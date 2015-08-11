@@ -12,7 +12,9 @@
 //
 //= require jquery
 //= require jquery_ujs
-//= require turbolinks
+//= require bootstrap
+//= require bindWithDelay
+//= require jquery.datetimepicker
 //= require_tree .
 
 $(document).ready(function(){
