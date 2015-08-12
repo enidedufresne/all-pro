@@ -13,7 +13,7 @@
 
 ActiveRecord::Schema.define(version: 20150723052743) do
 
-  create_table "activities", force: :cascade do |t|
+  create_table "activities", force: true do |t|
     t.integer  "trackable_id"
     t.string   "trackable_type"
     t.integer  "owner_id"
@@ -30,7 +30,7 @@ ActiveRecord::Schema.define(version: 20150723052743) do
   add_index "activities", ["recipient_id", "recipient_type"], name: "index_activities_on_recipient_id_and_recipient_type"
   add_index "activities", ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type"
 
-  create_table "comments", force: :cascade do |t|
+  create_table "comments", force: true do |t|
     t.string   "title",            limit: 50, default: ""
     t.text     "comment"
     t.integer  "commentable_id"
@@ -46,7 +46,7 @@ ActiveRecord::Schema.define(version: 20150723052743) do
   add_index "comments", ["commentable_type"], name: "index_comments_on_commentable_type"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
 
-  create_table "events", force: :cascade do |t|
+  create_table "events", force: true do |t|
     t.string   "name"
     t.datetime "when"
     t.integer  "user_id"
@@ -60,7 +60,7 @@ ActiveRecord::Schema.define(version: 20150723052743) do
   add_index "events", ["comments_count"], name: "index_events_on_comments_count"
   add_index "events", ["user_id"], name: "index_events_on_user_id"
 
-  create_table "follows", force: :cascade do |t|
+  create_table "follows", force: true do |t|
     t.integer  "followable_id",                   null: false
     t.string   "followable_type",                 null: false
     t.integer  "follower_id",                     null: false
@@ -73,7 +73,7 @@ ActiveRecord::Schema.define(version: 20150723052743) do
   add_index "follows", ["followable_id", "followable_type"], name: "fk_followables"
   add_index "follows", ["follower_id", "follower_type"], name: "fk_follows"
 
-  create_table "friendly_id_slugs", force: :cascade do |t|
+  create_table "friendly_id_slugs", force: true do |t|
     t.string   "slug",                      null: false
     t.integer  "sluggable_id",              null: false
     t.string   "sluggable_type", limit: 50
@@ -86,7 +86,7 @@ ActiveRecord::Schema.define(version: 20150723052743) do
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
 
-  create_table "posts", force: :cascade do |t|
+  create_table "posts", force: true do |t|
     t.text     "content",                     null: false
     t.integer  "user_id"
     t.string   "attachment"
@@ -101,7 +101,7 @@ ActiveRecord::Schema.define(version: 20150723052743) do
   add_index "posts", ["comments_count"], name: "index_posts_on_comments_count"
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
 
-  create_table "users", force: :cascade do |t|
+  create_table "users", force: true do |t|
     t.string   "name",                   default: "",     null: false
     t.string   "email",                  default: "",     null: false
     t.string   "encrypted_password",     default: "",     null: false
@@ -134,7 +134,7 @@ ActiveRecord::Schema.define(version: 20150723052743) do
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   add_index "users", ["slug"], name: "index_users_on_slug", unique: true
 
-  create_table "votes", force: :cascade do |t|
+  create_table "votes", force: true do |t|
     t.integer  "votable_id"
     t.string   "votable_type"
     t.integer  "voter_id"
