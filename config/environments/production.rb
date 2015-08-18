@@ -80,14 +80,14 @@ Rails.application.configure do
   config.action_mailer.default_url_options = { host: 'http://young-mountain-8934.herokuapp.com' }
 
   ActionMailer::Base.delivery_method = :smtp
-  ActionMailer::Base.perform_deliveries = false
+  ActionMailer::Base.perform_deliveries = true
 
   ActionMailer::Base.smtp_settings = {
     :address              => 'smtp.sendgrid.net',
     :port                 => '587',
     :domain               => 'heroku.com',
-    :user_name            => ENV['USERNAME'],
-    :password             => ENV['PASSWORD'],
+    :user_name            => 'AllProSports2015',#ENV['USERNAME'],
+    :password             => 'allprosports25',#ENV['PASSWORD'],
     :authentication       => "plain",
     :enable_starttls_auto => true
   }
