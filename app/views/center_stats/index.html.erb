@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Center Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Position name</th>
+      <th>Shorthand</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th>Sport name</th>
+      <th>Event</th>
+      <th>Games started</th>
+      <th>Games played</th>
+      <th>Win</th>
+      <th>Loss</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Minutes played</th>
+      <th>Fieldgoals made</th>
+      <th>Fieldgoal attemps</th>
+      <th>Threepoints made</th>
+      <th>Threepoint attemps</th>
+      <th>Freethrows made</th>
+      <th>Freethrow attemps</th>
+      <th>Rebounds</th>
+      <th>Assists</th>
+      <th>Steals</th>
+      <th>Blocks</th>
+      <th>Points</th>
+      <th>User</th>
+      <th>Stat</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @center_stats.each do |center_stat| %>
+      <tr>
+        <td><%= center_stat.position_name %></td>
+        <td><%= center_stat.shorthand %></td>
+        <td><%= center_stat.sport_id %></td>
+        <td><%= center_stat.position_id %></td>
+        <td><%= center_stat.sport_name %></td>
+        <td><%= center_stat.event %></td>
+        <td><%= center_stat.games_started %></td>
+        <td><%= center_stat.games_played %></td>
+        <td><%= center_stat.win %></td>
+        <td><%= center_stat.loss %></td>
+        <td><%= center_stat.wins %></td>
+        <td><%= center_stat.losses %></td>
+        <td><%= center_stat.minutes_played %></td>
+        <td><%= center_stat.fieldgoals_made %></td>
+        <td><%= center_stat.fieldgoal_attemps %></td>
+        <td><%= center_stat.threepoints_made %></td>
+        <td><%= center_stat.threepoint_attemps %></td>
+        <td><%= center_stat.freethrows_made %></td>
+        <td><%= center_stat.freethrow_attemps %></td>
+        <td><%= center_stat.rebounds %></td>
+        <td><%= center_stat.assists %></td>
+        <td><%= center_stat.steals %></td>
+        <td><%= center_stat.blocks %></td>
+        <td><%= center_stat.points %></td>
+        <td><%= center_stat.user %></td>
+        <td><%= center_stat.stat %></td>
+        <td><%= center_stat.sport %></td>
+        <td><%= center_stat.position %></td>
+        <td><%= link_to 'Show', center_stat %></td>
+        <td><%= link_to 'Edit', edit_center_stat_path(center_stat) %></td>
+        <td><%= link_to 'Destroy', center_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Center stat', new_center_stat_path %>

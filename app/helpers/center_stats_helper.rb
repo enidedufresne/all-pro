@@ -1,0 +1,2 @@
+module CenterStatsHelper
+end

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920025321) do
+ActiveRecord::Schema.define(version: 20150920025408) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -99,6 +99,42 @@ ActiveRecord::Schema.define(version: 20150920025321) do
   add_index "center_fielder_stats", ["sport_id"], name: "index_center_fielder_stats_on_sport_id"
   add_index "center_fielder_stats", ["stat_id"], name: "index_center_fielder_stats_on_stat_id"
   add_index "center_fielder_stats", ["user_id"], name: "index_center_fielder_stats_on_user_id"
+
+  create_table "center_stats", force: :cascade do |t|
+    t.string   "position_name"
+    t.string   "shorthand"
+    t.integer  "sport_id"
+    t.integer  "position_id"
+    t.string   "sport_name"
+    t.string   "event"
+    t.integer  "games_started"
+    t.integer  "games_played"
+    t.boolean  "win"
+    t.boolean  "loss"
+    t.integer  "wins"
+    t.integer  "losses"
+    t.integer  "minutes_played"
+    t.integer  "fieldgoals_made"
+    t.integer  "fieldgoal_attemps"
+    t.integer  "threepoints_made"
+    t.integer  "threepoint_attemps"
+    t.integer  "freethrows_made"
+    t.integer  "freethrow_attemps"
+    t.integer  "rebounds"
+    t.integer  "assists"
+    t.integer  "steals"
+    t.integer  "blocks"
+    t.integer  "points"
+    t.integer  "user_id"
+    t.integer  "stat_id"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+  end
+
+  add_index "center_stats", ["position_id"], name: "index_center_stats_on_position_id"
+  add_index "center_stats", ["sport_id"], name: "index_center_stats_on_sport_id"
+  add_index "center_stats", ["stat_id"], name: "index_center_stats_on_stat_id"
+  add_index "center_stats", ["user_id"], name: "index_center_stats_on_user_id"
 
   create_table "comments", force: :cascade do |t|
     t.string   "title",            limit: 50,  default: ""
