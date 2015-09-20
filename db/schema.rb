@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920031857) do
+ActiveRecord::Schema.define(version: 20150920032121) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -997,5 +997,32 @@ ActiveRecord::Schema.define(version: 20150920031857) do
 
   add_index "votes", ["votable_id", "votable_type", "vote_scope"], name: "index_votes_on_votable_id_and_votable_type_and_vote_scope"
   add_index "votes", ["voter_id", "voter_type", "vote_scope"], name: "index_votes_on_voter_id_and_voter_type_and_vote_scope"
+
+  create_table "wide_receiver_stats", force: :cascade do |t|
+    t.string   "position_name"
+    t.string   "shorthand"
+    t.integer  "sport_id"
+    t.integer  "position_id"
+    t.string   "sport_name"
+    t.string   "event"
+    t.integer  "games_played"
+    t.boolean  "win"
+    t.boolean  "loss"
+    t.integer  "wins"
+    t.integer  "losses"
+    t.integer  "receptions"
+    t.integer  "reception_yards"
+    t.integer  "reception_touchdowns"
+    t.integer  "fumbles"
+    t.integer  "user_id"
+    t.integer  "stat_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "wide_receiver_stats", ["position_id"], name: "index_wide_receiver_stats_on_position_id"
+  add_index "wide_receiver_stats", ["sport_id"], name: "index_wide_receiver_stats_on_sport_id"
+  add_index "wide_receiver_stats", ["stat_id"], name: "index_wide_receiver_stats_on_stat_id"
+  add_index "wide_receiver_stats", ["user_id"], name: "index_wide_receiver_stats_on_user_id"
 
 end
