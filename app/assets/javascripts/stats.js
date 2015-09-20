@@ -74,7 +74,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2003") {
+    else if ($(this).val() == "2002") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").show();
       $("#forward").hide();
@@ -109,7 +109,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2029") {
+    else if ($(this).val() == "2032") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").show();
@@ -144,7 +144,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2031") {
+    else if ($(this).val() == "2030") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -179,7 +179,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2012") {
+    else if ($(this).val() == "2029") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -214,7 +214,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2015") {
+    else if ($(this).val() == "2028") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -249,7 +249,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2017") {
+    else if ($(this).val() == "2027") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -284,7 +284,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2019") {
+    else if ($(this).val() == "2031") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -319,7 +319,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2022") {
+    else if ($(this).val() == "2021") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -354,7 +354,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2020") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -389,7 +389,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2018") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -424,7 +424,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2026") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -459,7 +459,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2025") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -494,7 +494,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2024") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -529,7 +529,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2023") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -564,7 +564,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2016") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -599,7 +599,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2014") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -634,7 +634,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2013") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -669,7 +669,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2012") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -704,7 +704,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2015") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -739,7 +739,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2011") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -774,7 +774,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2010") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -809,7 +809,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2009") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -844,7 +844,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2008") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -879,7 +879,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2007") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -914,7 +914,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2006") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -949,7 +949,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2005") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -984,7 +984,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2004") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -1019,7 +1019,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2003") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -1054,7 +1054,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2017") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -1089,7 +1089,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2019") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -1124,7 +1124,7 @@ $(document).ready(function (){
       $("#tight-end").hide();
       $("#sprinter").hide();
   }
-    else if ($(this).val() == "2033") {
+    else if ($(this).val() == "2022") {
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
