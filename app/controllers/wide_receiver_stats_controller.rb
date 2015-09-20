@@ -1,4 +1,6 @@
 class WideReceiverStatsController < ApplicationController
+  before_action :set_user
+  before_action :authenticate_user!
   before_action :set_wide_receiver_stat, only: [:show, :edit, :update, :destroy]
 
   # GET /wide_receiver_stats
@@ -54,5 +56,9 @@ class WideReceiverStatsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def wide_receiver_stat_params
       params.require(:wide_receiver_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :wins, :losses, :receptions, :reception_yards, :reception_touchdowns, :fumbles, :user_id, :stat_id, :sport_id, :position_id)
+    end
+    
+    def set_user
+      @user = current_user
     end
 end

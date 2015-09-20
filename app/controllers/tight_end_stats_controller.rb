@@ -1,4 +1,6 @@
 class TightEndStatsController < ApplicationController
+  before_action :set_user
+  before_action :authenticate_user!
   before_action :set_tight_end_stat, only: [:show, :edit, :update, :destroy]
 
   # GET /tight_end_stats
@@ -54,5 +56,9 @@ class TightEndStatsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def tight_end_stat_params
       params.require(:tight_end_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :wins, :losses, :receptions, :reception_yards, :reception_touchdowns, :pancakes, :user_id, :stat_id, :sport_id, :position_id)
+    end
+    
+    def set_user
+      @user = current_user
     end
 end

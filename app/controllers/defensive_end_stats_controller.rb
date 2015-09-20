@@ -1,4 +1,6 @@
 class DefensiveEndStatsController < ApplicationController
+  before_action :set_user
+  before_action :authenticate_user!
   before_action :set_defensive_end_stat, only: [:show, :edit, :update, :destroy]
 
   # GET /defensive_end_stats
@@ -54,5 +56,9 @@ class DefensiveEndStatsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def defensive_end_stat_params
       params.require(:defensive_end_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :win, :loss, :wins, :losses, :tackles, :sacks, :fumbles, :interception, :user_id, :stat_id, :sport_id, :position_id)
+    end
+    
+    def set_user
+      @user = current_user
     end
 end

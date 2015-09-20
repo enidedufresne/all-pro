@@ -57,4 +57,8 @@ class StatsController < ApplicationController
     def stat_params
       params.require(:stat).permit(:stat_name, :position_id, :sport_id, :user_id, :sport_id, :position_id)
     end
+    
+    def set_user
+      @user = current_user
+    end
 end

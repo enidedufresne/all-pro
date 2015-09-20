@@ -1,4 +1,6 @@
 class QuarterbackStatsController < ApplicationController
+  before_action :set_user
+  before_action :authenticate_user!
   before_action :set_quarterback_stat, only: [:show, :edit, :update, :destroy]
 
   # GET /quarterback_stats
@@ -54,5 +56,9 @@ class QuarterbackStatsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def quarterback_stat_params
       params.require(:quarterback_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :wins, :losses, :pass_completions, :pass_attempts, :passing_yards, :passing_touchdowns, :rushing_attempts, :rushing_yards, :rushing_touchdowns, :fumbles, :interception, :user_id, :stat_id, :sport_id, :position_id)
+    end
+    
+    def set_user
+      @user = current_user
     end
 end

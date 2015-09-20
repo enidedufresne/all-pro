@@ -1,4 +1,6 @@
 class StartingPitcherStatsController < ApplicationController
+  before_action :set_user
+  before_action :authenticate_user!
   before_action :set_starting_pitcher_stat, only: [:show, :edit, :update, :destroy]
 
   # GET /starting_pitcher_stats
@@ -54,5 +56,9 @@ class StartingPitcherStatsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def starting_pitcher_stat_params
       params.require(:starting_pitcher_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_started, :games_played, :win, :loss, :wins, :losses, :pitcher_win, :pitcher_loss, :pitcher_wins, :pitcher_losses, :pitcher_no_decision, :pitcher_no_decisions, :pitcher_saves, :innings_pitched, :hits_allowed, :runs_allowed, :strikeouts, :walks_allowed, :user_id, :stat_id, :sport_id, :position_id)
+    end
+    
+    def set_user
+      @user = current_user
     end
 end

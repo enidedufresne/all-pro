@@ -1,4 +1,6 @@
 class DefenderStatsController < ApplicationController
+  before_action :set_user
+  before_action :authenticate_user!
   before_action :set_defender_stat, only: [:show, :edit, :update, :destroy]
 
   # GET /defender_stats
@@ -54,5 +56,9 @@ class DefenderStatsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def defender_stat_params
       params.require(:defender_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :draw, :wins, :losses, :draws, :goals, :assists, :shots_taken, :user_id, :stat_id, :sport_id, :position_id)
+    end
+    
+    def set_user
+      @user = current_user
     end
 end

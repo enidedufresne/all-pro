@@ -1,4 +1,6 @@
 class DefensiveTackleStatsController < ApplicationController
+  before_action :set_user
+  before_action :authenticate_user!
   before_action :set_defensive_tackle_stat, only: [:show, :edit, :update, :destroy]
 
   # GET /defensive_tackle_stats
@@ -54,5 +56,9 @@ class DefensiveTackleStatsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def defensive_tackle_stat_params
       params.require(:defensive_tackle_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :win, :loss, :wins, :losses, :tackles, :sacks, :fumbles, :interception, :user_id, :stat_id, :sport_id, :position_id)
+    end
+    
+    def set_user
+      @user = current_user
     end
 end

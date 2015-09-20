@@ -1,4 +1,6 @@
 class KickerStatsController < ApplicationController
+  before_action :set_user
+  before_action :authenticate_user!
   before_action :set_kicker_stat, only: [:show, :edit, :update, :destroy]
 
   # GET /kicker_stats
@@ -54,5 +56,9 @@ class KickerStatsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def kicker_stat_params
       params.require(:kicker_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :wins, :losses, :field_goals, :user_id, :stat_id, :sport_id, :position_id)
+    end
+    
+    def set_user
+      @user = current_user
     end
 end

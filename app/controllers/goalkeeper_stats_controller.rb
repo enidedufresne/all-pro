@@ -1,4 +1,6 @@
 class GoalkeeperStatsController < ApplicationController
+  before_action :set_user
+  before_action :authenticate_user!
   before_action :set_goalkeeper_stat, only: [:show, :edit, :update, :destroy]
 
   # GET /goalkeeper_stats
@@ -54,5 +56,9 @@ class GoalkeeperStatsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def goalkeeper_stat_params
       params.require(:goalkeeper_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :draw, :wins, :losses, :draws, :saves, :shots_faced, :user_id, :stat_id, :sport_id, :position_id)
+    end
+    
+    def set_user
+      @user = current_user
     end
 end

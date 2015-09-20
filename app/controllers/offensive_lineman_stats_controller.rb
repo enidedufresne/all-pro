@@ -1,4 +1,6 @@
 class OffensiveLinemanStatsController < ApplicationController
+  before_action :set_user
+  before_action :authenticate_user!
   before_action :set_offensive_lineman_stat, only: [:show, :edit, :update, :destroy]
 
   # GET /offensive_lineman_stats
@@ -54,5 +56,9 @@ class OffensiveLinemanStatsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def offensive_lineman_stat_params
       params.require(:offensive_lineman_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :wins, :losses, :pancakes, :user_id, :stat_id, :sport_id, :position_id)
+    end
+    
+    def set_user
+      @user = current_user
     end
 end

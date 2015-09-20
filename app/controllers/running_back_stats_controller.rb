@@ -1,4 +1,6 @@
 class RunningBackStatsController < ApplicationController
+  before_action :set_user
+  before_action :authenticate_user!
   before_action :set_running_back_stat, only: [:show, :edit, :update, :destroy]
 
   # GET /running_back_stats
@@ -54,5 +56,9 @@ class RunningBackStatsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def running_back_stat_params
       params.require(:running_back_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :wins, :losses, :rushing_attempts, :rushing_yards, :rushing_touchdowns, :receptions, :reception_yards, :reception_touchdowns, :fumbles, :user_id, :stat_id, :sport_id, :position_id)
+    end
+    
+    def set_user
+      @user = current_user
     end
 end

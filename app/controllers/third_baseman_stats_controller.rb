@@ -1,4 +1,6 @@
 class ThirdBasemanStatsController < ApplicationController
+  before_action :set_user
+  before_action :authenticate_user!
   before_action :set_third_baseman_stat, only: [:show, :edit, :update, :destroy]
 
   # GET /third_baseman_stats
@@ -54,5 +56,9 @@ class ThirdBasemanStatsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def third_baseman_stat_params
       params.require(:third_baseman_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_started, :games_played, :win, :loss, :wins, :losses, :plate_appearances, :at_bats, :hits, :runs_scored, :runs_batted_in, :walks, :strike_outs, :stolen_bases, :doubles, :triples, :home_runs, :user_id, :stat_id, :sport_id, :position_id)
+    end
+    
+    def set_user
+      @user = current_user
     end
 end

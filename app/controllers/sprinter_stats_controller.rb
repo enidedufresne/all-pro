@@ -1,4 +1,6 @@
 class SprinterStatsController < ApplicationController
+  before_action :set_user
+  before_action :authenticate_user!
   before_action :set_sprinter_stat, only: [:show, :edit, :update, :destroy]
 
   # GET /sprinter_stats
@@ -54,5 +56,9 @@ class SprinterStatsController < ApplicationController
     # Only allow a trusted parameter "white list" through.
     def sprinter_stat_params
       params.require(:sprinter_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :races_run, :other_events, :win, :loss, :wins, :losses, :team_score, :distance_time, :placed, :speed, :user_id, :stat_id, :sport_id, :position_id)
+    end
+    
+    def set_user
+      @user = current_user
     end
 end
