@@ -2,6 +2,57 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+
 .well {
-  background-color: white;
+  background: $black;
+  border-radius: 0px;
+  border-color: $black;
+}
+.inwell {
+	
+}
+//colors
+$color_silver_chalice_approx: #aaa;
+$white: #fff;
+$black_50: rgba(0, 0, 0, .1);
+
+.form-control {
+  border-radius: 0px;
+  border-color: $black;
+}
+media a {
+  color: $white;
+  background-color: $black;
+  &:visited {
+    color: #FCA311;
+  }
+}
+
+media a:visted {
+  color: (a,a,a);
+}
+a:visited {
+    color: #FFFFFF;
+    text-decoration: none;
+    background-color: none;
+  }
+a {
+    color: #FFFFFF;
+  }
+a:hover {
+	color: $light-text-color;
+	text-decoration: none;
+	background-color: none;
+}
+media .btn {
+  border-radius: 0px;
+  color: (a,a,a);
+  background-color: rgba(0, 0, 0, .5);
+  &:visited {
+    color: $color_silver_chalice_approx;
+  }
+}
+.btn-primary {
+	border-radius: 0px;
+	border-color: rgba(0, 0, 0, .5);
 }

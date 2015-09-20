@@ -3,8 +3,9 @@
 
 body {
   padding-top: 100px;
-  background: $bg-color;
+  background: black;
   font-family: 'Noto Sans', sans-serif;
+  color: #ddd;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -24,14 +25,14 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat';
   color: white !important;
   &:hover {
-    color: $bg-color !important;
+    color: $light-text-color !important;
   };
 }
 
 .avatar {
-  border: 1px solid $border-color;
-  width: 50px;
-  height: 50px;
+  // border: 1px solid $border-color;
+  width: 60px;
+  height: 60px;
 }
 
 .cover {
@@ -43,13 +44,16 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .activity {
-  background: white;
-  border: 1px solid $border-color;
-  border-radius: 3px;
+  background: rgba(0, 0, 0, .7);
+  border-radius: 0px;
+  border-color: rgba(0, 0, 0, .5);
   padding: 10px;
   margin: 10px;
 }
-
+hr {
+  border-color: $light-text-color;
+  color: $light-text-color;
+}
 .name {
   display: inline-block;
   font-size: $default-font-size;
@@ -70,6 +74,7 @@ h1, h2, h3, h4, h5, h6 {
 .btn {
   font-family: 'Montserrat', sans-serif;
   padding: 10px 20px;
+  border-radius: 0px;
 }
 
 .btn-primary {
@@ -81,12 +86,13 @@ h1, h2, h3, h4, h5, h6 {
   border: none;
 }
 
+
 input[type="text"], 
 input[type="email"], 
 input[type="password"], 
 textarea {
   box-shadow: none !important;
-  border: 2px solid #ccc !important;
+  border: 2px solid #000 !important;
   &:focus {
     border: 2px solid #888 !important;
   };
@@ -110,23 +116,23 @@ textarea {
 
 .points span {
   padding: 5px;
-  background-color: $bg-color;
+  background-color: $black;
   color: $light-text-color;
   display: inline-block;
   font-size: $small-font-size;
   margin-top: 10px;
   margin-right: 10px;
 }  
-
 .post, .event {
   .actions {
     margin-top: 10px;
     padding-top: 10px;
-    border-top: 1px solid $border-color;
+    border-top: 1px solid $border-color-hi;
     a, button {
       font-family: 'Montserrat', sans-serif;
-      background-color: $border-color;
-      color: #555;
+      border-radius: 0px;
+      background-color: #214565;
+      color: #fff;
       i {
         margin-right: 5px;
       }
@@ -136,7 +142,7 @@ textarea {
 
 #links, #user-info {
   h5 {
-    border-bottom: 1px solid $border-color;
+    border-bottom: 1px solid $border-color-hi;
     padding: 15px 10px;
     margin: 0;
   }
@@ -151,3 +157,4 @@ p {
   font-size: 1.65rem;
   line-height: 3rem;
 }
+
