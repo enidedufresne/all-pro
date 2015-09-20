@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Starting Pitcher Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Position name</th>
+      <th>Shorthand</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th>Sport name</th>
+      <th>Event</th>
+      <th>Games started</th>
+      <th>Games played</th>
+      <th>Win</th>
+      <th>Loss</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Pitcher win</th>
+      <th>Pitcher loss</th>
+      <th>Pitcher wins</th>
+      <th>Pitcher losses</th>
+      <th>Pitcher no decision</th>
+      <th>Pitcher no decisions</th>
+      <th>Pitcher saves</th>
+      <th>Innings pitched</th>
+      <th>Hits allowed</th>
+      <th>Runs allowed</th>
+      <th>Strikeouts</th>
+      <th>Walks allowed</th>
+      <th>User</th>
+      <th>Stat</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @starting_pitcher_stats.each do |starting_pitcher_stat| %>
+      <tr>
+        <td><%= starting_pitcher_stat.position_name %></td>
+        <td><%= starting_pitcher_stat.shorthand %></td>
+        <td><%= starting_pitcher_stat.sport_id %></td>
+        <td><%= starting_pitcher_stat.position_id %></td>
+        <td><%= starting_pitcher_stat.sport_name %></td>
+        <td><%= starting_pitcher_stat.event %></td>
+        <td><%= starting_pitcher_stat.games_started %></td>
+        <td><%= starting_pitcher_stat.games_played %></td>
+        <td><%= starting_pitcher_stat.win %></td>
+        <td><%= starting_pitcher_stat.loss %></td>
+        <td><%= starting_pitcher_stat.wins %></td>
+        <td><%= starting_pitcher_stat.losses %></td>
+        <td><%= starting_pitcher_stat.pitcher_win %></td>
+        <td><%= starting_pitcher_stat.pitcher_loss %></td>
+        <td><%= starting_pitcher_stat.pitcher_wins %></td>
+        <td><%= starting_pitcher_stat.pitcher_losses %></td>
+        <td><%= starting_pitcher_stat.pitcher_no_decision %></td>
+        <td><%= starting_pitcher_stat.pitcher_no_decisions %></td>
+        <td><%= starting_pitcher_stat.pitcher_saves %></td>
+        <td><%= starting_pitcher_stat.innings_pitched %></td>
+        <td><%= starting_pitcher_stat.hits_allowed %></td>
+        <td><%= starting_pitcher_stat.runs_allowed %></td>
+        <td><%= starting_pitcher_stat.strikeouts %></td>
+        <td><%= starting_pitcher_stat.walks_allowed %></td>
+        <td><%= starting_pitcher_stat.user %></td>
+        <td><%= starting_pitcher_stat.stat %></td>
+        <td><%= starting_pitcher_stat.sport %></td>
+        <td><%= starting_pitcher_stat.position %></td>
+        <td><%= link_to 'Show', starting_pitcher_stat %></td>
+        <td><%= link_to 'Edit', edit_starting_pitcher_stat_path(starting_pitcher_stat) %></td>
+        <td><%= link_to 'Destroy', starting_pitcher_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Starting pitcher stat', new_starting_pitcher_stat_path %>

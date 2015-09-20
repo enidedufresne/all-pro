@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920022441) do
+ActiveRecord::Schema.define(version: 20150920023007) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -160,6 +160,42 @@ ActiveRecord::Schema.define(version: 20150920022441) do
   end
 
   add_index "sports", ["user_id"], name: "index_sports_on_user_id"
+
+  create_table "starting_pitcher_stats", force: :cascade do |t|
+    t.string   "position_name"
+    t.string   "shorthand"
+    t.integer  "sport_id"
+    t.integer  "position_id"
+    t.string   "sport_name"
+    t.string   "event"
+    t.integer  "games_started"
+    t.integer  "games_played"
+    t.boolean  "win"
+    t.boolean  "loss"
+    t.integer  "wins"
+    t.integer  "losses"
+    t.boolean  "pitcher_win"
+    t.boolean  "pitcher_loss"
+    t.integer  "pitcher_wins"
+    t.integer  "pitcher_losses"
+    t.boolean  "pitcher_no_decision"
+    t.integer  "pitcher_no_decisions"
+    t.integer  "pitcher_saves"
+    t.integer  "innings_pitched"
+    t.integer  "hits_allowed"
+    t.integer  "runs_allowed"
+    t.integer  "strikeouts"
+    t.integer  "walks_allowed"
+    t.integer  "user_id"
+    t.integer  "stat_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "starting_pitcher_stats", ["position_id"], name: "index_starting_pitcher_stats_on_position_id"
+  add_index "starting_pitcher_stats", ["sport_id"], name: "index_starting_pitcher_stats_on_sport_id"
+  add_index "starting_pitcher_stats", ["stat_id"], name: "index_starting_pitcher_stats_on_stat_id"
+  add_index "starting_pitcher_stats", ["user_id"], name: "index_starting_pitcher_stats_on_user_id"
 
   create_table "stats", force: :cascade do |t|
     t.string   "stat_name"
