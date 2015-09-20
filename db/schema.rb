@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920030301) do
+ActiveRecord::Schema.define(version: 20150920030620) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -151,6 +151,32 @@ ActiveRecord::Schema.define(version: 20150920030301) do
   add_index "comments", ["commentable_id"], name: "index_comments_on_commentable_id"
   add_index "comments", ["commentable_type"], name: "index_comments_on_commentable_type"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+
+  create_table "defensive_end_stats", force: :cascade do |t|
+    t.string   "position_name"
+    t.string   "shorthand"
+    t.integer  "sport_id"
+    t.integer  "position_id"
+    t.string   "sport_name"
+    t.string   "event"
+    t.boolean  "win"
+    t.boolean  "loss"
+    t.integer  "wins"
+    t.integer  "losses"
+    t.integer  "tackles"
+    t.integer  "sacks"
+    t.integer  "fumbles"
+    t.integer  "interception"
+    t.integer  "user_id"
+    t.integer  "stat_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "defensive_end_stats", ["position_id"], name: "index_defensive_end_stats_on_position_id"
+  add_index "defensive_end_stats", ["sport_id"], name: "index_defensive_end_stats_on_sport_id"
+  add_index "defensive_end_stats", ["stat_id"], name: "index_defensive_end_stats_on_stat_id"
+  add_index "defensive_end_stats", ["user_id"], name: "index_defensive_end_stats_on_user_id"
 
   create_table "designated_hitter_stats", force: :cascade do |t|
     t.string   "position_name"
