@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920023328) do
+ActiveRecord::Schema.define(version: 20150920023556) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -94,6 +94,41 @@ ActiveRecord::Schema.define(version: 20150920023328) do
   add_index "events", ["cached_votes_up"], name: "index_events_on_cached_votes_up"
   add_index "events", ["comments_count"], name: "index_events_on_comments_count"
   add_index "events", ["user_id"], name: "index_events_on_user_id"
+
+  create_table "first_baseman_stats", force: :cascade do |t|
+    t.string   "position_name"
+    t.string   "shorthand"
+    t.integer  "sport_id"
+    t.integer  "position_id"
+    t.string   "sport_name"
+    t.string   "event"
+    t.integer  "games_started"
+    t.integer  "games_played"
+    t.boolean  "win"
+    t.boolean  "loss"
+    t.integer  "wins"
+    t.integer  "losses"
+    t.integer  "plate_appearances"
+    t.integer  "at_bats"
+    t.integer  "hits"
+    t.integer  "runs_scored"
+    t.integer  "runs_batted_in"
+    t.integer  "walks"
+    t.integer  "strike_outs"
+    t.integer  "stolen_bases"
+    t.integer  "doubles"
+    t.integer  "triples"
+    t.integer  "home_runs"
+    t.integer  "user_id"
+    t.integer  "stat_id"
+    t.datetime "created_at",        null: false
+    t.datetime "updated_at",        null: false
+  end
+
+  add_index "first_baseman_stats", ["position_id"], name: "index_first_baseman_stats_on_position_id"
+  add_index "first_baseman_stats", ["sport_id"], name: "index_first_baseman_stats_on_sport_id"
+  add_index "first_baseman_stats", ["stat_id"], name: "index_first_baseman_stats_on_stat_id"
+  add_index "first_baseman_stats", ["user_id"], name: "index_first_baseman_stats_on_user_id"
 
   create_table "follows", force: :cascade do |t|
     t.integer  "followable_id",                               null: false

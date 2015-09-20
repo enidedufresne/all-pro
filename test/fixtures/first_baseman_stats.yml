@@ -1,0 +1,59 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  position_name: MyString
+  shorthand: MyString
+  sport_id: 1
+  position_id: 1
+  sport_name: MyString
+  event: MyString
+  games_started: 1
+  games_played: 1
+  win: false
+  loss: false
+  wins: 1
+  losses: 1
+  plate_appearances: 1
+  at_bats: 1
+  hits: 1
+  runs_scored: 1
+  runs_batted_in: 1
+  walks: 1
+  strike_outs: 1
+  stolen_bases: 1
+  doubles: 1
+  triples: 1
+  home_runs: 1
+  user_id: 
+  stat_id: 
+  sport_id: 
+  position_id: 
+
+two:
+  position_name: MyString
+  shorthand: MyString
+  sport_id: 1
+  position_id: 1
+  sport_name: MyString
+  event: MyString
+  games_started: 1
+  games_played: 1
+  win: false
+  loss: false
+  wins: 1
+  losses: 1
+  plate_appearances: 1
+  at_bats: 1
+  hits: 1
+  runs_scored: 1
+  runs_batted_in: 1
+  walks: 1
+  strike_outs: 1
+  stolen_bases: 1
+  doubles: 1
+  triples: 1
+  home_runs: 1
+  user_id: 
+  stat_id: 
+  sport_id: 
+  position_id: 
