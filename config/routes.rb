@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :power_forward_stats
   resources :small_forward_stats
   resources :shooting_guard_stats
   resources :point_guard_stats

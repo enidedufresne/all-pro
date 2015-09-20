@@ -1,0 +1,81 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Power Forward Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Position name</th>
+      <th>Shorthand</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th>Sport name</th>
+      <th>Event</th>
+      <th>Games started</th>
+      <th>Games played</th>
+      <th>Win</th>
+      <th>Loss</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Minutes played</th>
+      <th>Fieldgoals made</th>
+      <th>Fieldgoal attemps</th>
+      <th>Threepoints made</th>
+      <th>Threepoint attemps</th>
+      <th>Freethrows made</th>
+      <th>Freethrow attemps</th>
+      <th>Rebounds</th>
+      <th>Assists</th>
+      <th>Steals</th>
+      <th>Blocks</th>
+      <th>Points</th>
+      <th>User</th>
+      <th>Stat</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @power_forward_stats.each do |power_forward_stat| %>
+      <tr>
+        <td><%= power_forward_stat.position_name %></td>
+        <td><%= power_forward_stat.shorthand %></td>
+        <td><%= power_forward_stat.sport_id %></td>
+        <td><%= power_forward_stat.position_id %></td>
+        <td><%= power_forward_stat.sport_name %></td>
+        <td><%= power_forward_stat.event %></td>
+        <td><%= power_forward_stat.games_started %></td>
+        <td><%= power_forward_stat.games_played %></td>
+        <td><%= power_forward_stat.win %></td>
+        <td><%= power_forward_stat.loss %></td>
+        <td><%= power_forward_stat.wins %></td>
+        <td><%= power_forward_stat.losses %></td>
+        <td><%= power_forward_stat.minutes_played %></td>
+        <td><%= power_forward_stat.fieldgoals_made %></td>
+        <td><%= power_forward_stat.fieldgoal_attemps %></td>
+        <td><%= power_forward_stat.threepoints_made %></td>
+        <td><%= power_forward_stat.threepoint_attemps %></td>
+        <td><%= power_forward_stat.freethrows_made %></td>
+        <td><%= power_forward_stat.freethrow_attemps %></td>
+        <td><%= power_forward_stat.rebounds %></td>
+        <td><%= power_forward_stat.assists %></td>
+        <td><%= power_forward_stat.steals %></td>
+        <td><%= power_forward_stat.blocks %></td>
+        <td><%= power_forward_stat.points %></td>
+        <td><%= power_forward_stat.user %></td>
+        <td><%= power_forward_stat.stat %></td>
+        <td><%= power_forward_stat.sport %></td>
+        <td><%= power_forward_stat.position %></td>
+        <td><%= link_to 'Show', power_forward_stat %></td>
+        <td><%= link_to 'Edit', edit_power_forward_stat_path(power_forward_stat) %></td>
+        <td><%= link_to 'Destroy', power_forward_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Power forward stat', new_power_forward_stat_path %>
