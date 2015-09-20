@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920031356) do
+ActiveRecord::Schema.define(version: 20150920031610) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -400,6 +400,30 @@ ActiveRecord::Schema.define(version: 20150920031356) do
   add_index "line_backer_stats", ["sport_id"], name: "index_line_backer_stats_on_sport_id"
   add_index "line_backer_stats", ["stat_id"], name: "index_line_backer_stats_on_stat_id"
   add_index "line_backer_stats", ["user_id"], name: "index_line_backer_stats_on_user_id"
+
+  create_table "offensive_lineman_stats", force: :cascade do |t|
+    t.string   "position_name"
+    t.string   "shorthand"
+    t.integer  "sport_id"
+    t.integer  "position_id"
+    t.string   "sport_name"
+    t.string   "event"
+    t.integer  "games_played"
+    t.boolean  "win"
+    t.boolean  "loss"
+    t.integer  "wins"
+    t.integer  "losses"
+    t.integer  "pancakes"
+    t.integer  "user_id"
+    t.integer  "stat_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "offensive_lineman_stats", ["position_id"], name: "index_offensive_lineman_stats_on_position_id"
+  add_index "offensive_lineman_stats", ["sport_id"], name: "index_offensive_lineman_stats_on_sport_id"
+  add_index "offensive_lineman_stats", ["stat_id"], name: "index_offensive_lineman_stats_on_stat_id"
+  add_index "offensive_lineman_stats", ["user_id"], name: "index_offensive_lineman_stats_on_user_id"
 
   create_table "point_guard_stats", force: :cascade do |t|
     t.string   "position_name"
