@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Right Fielder Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Position name</th>
+      <th>Shorthand</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th>Sport name</th>
+      <th>Event</th>
+      <th>Games started</th>
+      <th>Games played</th>
+      <th>Win</th>
+      <th>Loss</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Plate appearances</th>
+      <th>At bats</th>
+      <th>Hits</th>
+      <th>Runs scored</th>
+      <th>Runs batted in</th>
+      <th>Walks</th>
+      <th>Strike outs</th>
+      <th>Stolen bases</th>
+      <th>Doubles</th>
+      <th>Triples</th>
+      <th>Home runs</th>
+      <th>User</th>
+      <th>Stat</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @right_fielder_stats.each do |right_fielder_stat| %>
+      <tr>
+        <td><%= right_fielder_stat.position_name %></td>
+        <td><%= right_fielder_stat.shorthand %></td>
+        <td><%= right_fielder_stat.sport_id %></td>
+        <td><%= right_fielder_stat.position_id %></td>
+        <td><%= right_fielder_stat.sport_name %></td>
+        <td><%= right_fielder_stat.event %></td>
+        <td><%= right_fielder_stat.games_started %></td>
+        <td><%= right_fielder_stat.games_played %></td>
+        <td><%= right_fielder_stat.win %></td>
+        <td><%= right_fielder_stat.loss %></td>
+        <td><%= right_fielder_stat.wins %></td>
+        <td><%= right_fielder_stat.losses %></td>
+        <td><%= right_fielder_stat.plate_appearances %></td>
+        <td><%= right_fielder_stat.at_bats %></td>
+        <td><%= right_fielder_stat.hits %></td>
+        <td><%= right_fielder_stat.runs_scored %></td>
+        <td><%= right_fielder_stat.runs_batted_in %></td>
+        <td><%= right_fielder_stat.walks %></td>
+        <td><%= right_fielder_stat.strike_outs %></td>
+        <td><%= right_fielder_stat.stolen_bases %></td>
+        <td><%= right_fielder_stat.doubles %></td>
+        <td><%= right_fielder_stat.triples %></td>
+        <td><%= right_fielder_stat.home_runs %></td>
+        <td><%= right_fielder_stat.user %></td>
+        <td><%= right_fielder_stat.stat %></td>
+        <td><%= right_fielder_stat.sport %></td>
+        <td><%= right_fielder_stat.position %></td>
+        <td><%= link_to 'Show', right_fielder_stat %></td>
+        <td><%= link_to 'Edit', edit_right_fielder_stat_path(right_fielder_stat) %></td>
+        <td><%= link_to 'Destroy', right_fielder_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Right fielder stat', new_right_fielder_stat_path %>

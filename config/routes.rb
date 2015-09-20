@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :right_fielder_stats
   resources :center_fielder_stats
   resources :left_fielder_stats
   resources :shortstop_stats
