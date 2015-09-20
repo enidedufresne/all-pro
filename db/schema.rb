@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920030018) do
+ActiveRecord::Schema.define(version: 20150920030301) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -647,6 +647,34 @@ ActiveRecord::Schema.define(version: 20150920030018) do
   end
 
   add_index "sports", ["user_id"], name: "index_sports_on_user_id"
+
+  create_table "sprinter_stats", force: :cascade do |t|
+    t.string   "position_name"
+    t.string   "shorthand"
+    t.integer  "sport_id"
+    t.integer  "position_id"
+    t.string   "sport_name"
+    t.string   "event"
+    t.integer  "races_run"
+    t.integer  "other_events"
+    t.boolean  "win"
+    t.boolean  "loss"
+    t.integer  "wins"
+    t.integer  "losses"
+    t.integer  "team_score"
+    t.integer  "distance_time"
+    t.integer  "placed"
+    t.integer  "speed"
+    t.integer  "user_id"
+    t.integer  "stat_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "sprinter_stats", ["position_id"], name: "index_sprinter_stats_on_position_id"
+  add_index "sprinter_stats", ["sport_id"], name: "index_sprinter_stats_on_sport_id"
+  add_index "sprinter_stats", ["stat_id"], name: "index_sprinter_stats_on_stat_id"
+  add_index "sprinter_stats", ["user_id"], name: "index_sprinter_stats_on_user_id"
 
   create_table "starting_pitcher_stats", force: :cascade do |t|
     t.string   "position_name"

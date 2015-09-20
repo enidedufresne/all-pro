@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :sprinter_stats
   resources :runner_stats
   resources :center_stats
   resources :power_forward_stats
