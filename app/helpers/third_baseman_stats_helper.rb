@@ -1,0 +1,2 @@
+module ThirdBasemanStatsHelper
+end
