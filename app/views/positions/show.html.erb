@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Position name:</strong>
+  <%= @position.position_name %>
+</p>
+
+<p>
+  <strong>Shorthand:</strong>
+  <%= @position.shorthand %>
+</p>
+
+<p>
+  <strong>Offensive:</strong>
+  <%= @position.offensive %>
+</p>
+
+<p>
+  <strong>Sport:</strong>
+  <%= @position.sport_id %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @position.position_id %>
+</p>
+
+<p>
+  <strong>Sport:</strong>
+  <%= @position.sport %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @position.user %>
+</p>
+
+<%= link_to 'Edit', edit_position_path(@position) %> |
+<%= link_to 'Back', positions_path %>

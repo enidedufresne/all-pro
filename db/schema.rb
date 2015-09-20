@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920002032) do
+ActiveRecord::Schema.define(version: 20150920002848) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -85,6 +85,20 @@ ActiveRecord::Schema.define(version: 20150920002032) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+
+  create_table "positions", force: :cascade do |t|
+    t.string   "position_name"
+    t.string   "shorthand"
+    t.boolean  "offensive"
+    t.integer  "sport_id"
+    t.integer  "position_id"
+    t.integer  "user_id"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "positions", ["sport_id"], name: "index_positions_on_sport_id"
+  add_index "positions", ["user_id"], name: "index_positions_on_user_id"
 
   create_table "posts", force: :cascade do |t|
     t.text     "content",                                 null: false
