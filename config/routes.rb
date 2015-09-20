@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :center_fielder_stats
   resources :left_fielder_stats
   resources :shortstop_stats
   resources :third_baseman_stats
