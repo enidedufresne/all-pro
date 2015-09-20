@@ -1,0 +1,2 @@
+module SecondBasemanStatsHelper
+end

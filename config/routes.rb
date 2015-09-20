@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :second_baseman_stats
   resources :first_baseman_stats
   resources :catcher_stats
   resources :starting_pitcher_stats
