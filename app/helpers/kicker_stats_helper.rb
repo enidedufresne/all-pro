@@ -1,0 +1,2 @@
+module KickerStatsHelper
+end

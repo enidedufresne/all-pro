@@ -1,0 +1,57 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Kicker Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Position name</th>
+      <th>Shorthand</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th>Sport name</th>
+      <th>Event</th>
+      <th>Games played</th>
+      <th>Win</th>
+      <th>Loss</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Field goals</th>
+      <th>User</th>
+      <th>Stat</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @kicker_stats.each do |kicker_stat| %>
+      <tr>
+        <td><%= kicker_stat.position_name %></td>
+        <td><%= kicker_stat.shorthand %></td>
+        <td><%= kicker_stat.sport_id %></td>
+        <td><%= kicker_stat.position_id %></td>
+        <td><%= kicker_stat.sport_name %></td>
+        <td><%= kicker_stat.event %></td>
+        <td><%= kicker_stat.games_played %></td>
+        <td><%= kicker_stat.win %></td>
+        <td><%= kicker_stat.loss %></td>
+        <td><%= kicker_stat.wins %></td>
+        <td><%= kicker_stat.losses %></td>
+        <td><%= kicker_stat.field_goals %></td>
+        <td><%= kicker_stat.user %></td>
+        <td><%= kicker_stat.stat %></td>
+        <td><%= kicker_stat.sport %></td>
+        <td><%= kicker_stat.position %></td>
+        <td><%= link_to 'Show', kicker_stat %></td>
+        <td><%= link_to 'Edit', edit_kicker_stat_path(kicker_stat) %></td>
+        <td><%= link_to 'Destroy', kicker_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Kicker stat', new_kicker_stat_path %>
