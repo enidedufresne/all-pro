@@ -1,0 +1,2 @@
+module DefenderStatsHelper
+end
