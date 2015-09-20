@@ -1,0 +1,79 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Shortstop Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Position name</th>
+      <th>Shorthand</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th>Sport name</th>
+      <th>Event</th>
+      <th>Games started</th>
+      <th>Games played</th>
+      <th>Win</th>
+      <th>Loss</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Plate appearances</th>
+      <th>At bats</th>
+      <th>Hits</th>
+      <th>Runs scored</th>
+      <th>Runs batted in</th>
+      <th>Walks</th>
+      <th>Strike outs</th>
+      <th>Stolen bases</th>
+      <th>Doubles</th>
+      <th>Triples</th>
+      <th>Home runs</th>
+      <th>User</th>
+      <th>Stat</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @shortstop_stats.each do |shortstop_stat| %>
+      <tr>
+        <td><%= shortstop_stat.position_name %></td>
+        <td><%= shortstop_stat.shorthand %></td>
+        <td><%= shortstop_stat.sport_id %></td>
+        <td><%= shortstop_stat.position_id %></td>
+        <td><%= shortstop_stat.sport_name %></td>
+        <td><%= shortstop_stat.event %></td>
+        <td><%= shortstop_stat.games_started %></td>
+        <td><%= shortstop_stat.games_played %></td>
+        <td><%= shortstop_stat.win %></td>
+        <td><%= shortstop_stat.loss %></td>
+        <td><%= shortstop_stat.wins %></td>
+        <td><%= shortstop_stat.losses %></td>
+        <td><%= shortstop_stat.plate_appearances %></td>
+        <td><%= shortstop_stat.at_bats %></td>
+        <td><%= shortstop_stat.hits %></td>
+        <td><%= shortstop_stat.runs_scored %></td>
+        <td><%= shortstop_stat.runs_batted_in %></td>
+        <td><%= shortstop_stat.walks %></td>
+        <td><%= shortstop_stat.strike_outs %></td>
+        <td><%= shortstop_stat.stolen_bases %></td>
+        <td><%= shortstop_stat.doubles %></td>
+        <td><%= shortstop_stat.triples %></td>
+        <td><%= shortstop_stat.home_runs %></td>
+        <td><%= shortstop_stat.user %></td>
+        <td><%= shortstop_stat.stat %></td>
+        <td><%= shortstop_stat.sport %></td>
+        <td><%= shortstop_stat.position %></td>
+        <td><%= link_to 'Show', shortstop_stat %></td>
+        <td><%= link_to 'Edit', edit_shortstop_stat_path(shortstop_stat) %></td>
+        <td><%= link_to 'Destroy', shortstop_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Shortstop stat', new_shortstop_stat_path %>
