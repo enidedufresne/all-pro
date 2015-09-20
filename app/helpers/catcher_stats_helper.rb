@@ -1,0 +1,2 @@
+module CatcherStatsHelper
+end

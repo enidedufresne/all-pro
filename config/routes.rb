@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :catcher_stats
   resources :starting_pitcher_stats
   resources :relief_pitcher_stats
   resources :relief_pitcher_stats
