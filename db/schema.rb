@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920004612) do
+ActiveRecord::Schema.define(version: 20150920022441) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -114,6 +114,42 @@ ActiveRecord::Schema.define(version: 20150920004612) do
   add_index "posts", ["cached_votes_up"], name: "index_posts_on_cached_votes_up"
   add_index "posts", ["comments_count"], name: "index_posts_on_comments_count"
   add_index "posts", ["user_id"], name: "index_posts_on_user_id"
+
+  create_table "relief_pitcher_stats", force: :cascade do |t|
+    t.string   "position_name"
+    t.string   "shorthand"
+    t.integer  "sport_id"
+    t.integer  "position_id"
+    t.string   "sport_name"
+    t.string   "event"
+    t.integer  "games_started"
+    t.integer  "games_played"
+    t.boolean  "win"
+    t.boolean  "loss"
+    t.integer  "wins"
+    t.integer  "losses"
+    t.boolean  "pitcher_win"
+    t.boolean  "pitcher_loss"
+    t.integer  "pitcher_wins"
+    t.integer  "pitcher_losses"
+    t.boolean  "pitcher_no_decision"
+    t.integer  "pitcher_no_decisions"
+    t.integer  "pitcher_saves"
+    t.integer  "innings_pitched"
+    t.integer  "hits_allowed"
+    t.integer  "runs_allowed"
+    t.integer  "strikeouts"
+    t.integer  "walks_allowed"
+    t.integer  "user_id"
+    t.integer  "stat_id"
+    t.datetime "created_at",           null: false
+    t.datetime "updated_at",           null: false
+  end
+
+  add_index "relief_pitcher_stats", ["position_id"], name: "index_relief_pitcher_stats_on_position_id"
+  add_index "relief_pitcher_stats", ["sport_id"], name: "index_relief_pitcher_stats_on_sport_id"
+  add_index "relief_pitcher_stats", ["stat_id"], name: "index_relief_pitcher_stats_on_stat_id"
+  add_index "relief_pitcher_stats", ["user_id"], name: "index_relief_pitcher_stats_on_user_id"
 
   create_table "sports", force: :cascade do |t|
     t.string   "name"

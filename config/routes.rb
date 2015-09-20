@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :relief_pitcher_stats
+  resources :relief_pitcher_stats
   resources :stats
   resources :positions
   resources :sports
