@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :forward_stats
   resources :midfielder_stats
   resources :defender_stats
   resources :goalkeeper_stats
