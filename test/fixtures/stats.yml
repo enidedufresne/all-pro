@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  stat_name: MyString
+  position_id: 1
+  sport_id: 1
+  user_id: 
+  sport_id: 
+  position_id: 
+
+two:
+  stat_name: MyString
+  position_id: 1
+  sport_id: 1
+  user_id: 
+  sport_id: 
+  position_id: 

@@ -1,0 +1,58 @@
+<%= form_for @stat do |f| %>
+  <div class="field">
+    <%= f.label :position_id, "Pick the position you play" %><br />
+    <%= f.grouped_collection_select :position_id, Sport.order(:name), :positions, :name, :id, :position_name, include_blank: true %>
+ </div>
+</div>
+
+<div id="pitcher" class="col-lg-6 well">
+<%= link_to "Pitcher", new_pitcher_stat_path %>
+</div>
+
+<div id="goalkeeper" class="col-lg-6 well">
+<!-- <a href="#" class="btn btn-success">Soccer</a> -->
+<%= link_to "Goalkeeper", new_goalkeeper_stat_path%>
+</div>
+
+<div id="midfielder" class="col-lg-6 well">
+<%= link_to "Midfielder", new_midfielder_stat_path%>
+</div>
+
+<div id="point-guard" class="col-lg-6 well">
+<!-- <a href="#" class="btn btn-success">Basketball</a> -->
+<%= link_to "Point Guard", new_point_guard_stat_path%>
+</div>
+
+<div id="power-forward" class="col-lg-6 well">
+<%= link_to "Power Forward", new_power_forward_stat_path%>
+</div>
+
+<div id="catcher" class="col-lg-6 well">
+<!-- <a href="#" class="btn btn-success">Baseball</a> -->
+<%= link_to "Catcher", new_catcher_stat_path%>
+</div>
+
+<div id="runner" class="col-lg-6 well">
+<!-- <a href="#" class="btn btn-success">Cross Country</a> -->
+<%= link_to "Runner", new_runner_stat_path%>
+</div>
+
+<div id="quarterback" class="col-lg-6 well">
+<!-- <a href="#" class="btn btn-success">Football</a> -->
+<%= link_to "Quarterback", new_quarterback_stat_path%>
+</div>
+
+<div id="tight-end" class="col-lg-6 well">
+<%= link_to "Tight End", new_tight_end_stat_path%>
+</div>
+
+<div id="sprinter" class="col-lg-6 well">
+<!-- <a href="#" class="btn btn-success">Track and Field</a> -->
+<%= link_to "Sprinter", new_sprinter_stat_path%>
+</div>
+
+
+
+
+<% end %>
+

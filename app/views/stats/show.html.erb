@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Stat name:</strong>
+  <%= @stat.stat_name %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @stat.position_id %>
+</p>
+
+<p>
+  <strong>Sport:</strong>
+  <%= @stat.sport_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @stat.user %>
+</p>
+
+<p>
+  <strong>Sport:</strong>
+  <%= @stat.sport %>
+</p>
+
+<p>
+  <strong>Position:</strong>
+  <%= @stat.position %>
+</p>
+
+<%= link_to 'Edit', edit_stat_path(@stat) %> |
+<%= link_to 'Back', stats_path %>
