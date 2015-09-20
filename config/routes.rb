@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :point_guard_stats
   resources :designated_hitter_stats
   resources :right_fielder_stats
   resources :center_fielder_stats
