@@ -26,12 +26,3 @@ CSV.foreach(Rails.root.join("positions.csv"), headers: true) do |row|
   end
 end
 
-puts "Importing statfields..."
-CSV.foreach(Rails.root.join("statfields.csv"), headers: true) do |row|
-  Statfield.create! do |statfield|
-    statfield.name = row[0]
-    statfield.shorthand = row[1]
-    statfield.sport_id = row[2]
-    statfield.position_id = row[3]
-  end
-end
