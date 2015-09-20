@@ -1,0 +1,63 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Runner Stats</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Position name</th>
+      <th>Shorthand</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th>Sport name</th>
+      <th>Event</th>
+      <th>Races run</th>
+      <th>Win</th>
+      <th>Loss</th>
+      <th>Wins</th>
+      <th>Losses</th>
+      <th>Team score</th>
+      <th>Distance time</th>
+      <th>Placed</th>
+      <th>Speed</th>
+      <th>User</th>
+      <th>Stat</th>
+      <th>Sport</th>
+      <th>Position</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @runner_stats.each do |runner_stat| %>
+      <tr>
+        <td><%= runner_stat.position_name %></td>
+        <td><%= runner_stat.shorthand %></td>
+        <td><%= runner_stat.sport_id %></td>
+        <td><%= runner_stat.position_id %></td>
+        <td><%= runner_stat.sport_name %></td>
+        <td><%= runner_stat.event %></td>
+        <td><%= runner_stat.races_run %></td>
+        <td><%= runner_stat.win %></td>
+        <td><%= runner_stat.loss %></td>
+        <td><%= runner_stat.wins %></td>
+        <td><%= runner_stat.losses %></td>
+        <td><%= runner_stat.team_score %></td>
+        <td><%= runner_stat.distance_time %></td>
+        <td><%= runner_stat.placed %></td>
+        <td><%= runner_stat.speed %></td>
+        <td><%= runner_stat.user %></td>
+        <td><%= runner_stat.stat %></td>
+        <td><%= runner_stat.sport %></td>
+        <td><%= runner_stat.position %></td>
+        <td><%= link_to 'Show', runner_stat %></td>
+        <td><%= link_to 'Edit', edit_runner_stat_path(runner_stat) %></td>
+        <td><%= link_to 'Destroy', runner_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Runner stat', new_runner_stat_path %>
