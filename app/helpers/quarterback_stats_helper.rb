@@ -1,0 +1,2 @@
+module QuarterbackStatsHelper
+end
