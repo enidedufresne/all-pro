@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920032522) do
+ActiveRecord::Schema.define(version: 20150920032834) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -339,6 +339,32 @@ ActiveRecord::Schema.define(version: 20150920032522) do
   add_index "friendly_id_slugs", ["slug", "sluggable_type"], name: "index_friendly_id_slugs_on_slug_and_sluggable_type"
   add_index "friendly_id_slugs", ["sluggable_id"], name: "index_friendly_id_slugs_on_sluggable_id"
   add_index "friendly_id_slugs", ["sluggable_type"], name: "index_friendly_id_slugs_on_sluggable_type"
+
+  create_table "kicker_returner_stats", force: :cascade do |t|
+    t.string   "position_name"
+    t.string   "shorthand"
+    t.integer  "sport_id"
+    t.integer  "position_id"
+    t.string   "sport_name"
+    t.string   "event"
+    t.integer  "games_played"
+    t.boolean  "win"
+    t.boolean  "loss"
+    t.integer  "wins"
+    t.integer  "losses"
+    t.integer  "kickreturns"
+    t.integer  "kickreturn_yards"
+    t.integer  "kickreturn_touchdowns"
+    t.integer  "user_id"
+    t.integer  "stat_id"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  add_index "kicker_returner_stats", ["position_id"], name: "index_kicker_returner_stats_on_position_id"
+  add_index "kicker_returner_stats", ["sport_id"], name: "index_kicker_returner_stats_on_sport_id"
+  add_index "kicker_returner_stats", ["stat_id"], name: "index_kicker_returner_stats_on_stat_id"
+  add_index "kicker_returner_stats", ["user_id"], name: "index_kicker_returner_stats_on_user_id"
 
   create_table "kicker_stats", force: :cascade do |t|
     t.string   "position_name"

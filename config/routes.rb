@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :kicker_returner_stats
   resources :kicker_stats
   resources :tight_end_stats
   resources :wide_receiver_stats
