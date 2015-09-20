@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
 
+  resources :tight_end_stats
   resources :wide_receiver_stats
   resources :running_back_stats
   resources :offensive_lineman_stats

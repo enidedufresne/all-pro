@@ -1,0 +1,2 @@
+module TightEndStatsHelper
+end
