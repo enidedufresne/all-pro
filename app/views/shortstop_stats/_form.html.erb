@@ -1,36 +1,4 @@
 <%= form_for(@shortstop_stat) do |f| %>
-  <% if @shortstop_stat.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@shortstop_stat.errors.count, "error") %> prohibited this shortstop_stat from being saved:</h2>
-
-      <ul>
-      <% @shortstop_stat.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :position_name %><br>
-    <%= f.text_field :position_name %>
-  </div>
-  <div class="field">
-    <%= f.label :shorthand %><br>
-    <%= f.text_field :shorthand %>
-  </div>
-  <div class="field">
-    <%= f.label :sport_id %><br>
-    <%= f.number_field :sport_id %>
-  </div>
-  <div class="field">
-    <%= f.label :position_id %><br>
-    <%= f.number_field :position_id %>
-  </div>
-  <div class="field">
-    <%= f.label :sport_name %><br>
-    <%= f.text_field :sport_name %>
-  </div>
   <div class="field">
     <%= f.label :event %><br>
     <%= f.text_field :event %>
