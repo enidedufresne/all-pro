@@ -1,16 +1,4 @@
 <%= form_for(@kicker_returner_stat) do |f| %>
-  <% if @kicker_returner_stat.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@kicker_returner_stat.errors.count, "error") %> prohibited this kicker_returner_stat from being saved:</h2>
-
-      <ul>
-      <% @kicker_returner_stat.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
   <div class="field">
     <%= f.label :position_name %><br>
     <%= f.text_field :position_name %>

@@ -1,6 +1,7 @@
-// Place all the behaviors and hooks related to the matching controller here.
-// All this logic will automatically be available in application.js.
+// // Place all the behaviors and hooks related to the matching controller here.
+// // All this logic will automatically be available in application.js.
 $(document).ready(function (){
+      console.log("Hello world...");
       $("#starting-pitcher").hide();
       $("#relief-pitcher").hide();
       $("#forward").hide();
@@ -34,9 +35,6 @@ $(document).ready(function (){
       $("#quarterback").hide();
       $("#tight-end").hide();
       $("#sprinter").hide();
-  }
-
-
   $("#stat_position_id").change(function() {
     console.log("Here we go agin!");
     if ($(this).val() == "2001") {
@@ -1195,16 +1193,39 @@ $(document).ready(function (){
       $("#sprinter").show();
   }
     else{
-      $("#catcher").hide();
-      $("#pitcher").hide();
-      $("#goalkeeper").hide();
-      $("#midfielder").hide();
-      $("#point-guard").hide();
-      $("#power-forward").hide();
-      $("#runner").hide();
-      $("#quarterback").hide();
-      $("#tight-end").hide();
-      $("#sprinter").hide();
+      $("#starting-pitcher").show();
+      $("#relief-pitcher").show();
+      $("#forward").show();
+      $("#defender").show();
+      $("#goalkeeper").show();
+      $("#kicker-returner").show();
+      $("#kicker").show();
+      $("#midfielder").show();
+      $("#wide-receiver").show();
+      $("#running-back").show();
+      $("#offensive-lineman").show();
+      $("#defensive-back").show();
+      $("#line-backer").show();
+      $("#defensive-tackle").show();
+      $("#defensive-end").show();
+      $("#center").show();
+      $("#small-forward").show();
+      $("#shooting-guard").show();
+      $("#point-guard").show();
+      $("#power-forward").show();
+      $("#designated-hitter").show();
+      $("#right-fielder").show();
+      $("#center-fielder").show();
+      $("#left-fielder").show();
+      $("#shortstop").show();
+      $("#third-baseman").show();
+      $("#second-baseman").show();
+      $("#first-baseman").show();
+      $("#catcher").show();
+      $("#runner").show();
+      $("#quarterback").show();
+      $("#tight-end").show();
+      $("#sprinter").show();
     } 
   });
 });

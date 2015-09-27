@@ -3,9 +3,13 @@
 
 body {
   padding-top: 100px;
-  background: black;
+  background: red;
   font-family: 'Noto Sans', sans-serif;
   color: #ddd;
+  height: 100%;
+  background-image: url(asset-path('b_w.png'));
+//  background-repeat: no-repeat;
+//  background-size: cover;
 }
 
 h1, h2, h3, h4, h5, h6 {
