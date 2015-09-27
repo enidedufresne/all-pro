@@ -1,77 +1,81 @@
+
 <%= form_for(@catcher_stat) do |f| %>
-  <div class="field">
-    <%= f.label :event %><br>
-    <%= f.text_field :event %>
-  </div>
-  <div class="field">
-    <%= f.label :games_started %><br>
-    <%= f.number_field :games_started %>
-  </div>
-  <div class="field">
-    <%= f.label :games_played %><br>
-    <%= f.number_field :games_played %>
-  </div>
-  <div class="field">
-    <%= f.label :win %><br>
-    <%= f.check_box :win %>
-  </div>
-  <div class="field">
-    <%= f.label :loss %><br>
-    <%= f.check_box :loss %>
-  </div>
-  <div class="field">
-    <%= f.label :wins %><br>
-    <%= f.number_field :wins %>
-  </div>
-  <div class="field">
-    <%= f.label :losses %><br>
-    <%= f.number_field :losses %>
-  </div>
-  <div class="field">
-    <%= f.label :plate_appearances %><br>
-    <%= f.number_field :plate_appearances %>
-  </div>
-  <div class="field">
-    <%= f.label :at_bats %><br>
-    <%= f.number_field :at_bats %>
-  </div>
-  <div class="field">
-    <%= f.label :hits %><br>
-    <%= f.number_field :hits %>
-  </div>
-  <div class="field">
-    <%= f.label :runs_scored %><br>
-    <%= f.number_field :runs_scored %>
-  </div>
-  <div class="field">
-    <%= f.label :runs_batted_in %><br>
-    <%= f.number_field :runs_batted_in %>
-  </div>
-  <div class="field">
-    <%= f.label :walks %><br>
-    <%= f.number_field :walks %>
-  </div>
-  <div class="field">
-    <%= f.label :strike_outs %><br>
-    <%= f.number_field :strike_outs %>
-  </div>
-  <div class="field">
-    <%= f.label :stolen_bases %><br>
-    <%= f.number_field :stolen_bases %>
-  </div>
-  <div class="field">
-    <%= f.label :doubles %><br>
-    <%= f.number_field :doubles %>
-  </div>
-  <div class="field">
-    <%= f.label :triples %><br>
-    <%= f.number_field :triples %>
-  </div>
-  <div class="field">
-    <%= f.label :home_runs %><br>
-    <%= f.number_field :home_runs %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <%= f.label :event %><br>
+      <%= f.text_field :event %>
+    </div>
+  
+    <div class="form-group">
+      <%= f.label :games_started %><br>
+      <%= f.number_field :games_started %>
+    </div>
+    <div class="form-group">
+      <%= f.label :games_played %><br>
+      <%= f.number_field :games_played %>
+    </div>
+    <div class="form-group">
+      <%= f.label :win %><br>
+      <%= f.check_box :win %>
+    </div>
+    <div class="form-group">
+      <%= f.label :loss %><br>
+      <%= f.check_box :loss %>
+    </div>
+    <div class="form-group">
+      <%= f.label :wins %><br>
+      <%= f.number_field :wins %>
+    </div>
+    <div class="form-group">
+      <%= f.label :losses %><br>
+      <%= f.number_field :losses %>
+    </div>
+    <div class="form-group">
+      <%= f.label :plate_appearances %><br>
+      <%= f.number_field :plate_appearances %>
+    </div>
+    <div class="form-group">
+      <%= f.label :at_bats %><br>
+      <%= f.number_field :at_bats %>
+    </div>
+    <div class="form-group">
+      <%= f.label :hits %><br>
+      <%= f.number_field :hits %>
+    </div>
+    <div class="form-group">
+      <%= f.label :runs_scored %><br>
+      <%= f.number_field :runs_scored %>
+    </div>
+    <div class="form-group">
+      <%= f.label :runs_batted_in %><br>
+      <%= f.number_field :runs_batted_in %>
+    </div>
+    <div class="form-group">
+      <%= f.label :walks %><br>
+      <%= f.number_field :walks %>
+    </div>
+    <div class="form-group">
+      <%= f.label :strike_outs %><br>
+      <%= f.number_field :strike_outs %>
+    </div>
+    <div class="form-group">
+      <%= f.label :stolen_bases %><br>
+      <%= f.number_field :stolen_bases %>
+    </div>
+    <div class="form-group">
+      <%= f.label :doubles %><br>
+      <%= f.number_field :doubles%>
+    </div>
+    <div class="form-group">
+      <%= f.label :triples %><br>
+      <%= f.number_field :triples %>
+    </div>
+    <div class="form-group">
+      <%= f.label :home_runs %><br>
+      <%= f.number_field :home_runs %>
+    </div>
+    <div class="form-group">
+      <%= f.submit :create %>
+    </div>
+</div>
 <% end %>

@@ -3,7 +3,7 @@
 
 body {
   padding-top: 100px;
-  background: red;
+  background: black;
   font-family: 'Noto Sans', sans-serif;
   color: #ddd;
   height: 100%;
@@ -90,10 +90,9 @@ hr {
   border: none;
 }
 
-
 input[type="text"], 
 input[type="email"], 
-input[type="password"], 
+input[type="password"],
 textarea {
   box-shadow: none !important;
   border: 2px solid #000 !important;
