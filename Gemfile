@@ -54,5 +54,5 @@ gem 'counter_culture', '~> 0.1.33'
 gem 'faker'
 gem 'populator'
 gem 'auto_html'
-
+gem 'simple_form'
 
