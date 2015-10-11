@@ -1,4 +1,24 @@
-<p id="notice"><%= notice %></p>
+<div id="event-<%= @third_baseman_stat.id %>" class="event">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <%= render @third_baseman_stat, remote: false %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @event %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 
 <p>
   <strong>Position name:</strong>

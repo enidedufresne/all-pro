@@ -1,144 +1,165 @@
+<div id="event-<%= @starting_sprinter_stat.id %>" class="event">
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <%= render @starting_sprinter_stat, remote: false %>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @event %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
 <p id="notice"><%= notice %></p>
 
 <p>
   <strong>Position name:</strong>
-  <%= @starting_pitcher_stat.position_name %>
+  <%= @starting_sprinter_stat.position_name %>
 </p>
 
 <p>
   <strong>Shorthand:</strong>
-  <%= @starting_pitcher_stat.shorthand %>
+  <%= @starting_sprinter_stat.shorthand %>
 </p>
 
 <p>
   <strong>Sport:</strong>
-  <%= @starting_pitcher_stat.sport_id %>
+  <%= @starting_sprinter_stat.sport_id %>
 </p>
 
 <p>
   <strong>Position:</strong>
-  <%= @starting_pitcher_stat.position_id %>
+  <%= @starting_sprinter_stat.position_id %>
 </p>
 
 <p>
   <strong>Sport name:</strong>
-  <%= @starting_pitcher_stat.sport_name %>
+  <%= @starting_sprinter_stat.sport_name %>
 </p>
 
 <p>
   <strong>Event:</strong>
-  <%= @starting_pitcher_stat.event %>
+  <%= @starting_sprinter_stat.event %>
 </p>
 
 <p>
   <strong>Games started:</strong>
-  <%= @starting_pitcher_stat.games_started %>
+  <%= @starting_sprinter_stat.games_started %>
 </p>
 
 <p>
   <strong>Games played:</strong>
-  <%= @starting_pitcher_stat.games_played %>
+  <%= @starting_sprinter_stat.games_played %>
 </p>
 
 <p>
   <strong>Win:</strong>
-  <%= @starting_pitcher_stat.win %>
+  <%= @starting_sprinter_stat.win %>
 </p>
 
 <p>
   <strong>Loss:</strong>
-  <%= @starting_pitcher_stat.loss %>
+  <%= @starting_sprinter_stat.loss %>
 </p>
 
 <p>
   <strong>Wins:</strong>
-  <%= @starting_pitcher_stat.wins %>
+  <%= @starting_sprinter_stat.wins %>
 </p>
 
 <p>
   <strong>Losses:</strong>
-  <%= @starting_pitcher_stat.losses %>
+  <%= @starting_sprinter_stat.losses %>
 </p>
 
 <p>
-  <strong>Pitcher win:</strong>
-  <%= @starting_pitcher_stat.pitcher_win %>
+  <strong>sprinter win:</strong>
+  <%= @starting_sprinter_stat.sprinter_win %>
 </p>
 
 <p>
-  <strong>Pitcher loss:</strong>
-  <%= @starting_pitcher_stat.pitcher_loss %>
+  <strong>sprinter loss:</strong>
+  <%= @starting_sprinter_stat.sprinter_loss %>
 </p>
 
 <p>
-  <strong>Pitcher wins:</strong>
-  <%= @starting_pitcher_stat.pitcher_wins %>
+  <strong>sprinter wins:</strong>
+  <%= @starting_sprinter_stat.sprinter_wins %>
 </p>
 
 <p>
-  <strong>Pitcher losses:</strong>
-  <%= @starting_pitcher_stat.pitcher_losses %>
+  <strong>sprinter losses:</strong>
+  <%= @starting_sprinter_stat.sprinter_losses %>
 </p>
 
 <p>
-  <strong>Pitcher no decision:</strong>
-  <%= @starting_pitcher_stat.pitcher_no_decision %>
+  <strong>sprinter no decision:</strong>
+  <%= @starting_sprinter_stat.sprinter_no_decision %>
 </p>
 
 <p>
-  <strong>Pitcher no decisions:</strong>
-  <%= @starting_pitcher_stat.pitcher_no_decisions %>
+  <strong>sprinter no decisions:</strong>
+  <%= @starting_sprinter_stat.sprinter_no_decisions %>
 </p>
 
 <p>
-  <strong>Pitcher saves:</strong>
-  <%= @starting_pitcher_stat.pitcher_saves %>
+  <strong>sprinter saves:</strong>
+  <%= @starting_sprinter_stat.sprinter_saves %>
 </p>
 
 <p>
   <strong>Innings pitched:</strong>
-  <%= @starting_pitcher_stat.innings_pitched %>
+  <%= @starting_sprinter_stat.innings_pitched %>
 </p>
 
 <p>
   <strong>Hits allowed:</strong>
-  <%= @starting_pitcher_stat.hits_allowed %>
+  <%= @starting_sprinter_stat.hits_allowed %>
 </p>
 
 <p>
   <strong>Runs allowed:</strong>
-  <%= @starting_pitcher_stat.runs_allowed %>
+  <%= @starting_sprinter_stat.runs_allowed %>
 </p>
 
 <p>
   <strong>Strikeouts:</strong>
-  <%= @starting_pitcher_stat.strikeouts %>
+  <%= @starting_sprinter_stat.strikeouts %>
 </p>
 
 <p>
   <strong>Walks allowed:</strong>
-  <%= @starting_pitcher_stat.walks_allowed %>
+  <%= @starting_sprinter_stat.walks_allowed %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @starting_pitcher_stat.user %>
+  <%= @starting_sprinter_stat.user %>
 </p>
 
 <p>
   <strong>Stat:</strong>
-  <%= @starting_pitcher_stat.stat %>
+  <%= @starting_sprinter_stat.stat %>
 </p>
 
 <p>
   <strong>Sport:</strong>
-  <%= @starting_pitcher_stat.sport %>
+  <%= @starting_sprinter_stat.sport %>
 </p>
 
 <p>
   <strong>Position:</strong>
-  <%= @starting_pitcher_stat.position %>
+  <%= @starting_sprinter_stat.position %>
 </p>
 
-<%= link_to 'Edit', edit_starting_pitcher_stat_path(@starting_pitcher_stat) %> |
-<%= link_to 'Back', starting_pitcher_stats_path %>
+<%= link_to 'Edit', edit_starting_sprinter_stat_path(@starting_sprinter_stat) %> |
+<%= link_to 'Back', starting_sprinter_stats_path %>
