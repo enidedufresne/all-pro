@@ -10,6 +10,7 @@ class DesignatedHitterStatsController < ApplicationController
 
   # GET /designated_hitter_stats/1
   def show
+    @comments = @designated_hitter_stat.comments
   end
 
   # GET /designated_hitter_stats/new

@@ -10,6 +10,7 @@ class ShootingGuardStatsController < ApplicationController
 
   # GET /shooting_guard_stats/1
   def show
+    @comments = @shooting_guard_stat.comments
   end
 
   # GET /shooting_guard_stats/new

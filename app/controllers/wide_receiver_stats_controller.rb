@@ -10,6 +10,7 @@ class WideReceiverStatsController < ApplicationController
 
   # GET /wide_receiver_stats/1
   def show
+    @comments = @wide_receiver_stat.comments
   end
 
   # GET /wide_receiver_stats/new

@@ -10,6 +10,7 @@ class SmallForwardStatsController < ApplicationController
 
   # GET /small_forward_stats/1
   def show
+    @comments = @small_forward_stat.comments
   end
 
   # GET /small_forward_stats/new

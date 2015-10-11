@@ -10,6 +10,7 @@ class PowerForwardStatsController < ApplicationController
 
   # GET /power_forward_stats/1
   def show
+    @comments = @power_forward_stat.comments
   end
 
   # GET /power_forward_stats/new

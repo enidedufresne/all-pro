@@ -10,6 +10,7 @@ class CatcherStatsController < ApplicationController
 
   # GET /catcher_stats/1
   def show
+    @comments = @catcher_stat.comments
   end
 
   # GET /catcher_stats/new

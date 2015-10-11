@@ -10,6 +10,7 @@ class LeftFielderStatsController < ApplicationController
 
   # GET /left_fielder_stats/1
   def show
+    @comments = @left_fielder_stat.comments
   end
 
   # GET /left_fielder_stats/new

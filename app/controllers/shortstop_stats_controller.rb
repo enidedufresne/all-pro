@@ -10,6 +10,7 @@ class ShortstopStatsController < ApplicationController
 
   # GET /shortstop_stats/1
   def show
+    @comments = @shortstop_stat.comments
   end
 
   # GET /shortstop_stats/new

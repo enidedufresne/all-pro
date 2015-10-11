@@ -10,6 +10,7 @@ class TightEndStatsController < ApplicationController
 
   # GET /tight_end_stats/1
   def show
+    @comments = @tight_end_stat.comments
   end
 
   # GET /tight_end_stats/new

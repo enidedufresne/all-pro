@@ -10,6 +10,7 @@ class StartingPitcherStatsController < ApplicationController
 
   # GET /starting_pitcher_stats/1
   def show
+    @comments = @starting_pitcher_stat.comments
   end
 
   # GET /starting_pitcher_stats/new

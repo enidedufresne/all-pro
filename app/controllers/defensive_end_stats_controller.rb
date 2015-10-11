@@ -10,6 +10,7 @@ class DefensiveEndStatsController < ApplicationController
 
   # GET /defensive_end_stats/1
   def show
+    @comments = @defensive_end_stat.comments
   end
 
   # GET /defensive_end_stats/new

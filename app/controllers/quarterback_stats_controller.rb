@@ -10,6 +10,7 @@ class QuarterbackStatsController < ApplicationController
 
   # GET /quarterback_stats/1
   def show
+    @comments = @quarterback_stat.comments
   end
 
   # GET /quarterback_stats/new

@@ -10,6 +10,7 @@ class SprinterStatsController < ApplicationController
 
   # GET /sprinter_stats/1
   def show
+    @comments = @sprinter_stat.comments
   end
 
   # GET /sprinter_stats/new

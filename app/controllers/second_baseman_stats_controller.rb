@@ -10,6 +10,7 @@ class SecondBasemanStatsController < ApplicationController
 
   # GET /second_baseman_stats/1
   def show
+    @comments = @second_baseman_stat.comments
   end
 
   # GET /second_baseman_stats/new

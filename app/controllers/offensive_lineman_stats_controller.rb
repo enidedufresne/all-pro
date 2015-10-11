@@ -10,6 +10,7 @@ class OffensiveLinemanStatsController < ApplicationController
 
   # GET /offensive_lineman_stats/1
   def show
+    @comments = @offensive_lineman_stat.comments
   end
 
   # GET /offensive_lineman_stats/new

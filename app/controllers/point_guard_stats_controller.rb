@@ -10,6 +10,7 @@ class PointGuardStatsController < ApplicationController
 
   # GET /point_guard_stats/1
   def show
+    @comments = @point_guard_stat.comments
   end
 
   # GET /point_guard_stats/new

@@ -10,6 +10,7 @@ class ReliefPitcherStatsController < ApplicationController
 
   # GET /relief_pitcher_stats/1
   def show
+    @comments = @relief_pitcher_stat.comments
   end
 
   # GET /relief_pitcher_stats/new

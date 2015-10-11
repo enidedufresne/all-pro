@@ -10,6 +10,7 @@ class LineBackerStatsController < ApplicationController
 
   # GET /line_backer_stats/1
   def show
+    @comments = @line_backer_stat.comments
   end
 
   # GET /line_backer_stats/new

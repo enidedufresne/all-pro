@@ -10,6 +10,7 @@ class ForwardStatsController < ApplicationController
 
   # GET /forward_stats/1
   def show
+    @comments = @forward_stat.comments
   end
 
   # GET /forward_stats/new

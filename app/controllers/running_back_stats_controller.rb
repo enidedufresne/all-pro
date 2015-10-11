@@ -10,6 +10,7 @@ class RunningBackStatsController < ApplicationController
 
   # GET /running_back_stats/1
   def show
+    @comments = @running_back_stat.comments
   end
 
   # GET /running_back_stats/new

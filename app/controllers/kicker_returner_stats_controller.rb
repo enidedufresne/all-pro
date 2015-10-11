@@ -10,6 +10,7 @@ class KickerReturnerStatsController < ApplicationController
 
   # GET /kicker_returner_stats/1
   def show
+    @comments = @kicker_returner_stat.comments
   end
 
   # GET /kicker_returner_stats/new

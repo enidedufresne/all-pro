@@ -10,6 +10,7 @@ class CenterFielderStatsController < ApplicationController
 
   # GET /center_fielder_stats/1
   def show
+    @comments = @center_fielder_stat.comments
   end
 
   # GET /center_fielder_stats/new
