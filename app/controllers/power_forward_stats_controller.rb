@@ -24,12 +24,14 @@ class PowerForwardStatsController < ApplicationController
 
   # POST /power_forward_stats
   def create
-    @power_forward_stat = PowerForwardStat.new(power_forward_stat_params)
+    @power_forward_stat = current_user.power_forward_stats.new(power_forward_stat_params)
 
     if @power_forward_stat.save
-      redirect_to @power_forward_stat, notice: 'Power forward stat was successfully created.'
+      # redirect_to @power_forward_stat, notice: 'power_forward stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @power_forward_stat.errors.full_messages.first
     end
   end
 

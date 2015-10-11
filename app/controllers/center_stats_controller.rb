@@ -24,12 +24,14 @@ class CenterStatsController < ApplicationController
 
   # POST /center_stats
   def create
-    @center_stat = CenterStat.new(center_stat_params)
+    @center_stat = current_user.center_stats.new(center_stat_params)
 
     if @center_stat.save
-      redirect_to @center_stat, notice: 'Center stat was successfully created.'
+      # redirect_to @center_stat, notice: 'center stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @center_stat.errors.full_messages.first
     end
   end
 

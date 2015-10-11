@@ -24,12 +24,14 @@ class LineBackerStatsController < ApplicationController
 
   # POST /line_backer_stats
   def create
-    @line_backer_stat = LineBackerStat.new(line_backer_stat_params)
+    @line_backer_stat = current_user.line_backer_stats.new(line_backer_stat_params)
 
     if @line_backer_stat.save
-      redirect_to @line_backer_stat, notice: 'Line backer stat was successfully created.'
+      # redirect_to @line_backer_stat, notice: 'line_backer stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @line_backer_stat.errors.full_messages.first
     end
   end
 

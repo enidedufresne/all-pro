@@ -24,12 +24,14 @@ class CatcherStatsController < ApplicationController
 
   # POST /catcher_stats
   def create
-    @catcher_stat = CatcherStat.new(catcher_stat_params)
+    @catcher_stat = current_user.catcher_stats.new(catcher_stat_params)
 
     if @catcher_stat.save
-      redirect_to @catcher_stat, notice: 'Catcher stat was successfully created.'
+      # redirect_to @catcher_stat, notice: 'catcher stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @catcher_stat.errors.full_messages.first
     end
   end
 

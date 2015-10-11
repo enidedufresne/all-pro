@@ -24,12 +24,14 @@ class RunningBackStatsController < ApplicationController
 
   # POST /running_back_stats
   def create
-    @running_back_stat = RunningBackStat.new(running_back_stat_params)
+    @running_back_stat = current_user.running_back_stats.new(running_back_stat_params)
 
     if @running_back_stat.save
-      redirect_to @running_back_stat, notice: 'Running back stat was successfully created.'
+      # redirect_to @running_back_stat, notice: 'running_back stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @running_back_stat.errors.full_messages.first
     end
   end
 

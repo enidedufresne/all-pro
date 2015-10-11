@@ -24,12 +24,14 @@ class FirstBasemanStatsController < ApplicationController
 
   # POST /first_baseman_stats
   def create
-    @first_baseman_stat = FirstBasemanStat.new(first_baseman_stat_params)
+    @first_baseman_stat = current_user.first_baseman_stats.new(first_baseman_stat_params)
 
     if @first_baseman_stat.save
-      redirect_to @first_baseman_stat, notice: 'First baseman stat was successfully created.'
+      # redirect_to @first_baseman_stat, notice: 'first_baseman stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @first_baseman_stat.errors.full_messages.first
     end
   end
 

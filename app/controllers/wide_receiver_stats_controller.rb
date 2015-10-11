@@ -24,13 +24,22 @@ class WideReceiverStatsController < ApplicationController
 
   # POST /wide_receiver_stats
   def create
-    @wide_receiver_stat = WideReceiverStat.new(wide_receiver_stat_params)
+    @wide_receiver_stat = current_user.wide_receiver_stats.new(wide_receiver_stat_params)
 
     if @wide_receiver_stat.save
-      redirect_to @wide_receiver_stat, notice: 'Wide receiver stat was successfully created.'
+      # redirect_to @wide_receiver_stat, notice: 'wide_receiver stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @wide_receiver_stat.errors.full_messages.first
     end
+    # @wide_receiver_stat = WideReceiverStat.new(wide_receiver_stat_params)
+
+    # if @wide_receiver_stat.save
+    #   redirect_to @wide_receiver_stat, notice: 'Wide receiver stat was successfully created.'
+    # else
+    #   render :new
+    # end
   end
 
   # PATCH/PUT /wide_receiver_stats/1

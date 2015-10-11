@@ -24,12 +24,14 @@ class StartingPitcherStatsController < ApplicationController
 
   # POST /starting_pitcher_stats
   def create
-    @starting_pitcher_stat = StartingPitcherStat.new(starting_pitcher_stat_params)
+    @starting_pitcher_stat = current_user.starting_pitcher_stats.new(starting_pitcher_stat_params)
 
     if @starting_pitcher_stat.save
-      redirect_to @starting_pitcher_stat, notice: 'Starting pitcher stat was successfully created.'
+      # redirect_to @starting_pitcher_stat, notice: 'starting_pitcher stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @starting_pitcher_stat.errors.full_messages.first
     end
   end
 

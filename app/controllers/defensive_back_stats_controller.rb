@@ -24,12 +24,14 @@ class DefensiveBackStatsController < ApplicationController
 
   # POST /defensive_back_stats
   def create
-    @defensive_back_stat = DefensiveBackStat.new(defensive_back_stat_params)
+    @defensive_back_stat = current_user.defensive_back_stats.new(defensive_back_stat_params)
 
     if @defensive_back_stat.save
-      redirect_to @defensive_back_stat, notice: 'Defensive back stat was successfully created.'
+      # redirect_to @defensive_back_stat, notice: 'defensive_back stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @defensive_back_stat.errors.full_messages.first
     end
   end
 

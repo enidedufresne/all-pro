@@ -24,12 +24,14 @@ class DefensiveTackleStatsController < ApplicationController
 
   # POST /defensive_tackle_stats
   def create
-    @defensive_tackle_stat = DefensiveTackleStat.new(defensive_tackle_stat_params)
+    @defensive_tackle_stat = current_user.defensive_tackle_stats.new(defensive_tackle_stat_params)
 
     if @defensive_tackle_stat.save
-      redirect_to @defensive_tackle_stat, notice: 'Defensive tackle stat was successfully created.'
+      # redirect_to @defensive_tackle_stat, notice: 'defensive_tackle stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @defensive_tackle_stat.errors.full_messages.first
     end
   end
 

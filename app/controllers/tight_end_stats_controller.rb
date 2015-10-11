@@ -24,12 +24,14 @@ class TightEndStatsController < ApplicationController
 
   # POST /tight_end_stats
   def create
-    @tight_end_stat = TightEndStat.new(tight_end_stat_params)
+    @tight_end_stat = current_user.tight_end_stats.new(tight_end_stat_params)
 
     if @tight_end_stat.save
-      redirect_to @tight_end_stat, notice: 'Tight end stat was successfully created.'
+      # redirect_to @tight_end_stat, notice: 'tight_end stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @tight_end_stat.errors.full_messages.first
     end
   end
 

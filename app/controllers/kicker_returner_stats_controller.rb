@@ -24,12 +24,14 @@ class KickerReturnerStatsController < ApplicationController
 
   # POST /kicker_returner_stats
   def create
-    @kicker_returner_stat = KickerReturnerStat.new(kicker_returner_stat_params)
+    @kicker_returner_stat = current_user.kicker_returner_stats.new(kicker_returner_stat_params)
 
     if @kicker_returner_stat.save
-      redirect_to @kicker_returner_stat, notice: 'Kicker returner stat was successfully created.'
+      # redirect_to @kicker_returner_stat, notice: 'kicker_returner stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @kicker_returner_stat.errors.full_messages.first
     end
   end
 

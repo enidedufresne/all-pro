@@ -24,12 +24,14 @@ class SprinterStatsController < ApplicationController
 
   # POST /sprinter_stats
   def create
-    @sprinter_stat = SprinterStat.new(sprinter_stat_params)
+    @sprinter_stat = current_user.sprinter_stats.new(sprinter_stat_params)
 
     if @sprinter_stat.save
-      redirect_to @sprinter_stat, notice: 'Sprinter stat was successfully created.'
+      # redirect_to @sprinter_stat, notice: 'sprinter stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @sprinter_stat.errors.full_messages.first
     end
   end
 

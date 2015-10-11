@@ -24,12 +24,14 @@ class OffensiveLinemanStatsController < ApplicationController
 
   # POST /offensive_lineman_stats
   def create
-    @offensive_lineman_stat = OffensiveLinemanStat.new(offensive_lineman_stat_params)
+    @offensive_lineman_stat = current_user.offensive_lineman_stats.new(offensive_lineman_stat_params)
 
     if @offensive_lineman_stat.save
-      redirect_to @offensive_lineman_stat, notice: 'Offensive lineman stat was successfully created.'
+      # redirect_to @offensive_lineman_stat, notice: 'offensive_lineman stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @offensive_lineman_stat.errors.full_messages.first
     end
   end
 

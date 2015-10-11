@@ -24,12 +24,14 @@ class KickerStatsController < ApplicationController
 
   # POST /kicker_stats
   def create
-    @kicker_stat = KickerStat.new(kicker_stat_params)
+    @kicker_stat = current_user.kicker_stats.new(kicker_stat_params)
 
     if @kicker_stat.save
-      redirect_to @kicker_stat, notice: 'Kicker stat was successfully created.'
+      # redirect_to @kicker_stat, notice: 'kicker stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @kicker_stat.errors.full_messages.first
     end
   end
 

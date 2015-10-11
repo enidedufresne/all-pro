@@ -24,12 +24,14 @@ class ReliefPitcherStatsController < ApplicationController
 
   # POST /relief_pitcher_stats
   def create
-    @relief_pitcher_stat = ReliefPitcherStat.new(relief_pitcher_stat_params)
+    @relief_pitcher_stat = current_user.relief_pitcher_stats.new(relief_pitcher_stat_params)
 
     if @relief_pitcher_stat.save
-      redirect_to @relief_pitcher_stat, notice: 'Relief pitcher stat was successfully created.'
+      # redirect_to @relief_pitcher_stat, notice: 'relief_pitcher stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @relief_pitcher_stat.errors.full_messages.first
     end
   end
 

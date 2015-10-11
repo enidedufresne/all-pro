@@ -24,12 +24,14 @@ class DefensiveEndStatsController < ApplicationController
 
   # POST /defensive_end_stats
   def create
-    @defensive_end_stat = DefensiveEndStat.new(defensive_end_stat_params)
+    @defensive_end_stat = current_user.defensive_end_stats.new(defensive_end_stat_params)
 
     if @defensive_end_stat.save
-      redirect_to @defensive_end_stat, notice: 'Defensive end stat was successfully created.'
+      # redirect_to @defensive_end_stat, notice: 'defensive_end stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @defensive_end_stat.errors.full_messages.first
     end
   end
 

@@ -24,12 +24,14 @@ class DesignatedHitterStatsController < ApplicationController
 
   # POST /designated_hitter_stats
   def create
-    @designated_hitter_stat = DesignatedHitterStat.new(designated_hitter_stat_params)
+    @designated_hitter_stat = current_user.designated_hitter_stats.new(designated_hitter_stat_params)
 
     if @designated_hitter_stat.save
-      redirect_to @designated_hitter_stat, notice: 'Designated hitter stat was successfully created.'
+      # redirect_to @designated_hitter_stat, notice: 'designated_hitter stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @designated_hitter_stat.errors.full_messages.first
     end
   end
 

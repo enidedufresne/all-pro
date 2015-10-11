@@ -24,12 +24,14 @@ class RunnerStatsController < ApplicationController
 
   # POST /runner_stats
   def create
-    @runner_stat = RunnerStat.new(runner_stat_params)
+    @runner_stat = current_user.runner_stats.new(runner_stat_params)
 
     if @runner_stat.save
-      redirect_to @runner_stat, notice: 'Runner stat was successfully created.'
+      # redirect_to @runner_stat, notice: 'runner stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @runner_stat.errors.full_messages.first
     end
   end
 

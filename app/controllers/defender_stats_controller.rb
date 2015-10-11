@@ -24,12 +24,14 @@ class DefenderStatsController < ApplicationController
 
   # POST /defender_stats
   def create
-    @defender_stat = DefenderStat.new(defender_stat_params)
+    @defender_stat = current_user.defender_stats.new(defender_stat_params)
 
     if @defender_stat.save
-      redirect_to @defender_stat, notice: 'Defender stat was successfully created.'
+      # redirect_to @defender_stat, notice: 'defender stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @defender_stat.errors.full_messages.first
     end
   end
 

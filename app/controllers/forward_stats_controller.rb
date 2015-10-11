@@ -24,12 +24,14 @@ class ForwardStatsController < ApplicationController
 
   # POST /forward_stats
   def create
-    @forward_stat = ForwardStat.new(forward_stat_params)
+    @forward_stat = current_user.forward_stats.new(forward_stat_params)
 
     if @forward_stat.save
-      redirect_to @forward_stat, notice: 'Forward stat was successfully created.'
+      # redirect_to @forward_stat, notice: 'forward stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @forward_stat.errors.full_messages.first
     end
   end
 

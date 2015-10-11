@@ -24,12 +24,14 @@ class SmallForwardStatsController < ApplicationController
 
   # POST /small_forward_stats
   def create
-    @small_forward_stat = SmallForwardStat.new(small_forward_stat_params)
+    @small_forward_stat = current_user.small_forward_stats.new(small_forward_stat_params)
 
     if @small_forward_stat.save
-      redirect_to @small_forward_stat, notice: 'Small forward stat was successfully created.'
+      # redirect_to @small_forward_stat, notice: 'small_forward stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @small_forward_stat.errors.full_messages.first
     end
   end
 

@@ -24,12 +24,14 @@ class RightFielderStatsController < ApplicationController
 
   # POST /right_fielder_stats
   def create
-    @right_fielder_stat = RightFielderStat.new(right_fielder_stat_params)
+    @right_fielder_stat = current_user.right_fielder_stats.new(right_fielder_stat_params)
 
     if @right_fielder_stat.save
-      redirect_to @right_fielder_stat, notice: 'Right fielder stat was successfully created.'
+      # redirect_to @right_fielder_stat, notice: 'right_fielder stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @right_fielder_stat.errors.full_messages.first
     end
   end
 

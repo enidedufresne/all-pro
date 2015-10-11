@@ -24,12 +24,14 @@ class QuarterbackStatsController < ApplicationController
 
   # POST /quarterback_stats
   def create
-    @quarterback_stat = QuarterbackStat.new(quarterback_stat_params)
+    @quarterback_stat = current_user.quarterback_stats.new(quarterback_stat_params)
 
     if @quarterback_stat.save
-      redirect_to @quarterback_stat, notice: 'Quarterback stat was successfully created.'
+      # redirect_to @quarterback_stat, notice: 'quarterback stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @quarterback_stat.errors.full_messages.first
     end
   end
 

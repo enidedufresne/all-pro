@@ -24,12 +24,14 @@ class ShortstopStatsController < ApplicationController
 
   # POST /shortstop_stats
   def create
-    @shortstop_stat = ShortstopStat.new(shortstop_stat_params)
+    @shortstop_stat = current_user.shortstop_stats.new(shortstop_stat_params)
 
     if @shortstop_stat.save
-      redirect_to @shortstop_stat, notice: 'Shortstop stat was successfully created.'
+      # redirect_to @shortstop_stat, notice: 'shortstop stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @shortstop_stat.errors.full_messages.first
     end
   end
 

@@ -24,12 +24,14 @@ class PointGuardStatsController < ApplicationController
 
   # POST /point_guard_stats
   def create
-    @point_guard_stat = PointGuardStat.new(point_guard_stat_params)
+    @point_guard_stat = current_user.point_guard_stats.new(point_guard_stat_params)
 
     if @point_guard_stat.save
-      redirect_to @point_guard_stat, notice: 'Point guard stat was successfully created.'
+      # redirect_to @point_guard_stat, notice: 'point_guard stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @point_guard_stat.errors.full_messages.first
     end
   end
 

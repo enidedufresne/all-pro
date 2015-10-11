@@ -24,12 +24,14 @@ class ThirdBasemanStatsController < ApplicationController
 
   # POST /third_baseman_stats
   def create
-    @third_baseman_stat = ThirdBasemanStat.new(third_baseman_stat_params)
+    @third_baseman_stat = current_user.third_baseman_stats.new(third_baseman_stat_params)
 
     if @third_baseman_stat.save
-      redirect_to @third_baseman_stat, notice: 'Third baseman stat was successfully created.'
+      # redirect_to @third_baseman_stat, notice: 'third_baseman stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @third_baseman_stat.errors.full_messages.first
     end
   end
 

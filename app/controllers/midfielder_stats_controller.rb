@@ -24,12 +24,14 @@ class MidfielderStatsController < ApplicationController
 
   # POST /midfielder_stats
   def create
-    @midfielder_stat = MidfielderStat.new(midfielder_stat_params)
+    @midfielder_stat = current_user.midfielder_stats.new(midfielder_stat_params)
 
     if @midfielder_stat.save
-      redirect_to @midfielder_stat, notice: 'Midfielder stat was successfully created.'
+      # redirect_to @midfielder_stat, notice: 'midfielder stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @midfielder_stat.errors.full_messages.first
     end
   end
 

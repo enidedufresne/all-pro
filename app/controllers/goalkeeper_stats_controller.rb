@@ -24,12 +24,14 @@ class GoalkeeperStatsController < ApplicationController
 
   # POST /goalkeeper_stats
   def create
-    @goalkeeper_stat = GoalkeeperStat.new(goalkeeper_stat_params)
+    @goalkeeper_stat = current_user.goalkeeper_stats.new(goalkeeper_stat_params)
 
     if @goalkeeper_stat.save
-      redirect_to @goalkeeper_stat, notice: 'Goalkeeper stat was successfully created.'
+      # redirect_to @goalkeeper_stat, notice: 'goalkeeper stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @goalkeeper_stat.errors.full_messages.first
     end
   end
 

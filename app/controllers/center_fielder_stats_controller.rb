@@ -24,12 +24,14 @@ class CenterFielderStatsController < ApplicationController
 
   # POST /center_fielder_stats
   def create
-    @center_fielder_stat = CenterFielderStat.new(center_fielder_stat_params)
+    @center_fielder_stat = current_user.center_fielder_stats.new(center_fielder_stat_params)
 
     if @center_fielder_stat.save
-      redirect_to @center_fielder_stat, notice: 'Center fielder stat was successfully created.'
+      # redirect_to @center_fielder_stat, notice: 'center stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @center_fielder_stat.errors.full_messages.first
     end
   end
 

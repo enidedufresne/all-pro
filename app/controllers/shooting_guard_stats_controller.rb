@@ -24,12 +24,14 @@ class ShootingGuardStatsController < ApplicationController
 
   # POST /shooting_guard_stats
   def create
-    @shooting_guard_stat = ShootingGuardStat.new(shooting_guard_stat_params)
+    @shooting_guard_stat = current_user.shooting_guard_stats.new(shooting_guard_stat_params)
 
     if @shooting_guard_stat.save
-      redirect_to @shooting_guard_stat, notice: 'Shooting guard stat was successfully created.'
+      # redirect_to @shooting_guard_stat, notice: 'shooting_guard stat was successfully created.'
+      redirect_to root_path
     else
-      render :new
+      # render :new
+       render 'new', notice: @shooting_guard_stat.errors.full_messages.first
     end
   end
 
