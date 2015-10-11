@@ -17,15 +17,28 @@
     <%= render 'shared/paginate', resources: @activities %>
   </div>
   <div class="col-lg-3">
-    <% if is_current_user?(@user) %>
-      <div class="well">
-        <ul class="nav nav-pills nav-stacked">
-          <li><%= link_to 'Edit Profile', edit_user_path(@user) %></li>
-          <li><%= link_to 'Change password', edit_user_registration_path %></li>
-          <li><%= link_to 'Friends', friends_user_path(@user) %></li>
-          <li><%= link_to 'Followers', followers_user_path(@user) %></li>
-          <li><%= link_to 'Deactivate', deactivate_user_path(@user) %></li>
-        </ul>
+    <div id="links" class="well">
+      <% if is_current_user?(@user) %>
+      <h5>
+        <%= fa_icon 'pencil' %>
+        <%= link_to 'Edit Profile', edit_user_path(@user) %>
+      </h5>
+      <h5>
+        <%= fa_icon 'lock' %>
+        <%= link_to 'Change password', edit_user_registration_path %>
+      </h5>
+      <h5>
+        <%= fa_icon 'arrow-circle-right' %>
+        <%= link_to 'Friends', friends_user_path(@user) %>
+      </h5>
+      <h5>
+        <%= fa_icon 'arrow-circle-left' %>
+        <%= link_to 'Followers', followers_user_path(@user) %>
+      </h5> 
+      <h5>
+        <%= fa_icon 'ban' %>
+        <%= link_to 'Deactivate', deactivate_user_path(@user) %>
+      </h5> 
       </div>
     <% end %>
   </div>

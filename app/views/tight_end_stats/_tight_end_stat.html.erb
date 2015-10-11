@@ -1,0 +1,26 @@
+<div class="info">
+  <%= render 'shared/avatar', user: tight_end_stat.user %>
+  <h4 class="name"><%= tight_end_stat.user.name %></h4>
+  <span class="action">created an <%= link_to 'tight_end_stat', tight_end_stat %></span>
+</div>
+<div class="content">
+  <h3><%= tight_end_stat.name %></h3>
+  <span class="text">
+    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+  </span>
+  <%= render 'shared/created_at', activity: tight_end_stat %>
+  <div class="points">
+    <span class="like-count"><%= pluralize(tight_end_stat.cached_votes_up, 'like') %></span>
+    <span class="comment-count"><%= pluralize(tight_end_stat.comments_count, 'comment') %></span>
+    <div class="pull-right">
+      <% if belongs_to_user?(tight_end_stat) %>
+        <%= form_tag tight_end_stat_path(tight_end_stat), method: :delete, remote: remote do %>
+          <% button_tag class: 'btn btn-danger btn-sm' do %>
+            <%= fa_icon 'trash' %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'shared/actions', resource: tight_end_stat %>

@@ -1,0 +1,26 @@
+<div class="info">
+  <%= render 'shared/avatar', user: defensive_back_stat.user %>
+  <h4 class="name"><%= defensive_back_stat.user.name %></h4>
+  <span class="action">created an <%= link_to 'defensive_back_stat', defensive_back_stat %></span>
+</div>
+<div class="content">
+  <h3><%= defensive_back_stat.name %></h3>
+  <span class="text">
+    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+  </span>
+  <%= render 'shared/created_at', activity: defensive_back_stat %>
+  <div class="points">
+    <span class="like-count"><%= pluralize(defensive_back_stat.cached_votes_up, 'like') %></span>
+    <span class="comment-count"><%= pluralize(defensive_back_stat.comments_count, 'comment') %></span>
+    <div class="pull-right">
+      <% if belongs_to_user?(defensive_back_stat) %>
+        <%= form_tag defensive_back_stat_path(defensive_back_stat), method: :delete, remote: remote do %>
+          <% button_tag class: 'btn btn-danger btn-sm' do %>
+            <%= fa_icon 'trash' %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'shared/actions', resource: defensive_back_stat %>

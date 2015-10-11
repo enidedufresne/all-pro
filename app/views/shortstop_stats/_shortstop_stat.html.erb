@@ -1,0 +1,26 @@
+<div class="info">
+  <%= render 'shared/avatar', user: shortstop_stat.user %>
+  <h4 class="name"><%= shortstop_stat.user.name %></h4>
+  <span class="action">created an <%= link_to 'shortstop_stat', shortstop_stat %></span>
+</div>
+<div class="content">
+  <h3><%= shortstop_stat.name %></h3>
+  <span class="text">
+    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+  </span>
+  <%= render 'shared/created_at', activity: shortstop_stat %>
+  <div class="points">
+    <span class="like-count"><%= pluralize(shortstop_stat.cached_votes_up, 'like') %></span>
+    <span class="comment-count"><%= pluralize(shortstop_stat.comments_count, 'comment') %></span>
+    <div class="pull-right">
+      <% if belongs_to_user?(shortstop_stat) %>
+        <%= form_tag shortstop_stat_path(shortstop_stat), method: :delete, remote: remote do %>
+          <% button_tag class: 'btn btn-danger btn-sm' do %>
+            <%= fa_icon 'trash' %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'shared/actions', resource: shortstop_stat %>

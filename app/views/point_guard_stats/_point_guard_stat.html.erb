@@ -1,0 +1,26 @@
+<div class="info">
+  <%= render 'shared/avatar', user: point_guard_stat.user %>
+  <h4 class="name"><%= point_guard_stat.user.name %></h4>
+  <span class="action">created an <%= link_to 'point_guard_stat', point_guard_stat %></span>
+</div>
+<div class="content">
+  <h3><%= point_guard_stat.name %></h3>
+  <span class="text">
+    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+  </span>
+  <%= render 'shared/created_at', activity: point_guard_stat %>
+  <div class="points">
+    <span class="like-count"><%= pluralize(point_guard_stat.cached_votes_up, 'like') %></span>
+    <span class="comment-count"><%= pluralize(point_guard_stat.comments_count, 'comment') %></span>
+    <div class="pull-right">
+      <% if belongs_to_user?(point_guard_stat) %>
+        <%= form_tag point_guard_stat_path(point_guard_stat), method: :delete, remote: remote do %>
+          <% button_tag class: 'btn btn-danger btn-sm' do %>
+            <%= fa_icon 'trash' %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'shared/actions', resource: point_guard_stat %>

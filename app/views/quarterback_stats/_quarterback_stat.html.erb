@@ -1,0 +1,55 @@
+<div class="info">
+  <%= render 'shared/avatar', user: quarterback_stat.user %>
+  <h4 class="name"><%= quarterback_stat.user.name %></h4>
+  <span class="action">created an <%= link_to 'quarterback_stat', quarterback_stat %></span>
+</div>
+<div class="content">
+  <h3><%= quarterback_stat.name %></h3>
+  <span class="text">
+    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+  </span>
+  <%= render 'shared/created_at', activity: quarterback_stat %>
+  <div class="points">
+    <span class="like-count"><%= pluralize(quarterback_stat.cached_votes_up, 'like') %></span>
+    <span class="comment-count"><%= pluralize(quarterback_stat.comments_count, 'comment') %></span>
+    <div class="pull-right">
+      <% if belongs_to_user?(quarterback_stat) %>
+        <%= form_tag quarterback_stat_path(quarterback_stat), method: :delete, remote: remote do %>
+          <% button_tag class: 'btn btn-danger btn-sm' do %>
+            <%= fa_icon 'trash' %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'shared/actions', resource: quarterback_stat %>
+
+
+<!-- 
+
+
+
+<div class="info">
+  <%= render 'shared/avatar', user: catcher_stat.user %>
+  <h4 class="name"><%= catcher_stat.user.name %></h4>
+  <span class="action">created an <%= link_to 'Catcher Stat', catcher_stat %></span>
+</div>
+<div class="content">
+  <h3><%= catcher_stat.wins %></h3>
+
+  <%= render 'shared/created_at', activity: catcher_stat %>
+  <div class="points">
+
+    <div class="pull-right">
+      <% if belongs_to_user?(catcher_stat) %>
+        <%= form_tag catcher_stat_path(pitcher_stat), method: :delete, remote: remote do %>
+          <% button_tag class: 'btn btn-danger btn-sm' do %>
+            <%= fa_icon 'trash' %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'shared/actions', resource: catcher_stat %> -->

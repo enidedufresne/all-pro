@@ -1,0 +1,26 @@
+<div class="info">
+  <%= render 'shared/avatar', user: center_fielder_stat.user %>
+  <h4 class="name"><%= center_fielder_stat.user.name %></h4>
+  <span class="action">created an <%= link_to 'center_fielder_stat', center_fielder_stat %></span>
+</div>
+<div class="content">
+  <h3><%= center_fielder_stat.name %></h3>
+  <span class="text">
+    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+  </span>
+  <%= render 'shared/created_at', activity: center_fielder_stat %>
+  <div class="points">
+    <span class="like-count"><%= pluralize(center_fielder_stat.cached_votes_up, 'like') %></span>
+    <span class="comment-count"><%= pluralize(center_fielder_stat.comments_count, 'comment') %></span>
+    <div class="pull-right">
+      <% if belongs_to_user?(center_fielder_stat) %>
+        <%= form_tag center_fielder_stat_path(center_fielder_stat), method: :delete, remote: remote do %>
+          <% button_tag class: 'btn btn-danger btn-sm' do %>
+            <%= fa_icon 'trash' %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'shared/actions', resource: center_fielder_stat %>

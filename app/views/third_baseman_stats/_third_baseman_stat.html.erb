@@ -1,0 +1,26 @@
+<div class="info">
+  <%= render 'shared/avatar', user: third_baseman_stat.user %>
+  <h4 class="name"><%= third_baseman_stat.user.name %></h4>
+  <span class="action">created an <%= link_to 'third_baseman_stat', third_baseman_stat %></span>
+</div>
+<div class="content">
+  <h3><%= third_baseman_stat.name %></h3>
+  <span class="text">
+    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+  </span>
+  <%= render 'shared/created_at', activity: third_baseman_stat %>
+  <div class="points">
+    <span class="like-count"><%= pluralize(third_baseman_stat.cached_votes_up, 'like') %></span>
+    <span class="comment-count"><%= pluralize(third_baseman_stat.comments_count, 'comment') %></span>
+    <div class="pull-right">
+      <% if belongs_to_user?(third_baseman_stat) %>
+        <%= form_tag third_baseman_stat_path(third_baseman_stat), method: :delete, remote: remote do %>
+          <% button_tag class: 'btn btn-danger btn-sm' do %>
+            <%= fa_icon 'trash' %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'shared/actions', resource: third_baseman_stat %>

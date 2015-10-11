@@ -1,5 +1,7 @@
-<% if user.cover.url %>
-  <div class="cover" style="background-image: url(<%= user.cover.url %>);"></div>
-<% else %>
-  <div class="cover" style="background-image: url(/assets/cover.png);"></div>
-<% end %>
+<div class="well">
+	<% if user.cover.url %>
+	  <div class="cover" style="image: url(<%= user.cover.url %>);"></div>
+	<% else %>
+	  <div class="cover" style="image: url(/assets/cover.png);"></div>
+	<% end %>
+</div>

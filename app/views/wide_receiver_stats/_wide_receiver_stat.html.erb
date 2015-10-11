@@ -1,0 +1,26 @@
+<div class="info">
+  <%= render 'shared/avatar', user: wide_reciever_stat.user %>
+  <h4 class="name"><%= wide_reciever_stat.user.name %></h4>
+  <span class="action">created an <%= link_to 'wide_reciever_stat', wide_reciever_stat %></span>
+</div>
+<div class="content">
+  <h3><%= wide_reciever_stat.name %></h3>
+  <span class="text">
+    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+  </span>
+  <%= render 'shared/created_at', activity: wide_reciever_stat %>
+  <div class="points">
+    <span class="like-count"><%= pluralize(wide_reciever_stat.cached_votes_up, 'like') %></span>
+    <span class="comment-count"><%= pluralize(wide_reciever_stat.comments_count, 'comment') %></span>
+    <div class="pull-right">
+      <% if belongs_to_user?(wide_reciever_stat) %>
+        <%= form_tag wide_reciever_stat_path(wide_reciever_stat), method: :delete, remote: remote do %>
+          <% button_tag class: 'btn btn-danger btn-sm' do %>
+            <%= fa_icon 'trash' %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'shared/actions', resource: wide_reciever_stat %>

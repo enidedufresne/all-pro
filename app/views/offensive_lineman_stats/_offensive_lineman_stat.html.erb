@@ -1,0 +1,26 @@
+<div class="info">
+  <%= render 'shared/avatar', user: offensive_lineman_stat.user %>
+  <h4 class="name"><%= offensive_lineman_stat.user.name %></h4>
+  <span class="action">created an <%= link_to 'offensive_lineman_stat', offensive_lineman_stat %></span>
+</div>
+<div class="content">
+  <h3><%= offensive_lineman_stat.name %></h3>
+  <span class="text">
+    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+  </span>
+  <%= render 'shared/created_at', activity: offensive_lineman_stat %>
+  <div class="points">
+    <span class="like-count"><%= pluralize(offensive_lineman_stat.cached_votes_up, 'like') %></span>
+    <span class="comment-count"><%= pluralize(offensive_lineman_stat.comments_count, 'comment') %></span>
+    <div class="pull-right">
+      <% if belongs_to_user?(offensive_lineman_stat) %>
+        <%= form_tag offensive_lineman_stat_path(offensive_lineman_stat), method: :delete, remote: remote do %>
+          <% button_tag class: 'btn btn-danger btn-sm' do %>
+            <%= fa_icon 'trash' %>
+          <% end %>
+        <% end %>
+      <% end %>
+    </div>
+  </div>
+</div>
+<%= render 'shared/actions', resource: offensive_lineman_stat %>
