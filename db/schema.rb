@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150920033601) do
+ActiveRecord::Schema.define(version: 20151012210133) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -56,10 +56,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "home_runs"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "cached_votes_up",   default: 0
+    t.integer  "comments_count",    default: 0
   end
 
+  add_index "catcher_stats", ["cached_votes_up"], name: "index_catcher_stats_on_cached_votes_up"
+  add_index "catcher_stats", ["comments_count"], name: "index_catcher_stats_on_comments_count"
   add_index "catcher_stats", ["position_id"], name: "index_catcher_stats_on_position_id"
   add_index "catcher_stats", ["sport_id"], name: "index_catcher_stats_on_sport_id"
   add_index "catcher_stats", ["stat_id"], name: "index_catcher_stats_on_stat_id"
@@ -91,10 +95,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "home_runs"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "cached_votes_up",   default: 0
+    t.integer  "comments_count",    default: 0
   end
 
+  add_index "center_fielder_stats", ["cached_votes_up"], name: "index_center_fielder_stats_on_cached_votes_up"
+  add_index "center_fielder_stats", ["comments_count"], name: "index_center_fielder_stats_on_comments_count"
   add_index "center_fielder_stats", ["position_id"], name: "index_center_fielder_stats_on_position_id"
   add_index "center_fielder_stats", ["sport_id"], name: "index_center_fielder_stats_on_sport_id"
   add_index "center_fielder_stats", ["stat_id"], name: "index_center_fielder_stats_on_stat_id"
@@ -127,10 +135,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "points"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "cached_votes_up",    default: 0
+    t.integer  "comments_count",     default: 0
   end
 
+  add_index "center_stats", ["cached_votes_up"], name: "index_center_stats_on_cached_votes_up"
+  add_index "center_stats", ["comments_count"], name: "index_center_stats_on_comments_count"
   add_index "center_stats", ["position_id"], name: "index_center_stats_on_position_id"
   add_index "center_stats", ["sport_id"], name: "index_center_stats_on_sport_id"
   add_index "center_stats", ["stat_id"], name: "index_center_stats_on_stat_id"
@@ -171,10 +183,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "shots_taken"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "cached_votes_up", default: 0
+    t.integer  "comments_count",  default: 0
   end
 
+  add_index "defender_stats", ["cached_votes_up"], name: "index_defender_stats_on_cached_votes_up"
+  add_index "defender_stats", ["comments_count"], name: "index_defender_stats_on_comments_count"
   add_index "defender_stats", ["position_id"], name: "index_defender_stats_on_position_id"
   add_index "defender_stats", ["sport_id"], name: "index_defender_stats_on_sport_id"
   add_index "defender_stats", ["stat_id"], name: "index_defender_stats_on_stat_id"
@@ -197,10 +213,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "interception"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "cached_votes_up", default: 0
+    t.integer  "comments_count",  default: 0
   end
 
+  add_index "defensive_back_stats", ["cached_votes_up"], name: "index_defensive_back_stats_on_cached_votes_up"
+  add_index "defensive_back_stats", ["comments_count"], name: "index_defensive_back_stats_on_comments_count"
   add_index "defensive_back_stats", ["position_id"], name: "index_defensive_back_stats_on_position_id"
   add_index "defensive_back_stats", ["sport_id"], name: "index_defensive_back_stats_on_sport_id"
   add_index "defensive_back_stats", ["stat_id"], name: "index_defensive_back_stats_on_stat_id"
@@ -223,10 +243,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "interception"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "cached_votes_up", default: 0
+    t.integer  "comments_count",  default: 0
   end
 
+  add_index "defensive_end_stats", ["cached_votes_up"], name: "index_defensive_end_stats_on_cached_votes_up"
+  add_index "defensive_end_stats", ["comments_count"], name: "index_defensive_end_stats_on_comments_count"
   add_index "defensive_end_stats", ["position_id"], name: "index_defensive_end_stats_on_position_id"
   add_index "defensive_end_stats", ["sport_id"], name: "index_defensive_end_stats_on_sport_id"
   add_index "defensive_end_stats", ["stat_id"], name: "index_defensive_end_stats_on_stat_id"
@@ -249,10 +273,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "interception"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "cached_votes_up", default: 0
+    t.integer  "comments_count",  default: 0
   end
 
+  add_index "defensive_tackle_stats", ["cached_votes_up"], name: "index_defensive_tackle_stats_on_cached_votes_up"
+  add_index "defensive_tackle_stats", ["comments_count"], name: "index_defensive_tackle_stats_on_comments_count"
   add_index "defensive_tackle_stats", ["position_id"], name: "index_defensive_tackle_stats_on_position_id"
   add_index "defensive_tackle_stats", ["sport_id"], name: "index_defensive_tackle_stats_on_sport_id"
   add_index "defensive_tackle_stats", ["stat_id"], name: "index_defensive_tackle_stats_on_stat_id"
@@ -284,10 +312,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "home_runs"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "cached_votes_up",   default: 0
+    t.integer  "comments_count",    default: 0
   end
 
+  add_index "designated_hitter_stats", ["cached_votes_up"], name: "index_designated_hitter_stats_on_cached_votes_up"
+  add_index "designated_hitter_stats", ["comments_count"], name: "index_designated_hitter_stats_on_comments_count"
   add_index "designated_hitter_stats", ["position_id"], name: "index_designated_hitter_stats_on_position_id"
   add_index "designated_hitter_stats", ["sport_id"], name: "index_designated_hitter_stats_on_sport_id"
   add_index "designated_hitter_stats", ["stat_id"], name: "index_designated_hitter_stats_on_stat_id"
@@ -333,10 +365,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "home_runs"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "cached_votes_up",   default: 0
+    t.integer  "comments_count",    default: 0
   end
 
+  add_index "first_baseman_stats", ["cached_votes_up"], name: "index_first_baseman_stats_on_cached_votes_up"
+  add_index "first_baseman_stats", ["comments_count"], name: "index_first_baseman_stats_on_comments_count"
   add_index "first_baseman_stats", ["position_id"], name: "index_first_baseman_stats_on_position_id"
   add_index "first_baseman_stats", ["sport_id"], name: "index_first_baseman_stats_on_sport_id"
   add_index "first_baseman_stats", ["stat_id"], name: "index_first_baseman_stats_on_stat_id"
@@ -374,10 +410,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "shots_taken"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "cached_votes_up", default: 0
+    t.integer  "comments_count",  default: 0
   end
 
+  add_index "forward_stats", ["cached_votes_up"], name: "index_forward_stats_on_cached_votes_up"
+  add_index "forward_stats", ["comments_count"], name: "index_forward_stats_on_comments_count"
   add_index "forward_stats", ["position_id"], name: "index_forward_stats_on_position_id"
   add_index "forward_stats", ["sport_id"], name: "index_forward_stats_on_sport_id"
   add_index "forward_stats", ["stat_id"], name: "index_forward_stats_on_stat_id"
@@ -414,10 +454,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "shots_faced"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "cached_votes_up", default: 0
+    t.integer  "comments_count",  default: 0
   end
 
+  add_index "goalkeeper_stats", ["cached_votes_up"], name: "index_goalkeeper_stats_on_cached_votes_up"
+  add_index "goalkeeper_stats", ["comments_count"], name: "index_goalkeeper_stats_on_comments_count"
   add_index "goalkeeper_stats", ["position_id"], name: "index_goalkeeper_stats_on_position_id"
   add_index "goalkeeper_stats", ["sport_id"], name: "index_goalkeeper_stats_on_sport_id"
   add_index "goalkeeper_stats", ["stat_id"], name: "index_goalkeeper_stats_on_stat_id"
@@ -440,10 +484,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "kickreturn_touchdowns"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",            null: false
-    t.datetime "updated_at",            null: false
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
+    t.integer  "cached_votes_up",       default: 0
+    t.integer  "comments_count",        default: 0
   end
 
+  add_index "kicker_returner_stats", ["cached_votes_up"], name: "index_kicker_returner_stats_on_cached_votes_up"
+  add_index "kicker_returner_stats", ["comments_count"], name: "index_kicker_returner_stats_on_comments_count"
   add_index "kicker_returner_stats", ["position_id"], name: "index_kicker_returner_stats_on_position_id"
   add_index "kicker_returner_stats", ["sport_id"], name: "index_kicker_returner_stats_on_sport_id"
   add_index "kicker_returner_stats", ["stat_id"], name: "index_kicker_returner_stats_on_stat_id"
@@ -464,10 +512,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "field_goals"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "cached_votes_up", default: 0
+    t.integer  "comments_count",  default: 0
   end
 
+  add_index "kicker_stats", ["cached_votes_up"], name: "index_kicker_stats_on_cached_votes_up"
+  add_index "kicker_stats", ["comments_count"], name: "index_kicker_stats_on_comments_count"
   add_index "kicker_stats", ["position_id"], name: "index_kicker_stats_on_position_id"
   add_index "kicker_stats", ["sport_id"], name: "index_kicker_stats_on_sport_id"
   add_index "kicker_stats", ["stat_id"], name: "index_kicker_stats_on_stat_id"
@@ -499,10 +551,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "home_runs"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "cached_votes_up",   default: 0
+    t.integer  "comments_count",    default: 0
   end
 
+  add_index "left_fielder_stats", ["cached_votes_up"], name: "index_left_fielder_stats_on_cached_votes_up"
+  add_index "left_fielder_stats", ["comments_count"], name: "index_left_fielder_stats_on_comments_count"
   add_index "left_fielder_stats", ["position_id"], name: "index_left_fielder_stats_on_position_id"
   add_index "left_fielder_stats", ["sport_id"], name: "index_left_fielder_stats_on_sport_id"
   add_index "left_fielder_stats", ["stat_id"], name: "index_left_fielder_stats_on_stat_id"
@@ -525,10 +581,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "interception"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "cached_votes_up", default: 0
+    t.integer  "comments_count",  default: 0
   end
 
+  add_index "line_backer_stats", ["cached_votes_up"], name: "index_line_backer_stats_on_cached_votes_up"
+  add_index "line_backer_stats", ["comments_count"], name: "index_line_backer_stats_on_comments_count"
   add_index "line_backer_stats", ["position_id"], name: "index_line_backer_stats_on_position_id"
   add_index "line_backer_stats", ["sport_id"], name: "index_line_backer_stats_on_sport_id"
   add_index "line_backer_stats", ["stat_id"], name: "index_line_backer_stats_on_stat_id"
@@ -553,10 +613,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "shots_taken"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "cached_votes_up", default: 0
+    t.integer  "comments_count",  default: 0
   end
 
+  add_index "midfielder_stats", ["cached_votes_up"], name: "index_midfielder_stats_on_cached_votes_up"
+  add_index "midfielder_stats", ["comments_count"], name: "index_midfielder_stats_on_comments_count"
   add_index "midfielder_stats", ["position_id"], name: "index_midfielder_stats_on_position_id"
   add_index "midfielder_stats", ["sport_id"], name: "index_midfielder_stats_on_sport_id"
   add_index "midfielder_stats", ["stat_id"], name: "index_midfielder_stats_on_stat_id"
@@ -577,10 +641,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "pancakes"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "cached_votes_up", default: 0
+    t.integer  "comments_count",  default: 0
   end
 
+  add_index "offensive_lineman_stats", ["cached_votes_up"], name: "index_offensive_lineman_stats_on_cached_votes_up"
+  add_index "offensive_lineman_stats", ["comments_count"], name: "index_offensive_lineman_stats_on_comments_count"
   add_index "offensive_lineman_stats", ["position_id"], name: "index_offensive_lineman_stats_on_position_id"
   add_index "offensive_lineman_stats", ["sport_id"], name: "index_offensive_lineman_stats_on_sport_id"
   add_index "offensive_lineman_stats", ["stat_id"], name: "index_offensive_lineman_stats_on_stat_id"
@@ -613,10 +681,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "points"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "cached_votes_up",    default: 0
+    t.integer  "comments_count",     default: 0
   end
 
+  add_index "point_guard_stats", ["cached_votes_up"], name: "index_point_guard_stats_on_cached_votes_up"
+  add_index "point_guard_stats", ["comments_count"], name: "index_point_guard_stats_on_comments_count"
   add_index "point_guard_stats", ["position_id"], name: "index_point_guard_stats_on_position_id"
   add_index "point_guard_stats", ["sport_id"], name: "index_point_guard_stats_on_sport_id"
   add_index "point_guard_stats", ["stat_id"], name: "index_point_guard_stats_on_stat_id"
@@ -678,10 +750,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "points"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "cached_votes_up",    default: 0
+    t.integer  "comments_count",     default: 0
   end
 
+  add_index "power_forward_stats", ["cached_votes_up"], name: "index_power_forward_stats_on_cached_votes_up"
+  add_index "power_forward_stats", ["comments_count"], name: "index_power_forward_stats_on_comments_count"
   add_index "power_forward_stats", ["position_id"], name: "index_power_forward_stats_on_position_id"
   add_index "power_forward_stats", ["sport_id"], name: "index_power_forward_stats_on_sport_id"
   add_index "power_forward_stats", ["stat_id"], name: "index_power_forward_stats_on_stat_id"
@@ -710,10 +786,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "interception"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "cached_votes_up",    default: 0
+    t.integer  "comments_count",     default: 0
   end
 
+  add_index "quarterback_stats", ["cached_votes_up"], name: "index_quarterback_stats_on_cached_votes_up"
+  add_index "quarterback_stats", ["comments_count"], name: "index_quarterback_stats_on_comments_count"
   add_index "quarterback_stats", ["position_id"], name: "index_quarterback_stats_on_position_id"
   add_index "quarterback_stats", ["sport_id"], name: "index_quarterback_stats_on_sport_id"
   add_index "quarterback_stats", ["stat_id"], name: "index_quarterback_stats_on_stat_id"
@@ -746,10 +826,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "walks_allowed"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "cached_votes_up",      default: 0
+    t.integer  "comments_count",       default: 0
   end
 
+  add_index "relief_pitcher_stats", ["cached_votes_up"], name: "index_relief_pitcher_stats_on_cached_votes_up"
+  add_index "relief_pitcher_stats", ["comments_count"], name: "index_relief_pitcher_stats_on_comments_count"
   add_index "relief_pitcher_stats", ["position_id"], name: "index_relief_pitcher_stats_on_position_id"
   add_index "relief_pitcher_stats", ["sport_id"], name: "index_relief_pitcher_stats_on_sport_id"
   add_index "relief_pitcher_stats", ["stat_id"], name: "index_relief_pitcher_stats_on_stat_id"
@@ -781,10 +865,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "home_runs"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "cached_votes_up",   default: 0
+    t.integer  "comments_count",    default: 0
   end
 
+  add_index "right_fielder_stats", ["cached_votes_up"], name: "index_right_fielder_stats_on_cached_votes_up"
+  add_index "right_fielder_stats", ["comments_count"], name: "index_right_fielder_stats_on_comments_count"
   add_index "right_fielder_stats", ["position_id"], name: "index_right_fielder_stats_on_position_id"
   add_index "right_fielder_stats", ["sport_id"], name: "index_right_fielder_stats_on_sport_id"
   add_index "right_fielder_stats", ["stat_id"], name: "index_right_fielder_stats_on_stat_id"
@@ -808,10 +896,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "speed"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "cached_votes_up", default: 0
+    t.integer  "comments_count",  default: 0
   end
 
+  add_index "runner_stats", ["cached_votes_up"], name: "index_runner_stats_on_cached_votes_up"
+  add_index "runner_stats", ["comments_count"], name: "index_runner_stats_on_comments_count"
   add_index "runner_stats", ["position_id"], name: "index_runner_stats_on_position_id"
   add_index "runner_stats", ["sport_id"], name: "index_runner_stats_on_sport_id"
   add_index "runner_stats", ["stat_id"], name: "index_runner_stats_on_stat_id"
@@ -838,10 +930,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "fumbles"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "cached_votes_up",      default: 0
+    t.integer  "comments_count",       default: 0
   end
 
+  add_index "running_back_stats", ["cached_votes_up"], name: "index_running_back_stats_on_cached_votes_up"
+  add_index "running_back_stats", ["comments_count"], name: "index_running_back_stats_on_comments_count"
   add_index "running_back_stats", ["position_id"], name: "index_running_back_stats_on_position_id"
   add_index "running_back_stats", ["sport_id"], name: "index_running_back_stats_on_sport_id"
   add_index "running_back_stats", ["stat_id"], name: "index_running_back_stats_on_stat_id"
@@ -873,10 +969,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "home_runs"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "cached_votes_up",   default: 0
+    t.integer  "comments_count",    default: 0
   end
 
+  add_index "second_baseman_stats", ["cached_votes_up"], name: "index_second_baseman_stats_on_cached_votes_up"
+  add_index "second_baseman_stats", ["comments_count"], name: "index_second_baseman_stats_on_comments_count"
   add_index "second_baseman_stats", ["position_id"], name: "index_second_baseman_stats_on_position_id"
   add_index "second_baseman_stats", ["sport_id"], name: "index_second_baseman_stats_on_sport_id"
   add_index "second_baseman_stats", ["stat_id"], name: "index_second_baseman_stats_on_stat_id"
@@ -909,10 +1009,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "points"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "cached_votes_up",    default: 0
+    t.integer  "comments_count",     default: 0
   end
 
+  add_index "shooting_guard_stats", ["cached_votes_up"], name: "index_shooting_guard_stats_on_cached_votes_up"
+  add_index "shooting_guard_stats", ["comments_count"], name: "index_shooting_guard_stats_on_comments_count"
   add_index "shooting_guard_stats", ["position_id"], name: "index_shooting_guard_stats_on_position_id"
   add_index "shooting_guard_stats", ["sport_id"], name: "index_shooting_guard_stats_on_sport_id"
   add_index "shooting_guard_stats", ["stat_id"], name: "index_shooting_guard_stats_on_stat_id"
@@ -944,10 +1048,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "home_runs"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "cached_votes_up",   default: 0
+    t.integer  "comments_count",    default: 0
   end
 
+  add_index "shortstop_stats", ["cached_votes_up"], name: "index_shortstop_stats_on_cached_votes_up"
+  add_index "shortstop_stats", ["comments_count"], name: "index_shortstop_stats_on_comments_count"
   add_index "shortstop_stats", ["position_id"], name: "index_shortstop_stats_on_position_id"
   add_index "shortstop_stats", ["sport_id"], name: "index_shortstop_stats_on_sport_id"
   add_index "shortstop_stats", ["stat_id"], name: "index_shortstop_stats_on_stat_id"
@@ -980,10 +1088,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "points"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
+    t.datetime "created_at",                     null: false
+    t.datetime "updated_at",                     null: false
+    t.integer  "cached_votes_up",    default: 0
+    t.integer  "comments_count",     default: 0
   end
 
+  add_index "small_forward_stats", ["cached_votes_up"], name: "index_small_forward_stats_on_cached_votes_up"
+  add_index "small_forward_stats", ["comments_count"], name: "index_small_forward_stats_on_comments_count"
   add_index "small_forward_stats", ["position_id"], name: "index_small_forward_stats_on_position_id"
   add_index "small_forward_stats", ["sport_id"], name: "index_small_forward_stats_on_sport_id"
   add_index "small_forward_stats", ["stat_id"], name: "index_small_forward_stats_on_stat_id"
@@ -1018,10 +1130,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "speed"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",    null: false
-    t.datetime "updated_at",    null: false
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.integer  "cached_votes_up", default: 0
+    t.integer  "comments_count",  default: 0
   end
 
+  add_index "sprinter_stats", ["cached_votes_up"], name: "index_sprinter_stats_on_cached_votes_up"
+  add_index "sprinter_stats", ["comments_count"], name: "index_sprinter_stats_on_comments_count"
   add_index "sprinter_stats", ["position_id"], name: "index_sprinter_stats_on_position_id"
   add_index "sprinter_stats", ["sport_id"], name: "index_sprinter_stats_on_sport_id"
   add_index "sprinter_stats", ["stat_id"], name: "index_sprinter_stats_on_stat_id"
@@ -1054,10 +1170,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "walks_allowed"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "cached_votes_up",      default: 0
+    t.integer  "comments_count",       default: 0
   end
 
+  add_index "starting_pitcher_stats", ["cached_votes_up"], name: "index_starting_pitcher_stats_on_cached_votes_up"
+  add_index "starting_pitcher_stats", ["comments_count"], name: "index_starting_pitcher_stats_on_comments_count"
   add_index "starting_pitcher_stats", ["position_id"], name: "index_starting_pitcher_stats_on_position_id"
   add_index "starting_pitcher_stats", ["sport_id"], name: "index_starting_pitcher_stats_on_sport_id"
   add_index "starting_pitcher_stats", ["stat_id"], name: "index_starting_pitcher_stats_on_stat_id"
@@ -1102,10 +1222,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "home_runs"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",        null: false
-    t.datetime "updated_at",        null: false
+    t.datetime "created_at",                    null: false
+    t.datetime "updated_at",                    null: false
+    t.integer  "cached_votes_up",   default: 0
+    t.integer  "comments_count",    default: 0
   end
 
+  add_index "third_baseman_stats", ["cached_votes_up"], name: "index_third_baseman_stats_on_cached_votes_up"
+  add_index "third_baseman_stats", ["comments_count"], name: "index_third_baseman_stats_on_comments_count"
   add_index "third_baseman_stats", ["position_id"], name: "index_third_baseman_stats_on_position_id"
   add_index "third_baseman_stats", ["sport_id"], name: "index_third_baseman_stats_on_sport_id"
   add_index "third_baseman_stats", ["stat_id"], name: "index_third_baseman_stats_on_stat_id"
@@ -1129,10 +1253,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "pancakes"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "cached_votes_up",      default: 0
+    t.integer  "comments_count",       default: 0
   end
 
+  add_index "tight_end_stats", ["cached_votes_up"], name: "index_tight_end_stats_on_cached_votes_up"
+  add_index "tight_end_stats", ["comments_count"], name: "index_tight_end_stats_on_comments_count"
   add_index "tight_end_stats", ["position_id"], name: "index_tight_end_stats_on_position_id"
   add_index "tight_end_stats", ["sport_id"], name: "index_tight_end_stats_on_sport_id"
   add_index "tight_end_stats", ["stat_id"], name: "index_tight_end_stats_on_stat_id"
@@ -1204,10 +1332,14 @@ ActiveRecord::Schema.define(version: 20150920033601) do
     t.integer  "fumbles"
     t.integer  "user_id"
     t.integer  "stat_id"
-    t.datetime "created_at",           null: false
-    t.datetime "updated_at",           null: false
+    t.datetime "created_at",                       null: false
+    t.datetime "updated_at",                       null: false
+    t.integer  "cached_votes_up",      default: 0
+    t.integer  "comments_count",       default: 0
   end
 
+  add_index "wide_receiver_stats", ["cached_votes_up"], name: "index_wide_receiver_stats_on_cached_votes_up"
+  add_index "wide_receiver_stats", ["comments_count"], name: "index_wide_receiver_stats_on_comments_count"
   add_index "wide_receiver_stats", ["position_id"], name: "index_wide_receiver_stats_on_position_id"
   add_index "wide_receiver_stats", ["sport_id"], name: "index_wide_receiver_stats_on_sport_id"
   add_index "wide_receiver_stats", ["stat_id"], name: "index_wide_receiver_stats_on_stat_id"
