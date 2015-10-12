@@ -81,6 +81,8 @@
   </span>
   <%= render 'shared/created_at', activity: starting_pitcher_stat %>
   <div class="points">
+    <span class="like-count"><%= pluralize(starting_pitcher_stat.cached_votes_up, 'like') %></span>
+    <span class="comment-count"><%= pluralize(starting_pitcher_stat.comments_count, 'comment') %></span>
 
     <div class="pull-right">
       <% if belongs_to_user?(starting_pitcher_stat) %>

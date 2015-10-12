@@ -10,6 +10,40 @@ class UsersController < ApplicationController
 
   def show
     @activities = PublicActivity::Activity.where(owner: @user).order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+
+    @catcher_stats = CatcherStat.all
+    @center_fielder_stats = CenterFielderStat.all
+    @center_stats = CenterStat.all
+    @defender_stats = DefenderStat.all
+    @defensive_back_stats = DefensiveBackStat.all
+    @defensive_end_stats = DefensiveEndStat.all
+    @defensive_tackle_stats = DefensiveTackleStat.all
+    @designated_hitter_stats = DesignatedHitterStat.all
+    @first_baseman_stats = FirstBasemanStat.all
+    @forward_stats = ForwardStat.all
+    @goalkeeper_stats = GoalkeeperStat.all
+    @kicker_stats = KickerStat.all
+    @kicker_returner_stats = KickerReturnerStat.all
+    @left_fielder_stats = LeftFielderStat.all
+    @line_backer_stats = LineBackerStat.all
+    @midfielder_stats = MidfielderStat.all
+    @offensive_lineman_stats = OffensiveLinemanStat.all
+    @point_guard_stats = PointGuardStat.all
+    @power_forward_stats = PowerForwardStat.all
+    @quarterback_stats = QuarterbackStat.all
+    @relief_pitcher_stats = ReliefPitcherStat.all
+    @right_fielder_stats = RightFielderStat.all
+    @runner_stats = RunnerStat.all
+    @running_back_stats = RunningBackStat.all
+    @second_baseman_stats = SecondBasemanStat.all
+    @shooting_guard_stats = ShootingGuardStat.all
+    @shortstop_stats = ShortstopStat.all
+    @small_forward_stats = SmallForwardStat.all
+    @sprinter_stats = SprinterStat.all
+    @starting_pitcher_stats = StartingPitcherStat.all
+    @third_baseman_stats = ThirdBasemanStat.all
+    @tight_end_stats = TightEndStat.all
+    @wide_receiver_stats = WideReceiverStat.all
   end
 
   def edit
