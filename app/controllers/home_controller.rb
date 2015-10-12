@@ -10,6 +10,7 @@ class HomeController < ApplicationController
     @post = Post.new
     @friends = @user.all_following.unshift(@user)
     @activities = PublicActivity::Activity.where(owner_id: @friends).order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+    @starting_pitcher_stats = StartingPitcherStat.all
   end
 
   def front
