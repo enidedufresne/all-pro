@@ -6,7 +6,38 @@
 <div class="content">
   <h3><%= offensive_lineman_stat.event %></h3>
   <span class="text">
-    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+
+<p>
+  <strong>Games played:</strong>
+  <%= offensive_lineman_stat.games_played %>
+</p>
+
+<p>
+  <strong>Win:</strong>
+  <%= offensive_lineman_stat.win %>
+</p>
+
+<p>
+  <strong>Loss:</strong>
+  <%= offensive_lineman_stat.loss %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= offensive_lineman_stat.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= offensive_lineman_stat.losses %>
+</p>
+
+<p>
+  <strong>Pancakes:</strong>
+  <%= offensive_lineman_stat.pancakes %>
+</p>
+
+
   </span>
   <%= render 'shared/created_at', activity: offensive_lineman_stat %>
   <div class="points">

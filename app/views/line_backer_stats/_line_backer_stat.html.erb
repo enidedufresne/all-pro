@@ -6,7 +6,49 @@
 <div class="content">
   <h3><%= line_backer_stat.event %></h3>
   <span class="text">
-    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+   
+<p>
+  <strong>Win:</strong>
+  <%= line_backer_stat.win %>
+</p>
+
+<p>
+  <strong>Loss:</strong>
+  <%= line_backer_stat.loss %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= line_backer_stat.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= line_backer_stat.losses %>
+</p>
+
+<p>
+  <strong>Tackles:</strong>
+  <%= line_backer_stat.tackles %>
+</p>
+
+<p>
+  <strong>Sacks:</strong>
+  <%= line_backer_stat.sacks %>
+</p>
+
+<p>
+  <strong>Fumbles:</strong>
+  <%= line_backer_stat.fumbles %>
+</p>
+
+<p>
+  <strong>Interception:</strong>
+  <%= line_backer_stat.interception %>
+</p>
+
+
+   
   </span>
   <%= render 'shared/created_at', activity: line_backer_stat %>
   <div class="points">

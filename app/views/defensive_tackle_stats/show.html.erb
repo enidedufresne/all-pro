@@ -1,14 +1,14 @@
-<div id="event-<%= @defensive_tackle_stat.id %>" class="event">
+<div id="event-<%= defensive_back_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @defensive_tackle_stat, remote: false %>
+      <%= render defensive_back_stat, remote: false %>
     </div>
   </div>
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
       <h4>Comments</h4>
       <hr>
-      <%= render 'comments/form', commentable: @defensive_tackle_stat %>
+      <%= render 'comments/form', commentable: defensive_back_stat %>
       <br>
       <div class="comments">
         <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
@@ -23,93 +23,93 @@
 
 <p>
   <strong>Position name:</strong>
-  <%= @defensive_tackle_stat.position_name %>
+  <%= defensive_back_stat.position_name %>
 </p>
 
 <p>
   <strong>Shorthand:</strong>
-  <%= @defensive_tackle_stat.shorthand %>
+  <%= defensive_back_stat.shorthand %>
 </p>
 
 <p>
   <strong>Sport:</strong>
-  <%= @defensive_tackle_stat.sport_id %>
+  <%= defensive_back_stat.sport_id %>
 </p>
 
 <p>
   <strong>Position:</strong>
-  <%= @defensive_tackle_stat.position_id %>
+  <%= defensive_back_stat.position_id %>
 </p>
 
 <p>
   <strong>Sport name:</strong>
-  <%= @defensive_tackle_stat.sport_name %>
+  <%= defensive_back_stat.sport_name %>
 </p>
 
 <p>
   <strong>Event:</strong>
-  <%= @defensive_tackle_stat.event %>
+  <%= defensive_back_stat.event %>
 </p>
 
 <p>
   <strong>Win:</strong>
-  <%= @defensive_tackle_stat.win %>
+  <%= defensive_back_stat.win %>
 </p>
 
 <p>
   <strong>Loss:</strong>
-  <%= @defensive_tackle_stat.loss %>
+  <%= defensive_back_stat.loss %>
 </p>
 
 <p>
   <strong>Wins:</strong>
-  <%= @defensive_tackle_stat.wins %>
+  <%= defensive_back_stat.wins %>
 </p>
 
 <p>
   <strong>Losses:</strong>
-  <%= @defensive_tackle_stat.losses %>
+  <%= defensive_back_stat.losses %>
 </p>
 
 <p>
   <strong>Tackles:</strong>
-  <%= @defensive_tackle_stat.tackles %>
+  <%= defensive_back_stat.tackles %>
 </p>
 
 <p>
   <strong>Sacks:</strong>
-  <%= @defensive_tackle_stat.sacks %>
+  <%= defensive_back_stat.sacks %>
 </p>
 
 <p>
   <strong>Fumbles:</strong>
-  <%= @defensive_tackle_stat.fumbles %>
+  <%= defensive_back_stat.fumbles %>
 </p>
 
 <p>
   <strong>Interception:</strong>
-  <%= @defensive_tackle_stat.interception %>
+  <%= defensive_back_stat.interception %>
 </p>
 
 <p>
   <strong>User:</strong>
-  <%= @defensive_tackle_stat.user %>
+  <%= defensive_back_stat.user %>
 </p>
 
 <p>
   <strong>Stat:</strong>
-  <%= @defensive_tackle_stat.stat %>
+  <%= defensive_back_stat.stat %>
 </p>
 
 <p>
   <strong>Sport:</strong>
-  <%= @defensive_tackle_stat.sport %>
+  <%= defensive_back_stat.sport %>
 </p>
 
 <p>
   <strong>Position:</strong>
-  <%= @defensive_tackle_stat.position %>
+  <%= defensive_back_stat.position %>
 </p>
 
-<%= link_to 'Edit', edit_defensive_tackle_stat_path(@defensive_tackle_stat) %> |
+<%= link_to 'Edit', edit_defensive_tackle_stat_path(defensive_back_stat) %> |
 <%= link_to 'Back', defensive_tackle_stats_path %>

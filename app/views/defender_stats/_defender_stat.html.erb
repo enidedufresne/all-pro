@@ -6,7 +6,59 @@
 <div class="content">
   <h3><%= defender_stat.event %></h3>
   <span class="text">
-    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+
+<p>
+  <strong>Games played:</strong>
+  <%= defender_stat.games_played %>
+</p>
+
+<p>
+  <strong>Win:</strong>
+  <%= defender_stat.win %>
+</p>
+
+<p>
+  <strong>Loss:</strong>
+  <%= defender_stat.loss %>
+</p>
+
+<p>
+  <strong>Draw:</strong>
+  <%= defender_stat.draw %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= defender_stat.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= defender_stat.losses %>
+</p>
+
+<p>
+  <strong>Draws:</strong>
+  <%= defender_stat.draws %>
+</p>
+
+<p>
+  <strong>Goals:</strong>
+  <%= defender_stat.goals %>
+</p>
+
+<p>
+  <strong>Assists:</strong>
+  <%= defender_stat.assists %>
+</p>
+
+<p>
+  <strong>Shots taken:</strong>
+  <%= defender_stat.shots_taken %>
+</p>
+
+
+
   </span>
   <%= render 'shared/created_at', activity: defender_stat %>
   <div class="points">

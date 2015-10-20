@@ -6,7 +6,54 @@
 <div class="content">
   <h3><%= tight_end_stat.event %></h3>
   <span class="text">
-    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+    
+
+    <p>
+  <strong>Games played:</strong>
+  <%= tight_end_stat.games_played %>
+</p>
+
+<p>
+  <strong>Win:</strong>
+  <%= tight_end_stat.win %>
+</p>
+
+<p>
+  <strong>Loss:</strong>
+  <%= tight_end_stat.loss %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= tight_end_stat.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= tight_end_stat.losses %>
+</p>
+
+<p>
+  <strong>Receptions:</strong>
+  <%= tight_end_stat.receptions %>
+</p>
+
+<p>
+  <strong>Reception yards:</strong>
+  <%= tight_end_stat.reception_yards %>
+</p>
+
+<p>
+  <strong>Reception touchdowns:</strong>
+  <%= tight_end_stat.reception_touchdowns %>
+</p>
+
+<p>
+  <strong>Pancakes:</strong>
+  <%= tight_end_stat.pancakes %>
+</p>
+
+
   </span>
   <%= render 'shared/created_at', activity: tight_end_stat %>
   <div class="points">

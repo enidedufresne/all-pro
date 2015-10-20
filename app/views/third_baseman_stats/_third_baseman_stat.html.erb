@@ -6,7 +6,93 @@
 <div class="content">
   <h3><%= third_baseman_stat.event %></h3>
   <span class="text">
-    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+    
+<p>
+  <strong>Games started:</strong>
+  <%= third_baseman_stat.games_started %>
+</p>
+
+<p>
+  <strong>Games played:</strong>
+  <%= third_baseman_stat.games_played %>
+</p>
+
+<p>
+  <strong>Win:</strong>
+  <%= third_baseman_stat.win %>
+</p>
+
+<p>
+  <strong>Loss:</strong>
+  <%= third_baseman_stat.loss %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= third_baseman_stat.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= third_baseman_stat.losses %>
+</p>
+
+<p>
+  <strong>Plate appearances:</strong>
+  <%= third_baseman_stat.plate_appearances %>
+</p>
+
+<p>
+  <strong>At bats:</strong>
+  <%= third_baseman_stat.at_bats %>
+</p>
+
+<p>
+  <strong>Hits:</strong>
+  <%= third_baseman_stat.hits %>
+</p>
+
+<p>
+  <strong>Runs scored:</strong>
+  <%= third_baseman_stat.runs_scored %>
+</p>
+
+<p>
+  <strong>Runs batted in:</strong>
+  <%= third_baseman_stat.runs_batted_in %>
+</p>
+
+<p>
+  <strong>Walks:</strong>
+  <%= third_baseman_stat.walks %>
+</p>
+
+<p>
+  <strong>Strike outs:</strong>
+  <%= third_baseman_stat.strike_outs %>
+</p>
+
+<p>
+  <strong>Stolen bases:</strong>
+  <%= third_baseman_stat.stolen_bases %>
+</p>
+
+<p>
+  <strong>Doubles:</strong>
+  <%= third_baseman_stat.doubles %>
+</p>
+
+<p>
+  <strong>Triples:</strong>
+  <%= third_baseman_stat.triples %>
+</p>
+
+<p>
+  <strong>Home runs:</strong>
+  <%= third_baseman_stat.home_runs %>
+</p>
+
+    
   </span>
   <%= render 'shared/created_at', activity: third_baseman_stat %>
   <div class="points">

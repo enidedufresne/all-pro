@@ -6,7 +6,58 @@
 <div class="content">
   <h3><%= midfielder_stat.event %></h3>
   <span class="text">
-    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+
+<p>
+  <strong>Games played:</strong>
+  <%= midfielder_stat.games_played %>
+</p>
+
+<p>
+  <strong>Win:</strong>
+  <%= midfielder_stat.win %>
+</p>
+
+<p>
+  <strong>Loss:</strong>
+  <%= midfielder_stat.loss %>
+</p>
+
+<p>
+  <strong>Draw:</strong>
+  <%= midfielder_stat.draw %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= midfielder_stat.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= midfielder_stat.losses %>
+</p>
+
+<p>
+  <strong>Draws:</strong>
+  <%= midfielder_stat.draws %>
+</p>
+
+<p>
+  <strong>Goals:</strong>
+  <%= midfielder_stat.goals %>
+</p>
+
+<p>
+  <strong>Assists:</strong>
+  <%= midfielder_stat.assists %>
+</p>
+
+<p>
+  <strong>Shots taken:</strong>
+  <%= midfielder_stat.shots_taken %>
+</p>
+
+
   </span>
   <%= render 'shared/created_at', activity: midfielder_stat %>
   <div class="points">

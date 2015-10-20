@@ -6,7 +6,94 @@
 <div class="content">
   <h3><%= left_fielder_stat.event %></h3>
   <span class="text">
-    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+   
+<p>
+  <strong>Games started:</strong>
+  <%= left_fielder_stat.games_started %>
+</p>
+
+<p>
+  <strong>Games played:</strong>
+  <%= left_fielder_stat.games_played %>
+</p>
+
+<p>
+  <strong>Win:</strong>
+  <%= left_fielder_stat.win %>
+</p>
+
+<p>
+  <strong>Loss:</strong>
+  <%= left_fielder_stat.loss %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= left_fielder_stat.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= left_fielder_stat.losses %>
+</p>
+
+<p>
+  <strong>Plate appearances:</strong>
+  <%= left_fielder_stat.plate_appearances %>
+</p>
+
+<p>
+  <strong>At bats:</strong>
+  <%= left_fielder_stat.at_bats %>
+</p>
+
+<p>
+  <strong>Hits:</strong>
+  <%= left_fielder_stat.hits %>
+</p>
+
+<p>
+  <strong>Runs scored:</strong>
+  <%= left_fielder_stat.runs_scored %>
+</p>
+
+<p>
+  <strong>Runs batted in:</strong>
+  <%= left_fielder_stat.runs_batted_in %>
+</p>
+
+<p>
+  <strong>Walks:</strong>
+  <%= left_fielder_stat.walks %>
+</p>
+
+<p>
+  <strong>Strike outs:</strong>
+  <%= left_fielder_stat.strike_outs %>
+</p>
+
+<p>
+  <strong>Stolen bases:</strong>
+  <%= left_fielder_stat.stolen_bases %>
+</p>
+
+<p>
+  <strong>Doubles:</strong>
+  <%= left_fielder_stat.doubles %>
+</p>
+
+<p>
+  <strong>Triples:</strong>
+  <%= left_fielder_stat.triples %>
+</p>
+
+<p>
+  <strong>Home runs:</strong>
+  <%= left_fielder_stat.home_runs %>
+</p>
+
+
+   
   </span>
   <%= render 'shared/created_at', activity: left_fielder_stat %>
   <div class="points">

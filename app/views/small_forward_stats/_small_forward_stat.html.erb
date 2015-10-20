@@ -6,7 +6,100 @@
 <div class="content">
   <h3><%= small_forward_stat.event %></h3>
   <span class="text">
-    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+    
+<p>
+  <strong>Games started:</strong>
+  <%= small_forward_stat.games_started %>
+</p>
+
+<p>
+  <strong>Games played:</strong>
+  <%= small_forward_stat.games_played %>
+</p>
+
+<p>
+  <strong>Win:</strong>
+  <%= small_forward_stat.win %>
+</p>
+
+<p>
+  <strong>Loss:</strong>
+  <%= small_forward_stat.loss %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= small_forward_stat.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= small_forward_stat.losses %>
+</p>
+
+<p>
+  <strong>Minutes played:</strong>
+  <%= small_forward_stat.minutes_played %>
+</p>
+
+<p>
+  <strong>Fieldgoals made:</strong>
+  <%= small_forward_stat.fieldgoals_made %>
+</p>
+
+<p>
+  <strong>Fieldgoal attemps:</strong>
+  <%= small_forward_stat.fieldgoal_attemps %>
+</p>
+
+<p>
+  <strong>Threepoints made:</strong>
+  <%= small_forward_stat.threepoints_made %>
+</p>
+
+<p>
+  <strong>Threepoint attemps:</strong>
+  <%= small_forward_stat.threepoint_attemps %>
+</p>
+
+<p>
+  <strong>Freethrows made:</strong>
+  <%= small_forward_stat.freethrows_made %>
+</p>
+
+<p>
+  <strong>Freethrow attemps:</strong>
+  <%= small_forward_stat.freethrow_attemps %>
+</p>
+
+<p>
+  <strong>Rebounds:</strong>
+  <%= small_forward_stat.rebounds %>
+</p>
+
+<p>
+  <strong>Assists:</strong>
+  <%= small_forward_stat.assists %>
+</p>
+
+<p>
+  <strong>Steals:</strong>
+  <%= small_forward_stat.steals %>
+</p>
+
+<p>
+  <strong>Blocks:</strong>
+  <%= small_forward_stat.blocks %>
+</p>
+
+<p>
+  <strong>Points:</strong>
+  <%= small_forward_stat.points %>
+</p>
+
+
+
+
   </span>
   <%= render 'shared/created_at', activity: small_forward_stat %>
   <div class="points">

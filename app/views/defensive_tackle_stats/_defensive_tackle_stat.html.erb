@@ -6,7 +6,48 @@
 <div class="content">
   <h3><%= defensive_tackle_stat.event %></h3>
   <span class="text">
-    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+    
+<p>
+  <strong>Win:</strong>
+  <%= @defensive_tackle_stat.win %>
+</p>
+
+<p>
+  <strong>Loss:</strong>
+  <%= @defensive_tackle_stat.loss %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= @defensive_tackle_stat.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= @defensive_tackle_stat.losses %>
+</p>
+
+<p>
+  <strong>Tackles:</strong>
+  <%= @defensive_tackle_stat.tackles %>
+</p>
+
+<p>
+  <strong>Sacks:</strong>
+  <%= @defensive_tackle_stat.sacks %>
+</p>
+
+<p>
+  <strong>Fumbles:</strong>
+  <%= @defensive_tackle_stat.fumbles %>
+</p>
+
+<p>
+  <strong>Interception:</strong>
+  <%= @defensive_tackle_stat.interception %>
+</p>
+
+    
   </span>
   <%= render 'shared/created_at', activity: defensive_tackle_stat %>
   <div class="points">

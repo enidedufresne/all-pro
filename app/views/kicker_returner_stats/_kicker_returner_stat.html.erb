@@ -6,7 +6,48 @@
 <div class="content">
   <h3><%= kicker_returner_stat.event %></h3>
   <span class="text">
-    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+    <p>
+      
+  <strong>Games played:</strong>
+  <%= kicker_returner_stat.games_played %>
+</p>
+
+<p>
+  <strong>Win:</strong>
+  <%= kicker_returner_stat.win %>
+</p>
+
+<p>
+  <strong>Loss:</strong>
+  <%= kicker_returner_stat.loss %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= kicker_returner_stat.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= kicker_returner_stat.losses %>
+</p>
+
+<p>
+  <strong>Kickreturns:</strong>
+  <%= kicker_returner_stat.kickreturns %>
+</p>
+
+<p>
+  <strong>Kickreturn yards:</strong>
+  <%= kicker_returner_stat.kickreturn_yards %>
+</p>
+
+<p>
+  <strong>Kickreturn touchdowns:</strong>
+  <%= kicker_returner_stat.kickreturn_touchdowns %>
+</p>
+
+
   </span>
   <%= render 'shared/created_at', activity: kicker_returner_stat %>
   <div class="points">

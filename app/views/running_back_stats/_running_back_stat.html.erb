@@ -6,7 +6,68 @@
 <div class="content">
   <h3><%= running_back_stat.event %></h3>
   <span class="text">
-    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+    
+<p>
+  <strong>Games played:</strong>
+  <%= running_back_stat.games_played %>
+</p>
+
+<p>
+  <strong>Win:</strong>
+  <%= running_back_stat.win %>
+</p>
+
+<p>
+  <strong>Loss:</strong>
+  <%= running_back_stat.loss %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= running_back_stat.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= running_back_stat.losses %>
+</p>
+
+<p>
+  <strong>Rushing attempts:</strong>
+  <%= running_back_stat.rushing_attempts %>
+</p>
+
+<p>
+  <strong>Rushing yards:</strong>
+  <%= running_back_stat.rushing_yards %>
+</p>
+
+<p>
+  <strong>Rushing touchdowns:</strong>
+  <%= running_back_stat.rushing_touchdowns %>
+</p>
+
+<p>
+  <strong>Receptions:</strong>
+  <%= running_back_stat.receptions %>
+</p>
+
+<p>
+  <strong>Reception yards:</strong>
+  <%= running_back_stat.reception_yards %>
+</p>
+
+<p>
+  <strong>Reception touchdowns:</strong>
+  <%= running_back_stat.reception_touchdowns %>
+</p>
+
+<p>
+  <strong>Fumbles:</strong>
+  <%= running_back_stat.fumbles %>
+</p>
+
+    
   </span>
   <%= render 'shared/created_at', activity: running_back_stat %>
   <div class="points">

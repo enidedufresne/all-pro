@@ -6,7 +6,51 @@
 <div class="content">
   <h3><%= wide_reciever_stat.event %></h3>
   <span class="text">
-    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+   <p>
+  <strong>Games played:</strong>
+  <%= wide_receiver_stat.games_played %>
+</p>
+
+<p>
+  <strong>Win:</strong>
+  <%= wide_receiver_stat.win %>
+</p>
+
+<p>
+  <strong>Loss:</strong>
+  <%= wide_receiver_stat.loss %>
+</p>
+
+<p>
+  <strong>Wins:</strong>
+  <%= wide_receiver_stat.wins %>
+</p>
+
+<p>
+  <strong>Losses:</strong>
+  <%= wide_receiver_stat.losses %>
+</p>
+
+<p>
+  <strong>Receptions:</strong>
+  <%= wide_receiver_stat.receptions %>
+</p>
+
+<p>
+  <strong>Reception yards:</strong>
+  <%= wide_receiver_stat.reception_yards %>
+</p>
+
+<p>
+  <strong>Reception touchdowns:</strong>
+  <%= wide_receiver_stat.reception_touchdowns %>
+</p>
+
+<p>
+  <strong>Fumbles:</strong>
+  <%= wide_receiver_stat.fumbles %>
+</p>
+
   </span>
   <%= render 'shared/created_at', activity: wide_reciever_stat %>
   <div class="points">

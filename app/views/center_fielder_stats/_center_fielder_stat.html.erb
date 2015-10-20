@@ -6,7 +6,76 @@
 <div class="content">
   <h3><%= center_fielder_stat.event %></h3>
   <span class="text">
-    <!-- <%= fa_icon'calendar' %> <%= formatted_time(event.when) %> -->
+    
+    <p>
+  <strong>Win:</strong>
+  <%= center_fielder_stat.win %>
+</p>
+
+<p>
+  <strong>Loss:</strong>
+  <%= center_fielder_stat.loss %>
+</p>
+
+
+<p>
+  <strong>Plate appearances:</strong>
+  <%= center_fielder_stat.plate_appearances %>
+</p>
+
+<p>
+  <strong>At bats:</strong>
+  <%= center_fielder_stat.at_bats %>
+</p>
+
+<p>
+  <strong>Hits:</strong>
+  <%= center_fielder_stat.hits %>
+</p>
+
+<p>
+  <strong>Runs scored:</strong>
+  <%= center_fielder_stat.runs_scored %>
+</p>
+
+<p>
+  <strong>Runs batted in:</strong>
+  <%= center_fielder_stat.runs_batted_in %>
+</p>
+
+<p>
+  <strong>Walks:</strong>
+  <%= center_fielder_stat.walks %>
+</p>
+
+<p>
+  <strong>Strike outs:</strong>
+  <%= center_fielder_stat.strike_outs %>
+</p>
+
+<p>
+  <strong>Stolen bases:</strong>
+  <%= center_fielder_stat.stolen_bases %>
+</p>
+
+<p>
+  <strong>Doubles:</strong>
+  <%= center_fielder_stat.doubles %>
+</p>
+
+<p>
+  <strong>Triples:</strong>
+  <%= center_fielder_stat.triples %>
+</p>
+
+<p>
+  <strong>Home runs:</strong>
+  <%= center_fielder_stat.home_runs %>
+</p>
+
+
+
+
   </span>
   <%= render 'shared/created_at', activity: center_fielder_stat %>
   <div class="points">
