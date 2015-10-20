@@ -7,9 +7,12 @@ class UsersController < ApplicationController
   before_action :set_user
   before_action :check_ownership, only: [:edit, :update]
   respond_to :html, :js
+  # load_and_authorize_resource :starting_pitcher_stat
 
   def show
     @activities = PublicActivity::Activity.where(owner: @user).order(created_at: :desc).paginate(page: params[:page], per_page: 10)
+
+    # @starting_pitcher_stat = current_user.starting_pitcher_stat
 
     @catcher_stats = CatcherStat.all
     @center_fielder_stats = CenterFielderStat.all
