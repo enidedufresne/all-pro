@@ -11,7 +11,9 @@ class User < ActiveRecord::Base
   acts_as_follower
   acts_as_followable
 
-  ROLES = %w[athlete coach scout]
+  named_scopr :wit
+
+  named_scope :with_role, lambda { |role| {:conditions => "roles_mask & #{2**ROLES.index(role.to_s)} > 0"} }
 
   def roles=(roles)
     self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.sum
