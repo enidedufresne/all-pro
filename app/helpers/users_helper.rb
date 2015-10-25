@@ -7,6 +7,10 @@ module UsersHelper
     [['Male', 'male'], ['Female', 'female']]
   end
 
+  def options_for_roles
+    [[], ['High School Athlete', 'athlete'], ['College Athlete', 'athlete'], ['Coach', 'coach'], ['Scout', 'scout']]
+  end
+
   def age(dob)
     now = Time.now.utc.to_date
     now.year - dob.year - (dob.to_date.change(:year => now.year) > now ? 1 : 0)
