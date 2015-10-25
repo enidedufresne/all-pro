@@ -11,21 +11,13 @@ class User < ActiveRecord::Base
   acts_as_follower
   acts_as_followable
 
-  named_scopr :wit
+  ROLES = %w[coach athlete scout]
 
-  named_scope :with_role, lambda { |role| {:conditions => "roles_mask & #{2**ROLES.index(role.to_s)} > 0"} }
-
-  def roles=(roles)
-    self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.sum
+  def role_symbol
+    [role.to_sym]
   end
 
-  def roles
-    ROLES.reject { |r| ((roles_mask || 0) & 2**ROLES.index(r)).zero? }
-  end
 
-  def role_symbols
-    roles.map(&:to_sym)
-  end
 
   has_many :posts
   has_many :comments
