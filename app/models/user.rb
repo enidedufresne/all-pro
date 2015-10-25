@@ -13,7 +13,13 @@ class User < ActiveRecord::Base
 
   ROLES = %w[athlete coach scout]
 
-  serialize :roles
+  def roles=(roles)
+    self.roles_mask = (roles & ROLES).map { |r| 2**ROLES.index(r) }.sum
+  end
+
+  def roles
+    ROLES.reject { |r| ((roles_mask || 0) & 2**ROLES.index(r)).zero? }
+  end
 
   def role_symbols
     [role.to_sym]
