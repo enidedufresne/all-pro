@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151012210133) do
+ActiveRecord::Schema.define(version: 20151025203006) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -29,6 +29,32 @@ ActiveRecord::Schema.define(version: 20151012210133) do
   add_index "activities", ["owner_id", "owner_type"], name: "index_activities_on_owner_id_and_owner_type"
   add_index "activities", ["recipient_id", "recipient_type"], name: "index_activities_on_recipient_id_and_recipient_type"
   add_index "activities", ["trackable_id", "trackable_type"], name: "index_activities_on_trackable_id_and_trackable_type"
+
+  create_table "admins", force: :cascade do |t|
+    t.string   "name",                   default: "", null: false
+    t.string   "email",                  default: "", null: false
+    t.string   "encrypted_password",     default: "", null: false
+    t.string   "about"
+    t.string   "avatar"
+    t.string   "cover"
+    t.string   "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.integer  "sign_in_count",          default: 0,  null: false
+    t.datetime "current_sign_in_at"
+    t.datetime "last_sign_in_at"
+    t.string   "current_sign_in_ip"
+    t.string   "last_sign_in_ip"
+    t.string   "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.datetime "created_at",                          null: false
+    t.datetime "updated_at",                          null: false
+  end
+
+  add_index "admins", ["confirmation_token"], name: "index_admins_on_confirmation_token", unique: true
+  add_index "admins", ["email"], name: "index_admins_on_email", unique: true
+  add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
   create_table "catcher_stats", force: :cascade do |t|
     t.string   "position_name"
@@ -1266,38 +1292,8 @@ ActiveRecord::Schema.define(version: 20151012210133) do
   add_index "tight_end_stats", ["stat_id"], name: "index_tight_end_stats_on_stat_id"
   add_index "tight_end_stats", ["user_id"], name: "index_tight_end_stats_on_user_id"
 
-  create_table "users", force: :cascade do |t|
-    t.string   "name",                   limit: 255, default: "",     null: false
-    t.string   "email",                  limit: 255, default: "",     null: false
-    t.string   "encrypted_password",     limit: 255, default: "",     null: false
-    t.string   "about",                  limit: 255
-    t.string   "avatar",                 limit: 255
-    t.string   "cover",                  limit: 255
-    t.string   "reset_password_token",   limit: 255
-    t.datetime "reset_password_sent_at"
-    t.datetime "remember_created_at"
-    t.integer  "sign_in_count",                      default: 0,      null: false
-    t.datetime "current_sign_in_at"
-    t.datetime "last_sign_in_at"
-    t.string   "current_sign_in_ip",     limit: 255
-    t.string   "last_sign_in_ip",        limit: 255
-    t.string   "confirmation_token",     limit: 255
-    t.datetime "confirmed_at"
-    t.datetime "confirmation_sent_at"
-    t.datetime "created_at",                                          null: false
-    t.datetime "updated_at",                                          null: false
-    t.string   "sex",                    limit: 255, default: "male", null: false
-    t.string   "location",               limit: 255
-    t.date     "dob"
-    t.string   "phone_number",           limit: 255
-    t.integer  "posts_count",                        default: 0,      null: false
-    t.string   "slug",                   limit: 255
-  end
-
-  add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
-  add_index "users", ["email"], name: "index_users_on_email", unique: true
-  add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-  add_index "users", ["slug"], name: "index_users_on_slug", unique: true
+# Could not dump table "users" because of following NoMethodError
+#   undefined method `[]' for nil:NilClass
 
   create_table "votes", force: :cascade do |t|
     t.integer  "votable_id"
