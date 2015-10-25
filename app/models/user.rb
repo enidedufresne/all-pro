@@ -13,6 +13,8 @@ class User < ActiveRecord::Base
 
   ROLES = %w[athlete coach scout]
 
+  serialize :roles
+
   def role_symbols
     [role.to_sym]
   end
