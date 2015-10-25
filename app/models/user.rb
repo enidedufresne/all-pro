@@ -13,6 +13,10 @@ class User < ActiveRecord::Base
 
   ROLES = %w[athlete coach scout]
 
+  def role_symbols
+    [role.to_sym]
+  end
+
   has_many :posts
   has_many :comments
   has_many :events
