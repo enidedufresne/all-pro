@@ -22,7 +22,7 @@ class User < ActiveRecord::Base
   end
 
   def role_symbols
-    [role.to_sym]
+    roles.map(&:to_sym)
   end
 
   has_many :posts
