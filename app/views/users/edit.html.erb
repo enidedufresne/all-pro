@@ -42,15 +42,7 @@
           <%= f.label :sex %><br>
           <%= f.select :sex, options_for_seasons, class: 'form-control', prompt: 'Select One' %>
         </div>
-<!--         <div class="form-group">
-        <%= f.label :roles %>
-        <% for role in User::ROLES %>
-          <%= check_box_tag "user[roles][]", role, @user.roles.include?(role) %>
-          <%=h role.humanize %><br />
-          <!-- f.collection_select :role, User::ROLES, :to_s, :humanize, class: 'form-control' %> 
-        <% end %>
-        <%= hidden_field_tag "user[roles][]", "" %>
-      </div> -->
+
         <div class="actions">
           <%= submit_tag 'Update', class: 'btn btn-primary' %>
         </div>
