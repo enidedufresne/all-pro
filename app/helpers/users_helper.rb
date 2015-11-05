@@ -8,7 +8,11 @@ module UsersHelper
   end
 
   def options_for_roles
-    [[], ['High School Athlete', 'athlete'], ['College Athlete', 'athlete'], ['Coach', 'coach'], ['Scout', 'scout']]
+    [['High School Athlete', 'athlete'], ['College Athlete', 'athlete'], ['Coach', 'coach'], ['Scout', 'scout']]
+  end
+
+  def options_for_year
+    [['Freshman', 'freshman'], ['Sophomore', 'sophomore'], ['Junior', 'junior'], ['Senior', 'senior']]
   end
 
   def age(dob)

@@ -42,7 +42,48 @@
           <%= f.label :sex %><br>
           <%= f.select :sex, options_for_seasons, class: 'form-control', prompt: 'Select One' %>
         </div>
-
+        <div class="form-group">
+          <%= f.label :institution %><br>
+          <%= f.text_field :institution, placeholder: 'School or Institution Name', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :year %><br>
+          <%= f.select :year, options_for_year, class: 'form-control', prompt: 'Select One' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :coach_name %><br>
+          <%= f.text_field :coach_name, placeholder: 'Coach Name', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :title %><br>
+          <%= f.text_field :title, placeholder: 'ex. Head Coach or Athletic Trainer', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :coach_phone %><br>
+          <%= f.text_field :coach_phone, placeholder: 'Coach Phone', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :gpa %><br>
+          <%= f.text_field :gpa, placeholder: 'GPA', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :feet %><br>
+          <%= f.text_field :feet, placeholder: 'Feet', class: 'form-control' %>
+          <%= f.label :inches %><br>
+          <%= f.text_field :inches, placeholder: 'Inches', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :weight %><br>
+          <%= f.text_field :weight, placeholder: 'Weight', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :bmi %><br>
+          <%= f.text_field :bmi, placeholder: 'BMI', class: 'form-control' %>
+        </div>
+        <div class="form-group">
+          <%= f.label :bench %><br>
+          <%= f.text_field :bench, placeholder: 'Bench Press', class: 'form-control' %>
+        </div>
         <div class="actions">
           <%= submit_tag 'Update', class: 'btn btn-primary' %>
         </div>
