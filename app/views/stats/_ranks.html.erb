@@ -1,146 +1,142 @@
-<%= form_for @stat do |f| %>
-  <div class="field">
-    <%= f.label :position_id, "Pick the position you play" %><br />
-    <%= f.grouped_collection_select :position_id, Sport.order(:name), :positions, :name, :id, :position_name, include_blank: true %>
- </div>
+
+<h1>Hello World</h1>
+<div id="starting-pitchers" class="col-lg-6 well">
+<%= link_to "Starting Pitchers", starting_pitcher_stats_path %>
 </div>
 
-<div id="starting-pitcher" class="col-lg-6 well">
-<%= link_to "Starting Pitcher", starting_pitcher_stats_path %>
+<div id="relief-pitchers" class="col-lg-6 well">
+<%= link_to "Relief Pitchers", relief_pitcher_stats_path %>
 </div>
 
-<div id="relief-pitcher" class="col-lg-6 well">
-<%= link_to "Relief Pitcher", relief_pitcher_stats_path %>
+<div id="forwards" class="col-lg-6 well">
+<%= link_to "Forwards", forward_stats_path %>
 </div>
 
-<div id="forward" class="col-lg-6 well">
-<%= link_to "Forward", forward_stats_path %>
+<div id="defenders" class="col-lg-6 well">
+<%= link_to "Defenders", defender_stats_path %>
 </div>
 
-<div id="defender" class="col-lg-6 well">
-<%= link_to "Defender", defender_stats_path %>
-</div>
-
-<div id="goalkeeper" class="col-lg-6 well">
+<div id="goalkeepers" class="col-lg-6 well">
 <!-- <a href="#" class="btn btn-success">Soccer</a> -->
-<%= link_to "Goalkeeper", goalkeeper_stats_path%>
+<%= link_to "Goalkeepers", goalkeeper_stats_path%>
 </div>
 
-<div id="kicker-returner" class="col-lg-6 well">
-<%= link_to "Kick Returner", kicker_returner_stats_path %>
+<div id="kicker-returners" class="col-lg-6 well">
+<%= link_to "Kick Returners", kicker_returner_stats_path %>
 </div>
 
-<div id="kicker" class="col-lg-6 well">
-<%= link_to "Kicker", kicker_stats_path %>
+<div id="kickers" class="col-lg-6 well">
+<%= link_to "Kickers", kicker_stats_path %>
 </div>
 
-<div id="midfielder" class="col-lg-6 well">
-<%= link_to "Midfielder", midfielder_stats_path%>
+<div id="midfielders" class="col-lg-6 well">
+<%= link_to "Midfielders", midfielder_stats_path%>
 </div>
 
-<div id="wide-receiver" class="col-lg-6 well">
-<%= link_to "Wide Reciever", wide_receiver_stats_path %>
+<div id="wide-receivers" class="col-lg-6 well">
+<%= link_to "Wide Recievers", wide_receiver_stats_path %>
 </div>
 
-<div id="running-back" class="col-lg-6 well">
-<%= link_to "Running Back", running_back_stats_path %>
+<div id="running-backs" class="col-lg-6 well">
+<%= link_to "Running Backs", running_back_stats_path %>
 </div>
 
-<div id="offensive-lineman" class="col-lg-6 well">
-<%= link_to "Offensive Lineman", offensive_lineman_stats_path %>
+<div id="offensive-linemen" class="col-lg-6 well">
+<%= link_to "Offensive Linemen", offensive_lineman_stats_path %>
 </div>
 
-<div id="defensive-back" class="col-lg-6 well">
-<%= link_to "Defensive Back", defensive_back_stats_path %>
+<div id="defensive-backs" class="col-lg-6 well">
+<%= link_to "Defensive Backs", defensive_back_stats_path %>
 </div>
 
-<div id="line-backer" class="col-lg-6 well">
-<%= link_to "Line Backer", line_backer_stats_path %>
+<div id="line-backers" class="col-lg-6 well">
+<%= link_to "Line Backers", line_backer_stats_path %>
 </div>
 
-<div id="defensive-tackle" class="col-lg-6 well">
-<%= link_to "Defensive Tackle", defensive_tackle_stats_path %>
+<div id="defensive-tackles" class="col-lg-6 well">
+<%= link_to "Defensive Tackles", defensive_tackle_stats_path %>
 </div>
 
-<div id="defensive-end" class="col-lg-6 well">
-<%= link_to "Defensive End", defensive_end_stats_path %>
+<div id="defensive-ends" class="col-lg-6 well">
+<%= link_to "Defensive Ends", defensive_end_stats_path %>
 </div>
 
-<div id="center" class="col-lg-6 well">
-<%= link_to "Center", center_stats_path %>
+<div id="centers" class="col-lg-6 well">
+<%= link_to "Centers", center_stats_path %>
 </div>
 
-<div id="small-forward" class="col-lg-6 well">
-<%= link_to "Small Forward", small_forward_stats_path %>
+<div id="small-forwards" class="col-lg-6 well">
+<%= link_to "Small Forwards", small_forward_stats_path %>
 </div>
 
-<div id="shooting-guard" class="col-lg-6 well">
-<%= link_to "Shooting Guard", shooting_guard_stats_path %>
+<div id="shooting-guards" class="col-lg-6 well">
+<%= link_to "Shooting Guards", shooting_guard_stats_path %>
 </div>
 
-<div id="point-guard" class="col-lg-6 well">
+<div id="point-guards" class="col-lg-6 well">
 <!-- <a href="#" class="btn btn-success">Basketball</a> -->
-<%= link_to "Point Guard", point_guard_stats_path%>
+<%= link_to "Point Guards", point_guard_stats_path%>
 </div>
 
-<div id="power-forward" class="col-lg-6 well">
+<div id="power-forwards" class="col-lg-6 well">
 <%= link_to "Power Forward", power_forward_stats_path%>
 </div>
 
-<div id="designated-hitter" class="col-lg-6 well">
-<%= link_to "Designated Hitter", designated_hitter_stats_path %>
+<div id="designated-hitters" class="col-lg-6 well">
+<%= link_to "Designated Hitters", designated_hitter_stats_path %>
 </div>
 
-<div id="right-fielder" class="col-lg-6 well">
-<%= link_to "Right Fielder", right_fielder_stats_path %>
+<div id="right-fielders" class="col-lg-6 well">
+<%= link_to "Right Fielders", right_fielder_stats_path %>
 </div>
 
-<div id="center-fielder" class="col-lg-6 well">
-<%= link_to "Center Fielder", center_fielder_stats_path %>
+<div id="center-fielders" class="col-lg-6 well">
+<%= link_to "Center Fielders", center_fielder_stats_path %>
 </div>
 
-<div id="left-fielder" class="col-lg-6 well">
-<%= link_to "Left Fielder", left_fielder_stats_path %>
+<div id="left-fielders" class="col-lg-6 well">
+<%= link_to "Left Fielders", left_fielder_stats_path %>
 </div>
 
-<div id="shortstop" class="col-lg-6 well">
-<%= link_to "Shortstop", shortstop_stats_path %>
+<div id="shortstops" class="col-lg-6 well">
+<%= link_to "Shortstops", shortstop_stats_path %>
 </div>
 
-<div id="third-baseman" class="col-lg-6 well">
-<%= link_to "Third Baseman", third_baseman_stats_path %>
+<div id="third-basemans" class="col-lg-6 well">
+<%= link_to "Third Basemen", third_baseman_stats_path %>
 </div>
 
-<div id="second-baseman" class="col-lg-6 well">
-<%= link_to "Second Baseman", second_baseman_stats_path %>
+<div id="second-basemans" class="col-lg-6 well">
+<%= link_to "Second Basemen", second_baseman_stats_path %>
 </div>
 
-<div id="first-baseman" class="col-lg-6 well">
-<%= link_to "First Baseman", first_baseman_stats_path %>
+<div id="first-basemans" class="col-lg-6 well">
+<%= link_to "First Basemen", first_baseman_stats_path %>
 </div>
 
-<div id="catcher" class="col-lg-6 well">
+<div id="catchers" class="col-lg-6 well">
 <!-- <a href="#" class="btn btn-success">Baseball</a> -->
-<%= link_to "Catcher", catcher_stats_path%>
+<%= link_to "Catchers", catcher_stats_path%>
 </div>
 
-<div id="runner" class="col-lg-6 well">
+<div id="runners" class="col-lg-6 well">
 <!-- <a href="#" class="btn btn-success">Cross Country</a> -->
-<%= link_to "Runner", runner_stats_path%>
+<%= link_to "Runners", runner_stats_path%>
 </div>
 
-<div id="quarterback" class="col-lg-6 well">
+<div id="quarterbacks" class="col-lg-6 well">
 <!-- <a href="#" class="btn btn-success">Football</a> -->
-<%= link_to "Quarterback", quarterback_stats_path%>
+<%= link_to "Quarterbacks", quarterback_stats_path%>
 </div>
 
-<div id="tight-end" class="col-lg-6 well">
-<%= link_to "Tight End", tight_end_stats_path%>
+<div id="tight-ends" class="col-lg-6 well">
+<%= link_to "Tight Ends", tight_end_stats_path%>
 </div>
 
-<div id="sprinter" class="col-lg-6 well">
+<div id="sprinters" class="col-lg-6 well">
 <!-- <a href="#" class="btn btn-success">Track and Field</a> -->
-<%= link_to "Sprinter", sprinter_stats_path%>
+<%= link_to "Sprinters", sprinter_stats_path%>
 </div>
-<% end %>
+
+
 
