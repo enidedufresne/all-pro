@@ -73,8 +73,7 @@ class UsersController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:name, :about, :avatar, :cover,
-                                 :sex, :dob, :location, :phone_number)
+    params.require(:user).permit(:name, :about, :avatar, :cover, :sex, :dob, :location, :phone_number, :institution, :year, :coach_name, :title, :coach_phone, :gpa, :feet, :inches, :weight, :bmi, :bench)
   end
 
   def check_ownership
