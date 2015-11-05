@@ -3,7 +3,7 @@
     <%= fa_icon 'newspaper-o' %>
     <%= link_to 'NewsFeed', root_path %>
   </h5>
-  <% if can? :manage, Stat %>
+  <% if can? :create, Stat %>
     <h5>
         <%= fa_icon 'futbol-o' %>
         <%= link_to 'Add Stats', new_stat_path %>

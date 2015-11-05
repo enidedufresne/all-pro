@@ -2,7 +2,7 @@ class StatsController < ApplicationController
   before_action :set_user
   before_action :authenticate_user!
   before_action :set_stat, only: [:show, :edit, :update, :destroy]
-  # load_and_authorize_resource
+  load_and_authorize_resource
 
   # # GET /stats
   # def index
@@ -15,7 +15,7 @@ class StatsController < ApplicationController
 
   # GET /stats/new
   def new
-    @stat = Stat.new
+    # @stat = Stat.new
   end
 
   # # GET /stats/1/edit

@@ -5,7 +5,7 @@ class Ability
     user ||= User.new # guest user (not logged in)
 
     if user.is? :athlete
-        can :manage, Stat
+        can :create, Stat
     end
 
     # Define abilities for the passed in user here. For example:
