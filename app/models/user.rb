@@ -13,8 +13,12 @@ class User < ActiveRecord::Base
 
   ROLES = %w[coach athlete scout]
 
-  def role_symbol
-    [role.to_sym]
+  # def role_symbol
+  #   [role.to_sym]
+  # end
+
+  def is?( requested_role )
+    self.role == requested_role.to_s
   end
 
 
