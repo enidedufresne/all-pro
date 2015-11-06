@@ -52,7 +52,7 @@
         <td><%= running_back_stat.reception_yards %></td>
         <td><%= running_back_stat.reception_touchdowns %></td>
         <td><%= running_back_stat.fumbles %></td>
-        <td><%= running_back_stat.user %></td>
+        <td><%= running_back_stat.user.try(:name) %></td>
         <td><%= running_back_stat.stat %></td>
         <td><%= running_back_stat.sport %></td>
         <td><%= running_back_stat.position %></td>

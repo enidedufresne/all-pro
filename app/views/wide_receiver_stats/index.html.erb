@@ -46,7 +46,7 @@
         <td><%= wide_receiver_stat.reception_yards %></td>
         <td><%= wide_receiver_stat.reception_touchdowns %></td>
         <td><%= wide_receiver_stat.fumbles %></td>
-        <td><%= wide_receiver_stat.user %></td>
+        <td><%= wide_receiver_stat.user.try(:name) %></td>
         <td><%= wide_receiver_stat.stat %></td>
         <td><%= wide_receiver_stat.sport %></td>
         <td><%= wide_receiver_stat.position %></td>

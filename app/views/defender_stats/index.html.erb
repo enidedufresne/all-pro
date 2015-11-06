@@ -48,7 +48,7 @@
         <td><%= defender_stat.goals %></td>
         <td><%= defender_stat.assists %></td>
         <td><%= defender_stat.shots_taken %></td>
-        <td><%= defender_stat.user %></td>
+        <td><%= defender_stat.user.try(:name) %></td>
         <td><%= defender_stat.stat %></td>
         <td><%= defender_stat.sport %></td>
         <td><%= defender_stat.position %></td>

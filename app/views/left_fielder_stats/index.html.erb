@@ -62,7 +62,7 @@
         <td><%= left_fielder_stat.doubles %></td>
         <td><%= left_fielder_stat.triples %></td>
         <td><%= left_fielder_stat.home_runs %></td>
-        <td><%= left_fielder_stat.user %></td>
+        <td><%= left_fielder_stat.user.try(:name) %></td>
         <td><%= left_fielder_stat.stat %></td>
         <td><%= left_fielder_stat.sport %></td>
         <td><%= left_fielder_stat.position %></td>

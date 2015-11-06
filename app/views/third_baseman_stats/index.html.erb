@@ -62,7 +62,7 @@
         <td><%= third_baseman_stat.doubles %></td>
         <td><%= third_baseman_stat.triples %></td>
         <td><%= third_baseman_stat.home_runs %></td>
-        <td><%= third_baseman_stat.user %></td>
+        <td><%= third_baseman_stat.user.try(:name) %></td>
         <td><%= third_baseman_stat.stat %></td>
         <td><%= third_baseman_stat.sport %></td>
         <td><%= third_baseman_stat.position %></td>

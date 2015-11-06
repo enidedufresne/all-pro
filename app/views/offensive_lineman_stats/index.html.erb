@@ -40,7 +40,7 @@
         <td><%= offensive_lineman_stat.wins %></td>
         <td><%= offensive_lineman_stat.losses %></td>
         <td><%= offensive_lineman_stat.pancakes %></td>
-        <td><%= offensive_lineman_stat.user %></td>
+        <td><%= offensive_lineman_stat.user.try(:name) %></td>
         <td><%= offensive_lineman_stat.stat %></td>
         <td><%= offensive_lineman_stat.sport %></td>
         <td><%= offensive_lineman_stat.position %></td>

@@ -44,7 +44,7 @@
         <td><%= line_backer_stat.sacks %></td>
         <td><%= line_backer_stat.fumbles %></td>
         <td><%= line_backer_stat.interception %></td>
-        <td><%= line_backer_stat.user %></td>
+        <td><%= line_backer_stat.user.try(:name) %></td>
         <td><%= line_backer_stat.stat %></td>
         <td><%= line_backer_stat.sport %></td>
         <td><%= line_backer_stat.position %></td>

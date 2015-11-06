@@ -46,7 +46,7 @@
         <td><%= runner_stat.distance_time %></td>
         <td><%= runner_stat.placed %></td>
         <td><%= runner_stat.speed %></td>
-        <td><%= runner_stat.user %></td>
+        <td><%= runner_stat.user.try(:name) %></td>
         <td><%= runner_stat.stat %></td>
         <td><%= runner_stat.sport %></td>
         <td><%= runner_stat.position %></td>

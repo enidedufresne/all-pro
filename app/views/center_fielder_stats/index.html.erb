@@ -62,7 +62,7 @@
         <td><%= center_fielder_stat.doubles %></td>
         <td><%= center_fielder_stat.triples %></td>
         <td><%= center_fielder_stat.home_runs %></td>
-        <td><%= center_fielder_stat.user %></td>
+        <td><%= center_fielder_stat.user.try(:name) %></td>
         <td><%= center_fielder_stat.stat %></td>
         <td><%= center_fielder_stat.sport %></td>
         <td><%= center_fielder_stat.position %></td>

@@ -64,7 +64,7 @@
         <td><%= relief_pitcher_stat.runs_allowed %></td>
         <td><%= relief_pitcher_stat.strikeouts %></td>
         <td><%= relief_pitcher_stat.walks_allowed %></td>
-        <td><%= relief_pitcher_stat.user %></td>
+        <td><%= relief_pitcher_stat.user.try(:name) %></td>
         <td><%= relief_pitcher_stat.stat %></td>
         <td><%= relief_pitcher_stat.sport %></td>
         <td><%= relief_pitcher_stat.position %></td>

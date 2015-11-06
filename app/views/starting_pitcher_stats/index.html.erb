@@ -7,11 +7,6 @@
 <table>
   <thead>
     <tr>
-      <th>Position name</th>
-      <th>Shorthand</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th>Sport name</th>
       <th>Event</th>
       <th>Games started</th>
       <th>Games played</th>
@@ -35,7 +30,6 @@
       <th>Stat</th>
       <th>Sport</th>
       <th>Position</th>
-      <th colspan="3"></th>
     </tr>
   </thead>
 
@@ -66,7 +60,7 @@
         <td><%= starting_pitcher_stat.runs_allowed %></td>
         <td><%= starting_pitcher_stat.strikeouts %></td>
         <td><%= starting_pitcher_stat.walks_allowed %></td>
-        <td><%= starting_pitcher_stat.user %></td>
+        <td><%= starting_pitcher_stat.user.try(:name).try(:name) %></td>
         <td><%= starting_pitcher_stat.stat %></td>
         <td><%= starting_pitcher_stat.sport %></td>
         <td><%= starting_pitcher_stat.position %></td>

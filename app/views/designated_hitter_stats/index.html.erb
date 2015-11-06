@@ -62,7 +62,7 @@
         <td><%= designated_hitter_stat.doubles %></td>
         <td><%= designated_hitter_stat.triples %></td>
         <td><%= designated_hitter_stat.home_runs %></td>
-        <td><%= designated_hitter_stat.user %></td>
+        <td><%= designated_hitter_stat.user.try(:name) %></td>
         <td><%= designated_hitter_stat.stat %></td>
         <td><%= designated_hitter_stat.sport %></td>
         <td><%= designated_hitter_stat.position %></td>

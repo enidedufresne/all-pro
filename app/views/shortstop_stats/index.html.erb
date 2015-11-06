@@ -62,7 +62,7 @@
         <td><%= shortstop_stat.doubles %></td>
         <td><%= shortstop_stat.triples %></td>
         <td><%= shortstop_stat.home_runs %></td>
-        <td><%= shortstop_stat.user %></td>
+        <td><%= shortstop_stat.user.try(:name) %></td>
         <td><%= shortstop_stat.stat %></td>
         <td><%= shortstop_stat.sport %></td>
         <td><%= shortstop_stat.position %></td>

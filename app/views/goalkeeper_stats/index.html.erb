@@ -46,7 +46,7 @@
         <td><%= goalkeeper_stat.draws %></td>
         <td><%= goalkeeper_stat.saves %></td>
         <td><%= goalkeeper_stat.shots_faced %></td>
-        <td><%= goalkeeper_stat.user %></td>
+        <td><%= goalkeeper_stat.user.try(:name) %></td>
         <td><%= goalkeeper_stat.stat %></td>
         <td><%= goalkeeper_stat.sport %></td>
         <td><%= goalkeeper_stat.position %></td>

@@ -44,7 +44,7 @@
         <td><%= kicker_returner_stat.kickreturns %></td>
         <td><%= kicker_returner_stat.kickreturn_yards %></td>
         <td><%= kicker_returner_stat.kickreturn_touchdowns %></td>
-        <td><%= kicker_returner_stat.user %></td>
+        <td><%= kicker_returner_stat.user.try(:name) %></td>
         <td><%= kicker_returner_stat.stat %></td>
         <td><%= kicker_returner_stat.sport %></td>
         <td><%= kicker_returner_stat.position %></td>

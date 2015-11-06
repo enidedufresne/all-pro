@@ -62,7 +62,7 @@
         <td><%= catcher_stat.doubles %></td>
         <td><%= catcher_stat.triples %></td>
         <td><%= catcher_stat.home_runs %></td>
-        <td><%= catcher_stat.user %></td>
+        <td><%= catcher_stat.user.try(:name) %></td>
         <td><%= catcher_stat.stat %></td>
         <td><%= catcher_stat.sport %></td>
         <td><%= catcher_stat.position %></td>

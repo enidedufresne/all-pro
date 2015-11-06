@@ -44,7 +44,7 @@
         <td><%= defensive_back_stat.sacks %></td>
         <td><%= defensive_back_stat.fumbles %></td>
         <td><%= defensive_back_stat.interception %></td>
-        <td><%= defensive_back_stat.user %></td>
+        <td><%= defensive_back_stat.user.try(:name) %></td>
         <td><%= defensive_back_stat.stat %></td>
         <td><%= defensive_back_stat.sport %></td>
         <td><%= defensive_back_stat.position %></td>

@@ -64,7 +64,7 @@
         <td><%= point_guard_stat.steals %></td>
         <td><%= point_guard_stat.blocks %></td>
         <td><%= point_guard_stat.points %></td>
-        <td><%= point_guard_stat.user %></td>
+        <td><%= point_guard_stat.user.try(:name) %></td>
         <td><%= point_guard_stat.stat %></td>
         <td><%= point_guard_stat.sport %></td>
         <td><%= point_guard_stat.position %></td>

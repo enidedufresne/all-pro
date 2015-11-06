@@ -56,7 +56,7 @@
         <td><%= quarterback_stat.rushing_touchdowns %></td>
         <td><%= quarterback_stat.fumbles %></td>
         <td><%= quarterback_stat.interception %></td>
-        <td><%= quarterback_stat.user %></td>
+        <td><%= quarterback_stat.user.try(:name) %></td>
         <td><%= quarterback_stat.stat %></td>
         <td><%= quarterback_stat.sport %></td>
         <td><%= quarterback_stat.position %></td>

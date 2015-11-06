@@ -48,7 +48,7 @@
         <td><%= midfielder_stat.goals %></td>
         <td><%= midfielder_stat.assists %></td>
         <td><%= midfielder_stat.shots_taken %></td>
-        <td><%= midfielder_stat.user %></td>
+        <td><%= midfielder_stat.user.try(:name) %></td>
         <td><%= midfielder_stat.stat %></td>
         <td><%= midfielder_stat.sport %></td>
         <td><%= midfielder_stat.position %></td>

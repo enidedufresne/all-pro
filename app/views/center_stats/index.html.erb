@@ -64,7 +64,7 @@
         <td><%= center_stat.steals %></td>
         <td><%= center_stat.blocks %></td>
         <td><%= center_stat.points %></td>
-        <td><%= center_stat.user %></td>
+        <td><%= center_stat.user.try(:name) %></td>
         <td><%= center_stat.stat %></td>
         <td><%= center_stat.sport %></td>
         <td><%= center_stat.position %></td>

@@ -48,7 +48,7 @@
         <td><%= forward_stat.goals %></td>
         <td><%= forward_stat.assists %></td>
         <td><%= forward_stat.shots_taken %></td>
-        <td><%= forward_stat.user %></td>
+        <td><%= forward_stat.user.try(:name) %></td>
         <td><%= forward_stat.stat %></td>
         <td><%= forward_stat.sport %></td>
         <td><%= forward_stat.position %></td>
