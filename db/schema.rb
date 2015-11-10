@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151105200101) do
+ActiveRecord::Schema.define(version: 20151110221424) do
 
   create_table "activities", force: :cascade do |t|
     t.integer  "trackable_id"
@@ -86,6 +86,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                    null: false
     t.integer  "cached_votes_up",   default: 0
     t.integer  "comments_count",    default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "catcher_stats", ["cached_votes_up"], name: "index_catcher_stats_on_cached_votes_up"
@@ -125,6 +127,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                    null: false
     t.integer  "cached_votes_up",   default: 0
     t.integer  "comments_count",    default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "center_fielder_stats", ["cached_votes_up"], name: "index_center_fielder_stats_on_cached_votes_up"
@@ -165,6 +169,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                     null: false
     t.integer  "cached_votes_up",    default: 0
     t.integer  "comments_count",     default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "center_stats", ["cached_votes_up"], name: "index_center_stats_on_cached_votes_up"
@@ -213,6 +219,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                  null: false
     t.integer  "cached_votes_up", default: 0
     t.integer  "comments_count",  default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "defender_stats", ["cached_votes_up"], name: "index_defender_stats_on_cached_votes_up"
@@ -243,6 +251,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                  null: false
     t.integer  "cached_votes_up", default: 0
     t.integer  "comments_count",  default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "defensive_back_stats", ["cached_votes_up"], name: "index_defensive_back_stats_on_cached_votes_up"
@@ -273,6 +283,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                  null: false
     t.integer  "cached_votes_up", default: 0
     t.integer  "comments_count",  default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "defensive_end_stats", ["cached_votes_up"], name: "index_defensive_end_stats_on_cached_votes_up"
@@ -303,6 +315,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                  null: false
     t.integer  "cached_votes_up", default: 0
     t.integer  "comments_count",  default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "defensive_tackle_stats", ["cached_votes_up"], name: "index_defensive_tackle_stats_on_cached_votes_up"
@@ -342,6 +356,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                    null: false
     t.integer  "cached_votes_up",   default: 0
     t.integer  "comments_count",    default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "designated_hitter_stats", ["cached_votes_up"], name: "index_designated_hitter_stats_on_cached_votes_up"
@@ -395,6 +411,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                    null: false
     t.integer  "cached_votes_up",   default: 0
     t.integer  "comments_count",    default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "first_baseman_stats", ["cached_votes_up"], name: "index_first_baseman_stats_on_cached_votes_up"
@@ -440,6 +458,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                  null: false
     t.integer  "cached_votes_up", default: 0
     t.integer  "comments_count",  default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "forward_stats", ["cached_votes_up"], name: "index_forward_stats_on_cached_votes_up"
@@ -484,6 +504,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                  null: false
     t.integer  "cached_votes_up", default: 0
     t.integer  "comments_count",  default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "goalkeeper_stats", ["cached_votes_up"], name: "index_goalkeeper_stats_on_cached_votes_up"
@@ -514,6 +536,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                        null: false
     t.integer  "cached_votes_up",       default: 0
     t.integer  "comments_count",        default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "kicker_returner_stats", ["cached_votes_up"], name: "index_kicker_returner_stats_on_cached_votes_up"
@@ -542,6 +566,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                  null: false
     t.integer  "cached_votes_up", default: 0
     t.integer  "comments_count",  default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "kicker_stats", ["cached_votes_up"], name: "index_kicker_stats_on_cached_votes_up"
@@ -581,6 +607,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                    null: false
     t.integer  "cached_votes_up",   default: 0
     t.integer  "comments_count",    default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "left_fielder_stats", ["cached_votes_up"], name: "index_left_fielder_stats_on_cached_votes_up"
@@ -611,6 +639,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                  null: false
     t.integer  "cached_votes_up", default: 0
     t.integer  "comments_count",  default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "line_backer_stats", ["cached_votes_up"], name: "index_line_backer_stats_on_cached_votes_up"
@@ -643,6 +673,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                  null: false
     t.integer  "cached_votes_up", default: 0
     t.integer  "comments_count",  default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "midfielder_stats", ["cached_votes_up"], name: "index_midfielder_stats_on_cached_votes_up"
@@ -671,6 +703,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                  null: false
     t.integer  "cached_votes_up", default: 0
     t.integer  "comments_count",  default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "offensive_lineman_stats", ["cached_votes_up"], name: "index_offensive_lineman_stats_on_cached_votes_up"
@@ -711,6 +745,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                     null: false
     t.integer  "cached_votes_up",    default: 0
     t.integer  "comments_count",     default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "point_guard_stats", ["cached_votes_up"], name: "index_point_guard_stats_on_cached_votes_up"
@@ -780,6 +816,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                     null: false
     t.integer  "cached_votes_up",    default: 0
     t.integer  "comments_count",     default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "power_forward_stats", ["cached_votes_up"], name: "index_power_forward_stats_on_cached_votes_up"
@@ -816,6 +854,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                     null: false
     t.integer  "cached_votes_up",    default: 0
     t.integer  "comments_count",     default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "quarterback_stats", ["cached_votes_up"], name: "index_quarterback_stats_on_cached_votes_up"
@@ -856,6 +896,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                       null: false
     t.integer  "cached_votes_up",      default: 0
     t.integer  "comments_count",       default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "relief_pitcher_stats", ["cached_votes_up"], name: "index_relief_pitcher_stats_on_cached_votes_up"
@@ -895,6 +937,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                    null: false
     t.integer  "cached_votes_up",   default: 0
     t.integer  "comments_count",    default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "right_fielder_stats", ["cached_votes_up"], name: "index_right_fielder_stats_on_cached_votes_up"
@@ -926,6 +970,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                  null: false
     t.integer  "cached_votes_up", default: 0
     t.integer  "comments_count",  default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "runner_stats", ["cached_votes_up"], name: "index_runner_stats_on_cached_votes_up"
@@ -960,6 +1006,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                       null: false
     t.integer  "cached_votes_up",      default: 0
     t.integer  "comments_count",       default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "running_back_stats", ["cached_votes_up"], name: "index_running_back_stats_on_cached_votes_up"
@@ -999,6 +1047,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                    null: false
     t.integer  "cached_votes_up",   default: 0
     t.integer  "comments_count",    default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "second_baseman_stats", ["cached_votes_up"], name: "index_second_baseman_stats_on_cached_votes_up"
@@ -1039,6 +1089,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                     null: false
     t.integer  "cached_votes_up",    default: 0
     t.integer  "comments_count",     default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "shooting_guard_stats", ["cached_votes_up"], name: "index_shooting_guard_stats_on_cached_votes_up"
@@ -1078,6 +1130,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                    null: false
     t.integer  "cached_votes_up",   default: 0
     t.integer  "comments_count",    default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "shortstop_stats", ["cached_votes_up"], name: "index_shortstop_stats_on_cached_votes_up"
@@ -1118,6 +1172,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                     null: false
     t.integer  "cached_votes_up",    default: 0
     t.integer  "comments_count",     default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "small_forward_stats", ["cached_votes_up"], name: "index_small_forward_stats_on_cached_votes_up"
@@ -1160,6 +1216,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                  null: false
     t.integer  "cached_votes_up", default: 0
     t.integer  "comments_count",  default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "sprinter_stats", ["cached_votes_up"], name: "index_sprinter_stats_on_cached_votes_up"
@@ -1200,6 +1258,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                       null: false
     t.integer  "cached_votes_up",      default: 0
     t.integer  "comments_count",       default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "starting_pitcher_stats", ["cached_votes_up"], name: "index_starting_pitcher_stats_on_cached_votes_up"
@@ -1252,6 +1312,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                    null: false
     t.integer  "cached_votes_up",   default: 0
     t.integer  "comments_count",    default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "third_baseman_stats", ["cached_votes_up"], name: "index_third_baseman_stats_on_cached_votes_up"
@@ -1283,6 +1345,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                       null: false
     t.integer  "cached_votes_up",      default: 0
     t.integer  "comments_count",       default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "tight_end_stats", ["cached_votes_up"], name: "index_tight_end_stats_on_cached_votes_up"
@@ -1332,6 +1396,8 @@ ActiveRecord::Schema.define(version: 20151105200101) do
     t.datetime "updated_at",                       null: false
     t.integer  "cached_votes_up",      default: 0
     t.integer  "comments_count",       default: 0
+    t.integer  "score"
+    t.integer  "opponent_score"
   end
 
   add_index "wide_receiver_stats", ["cached_votes_up"], name: "index_wide_receiver_stats_on_cached_votes_up"
