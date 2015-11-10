@@ -1,65 +1,70 @@
+<div class="row">
+<div class="col-lg-12 well">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Forward Stats</h1>
 
-<table>
+<div class="table-responsive">
+<table class="table">
   <thead>
     <tr>
-      <th>Position name</th>
+<!--       <th>Position name</th>
       <th>Shorthand</th>
       <th>Sport</th>
       <th>Position</th>
-      <th>Sport name</th>
+      <th>Sport name</th> -->
       <th>Event</th>
-      <th>Games played</th>
+<!--       <th>Games played</th> -->
       <th>Win</th>
-      <th>Loss</th>
+      <!-- <th>Loss</th>
       <th>Draw</th>
       <th>Wins</th>
       <th>Losses</th>
-      <th>Draws</th>
+      <th>Draws</th> -->
       <th>Goals</th>
       <th>Assists</th>
       <th>Shots taken</th>
       <th>User</th>
-      <th>Stat</th>
+     <!--  <th>Stat</th>
       <th>Sport</th>
       <th>Position</th>
-      <th colspan="3"></th>
+      <th colspan="3"></th> -->
     </tr>
   </thead>
 
   <tbody>
     <% @forward_stats.each do |forward_stat| %>
       <tr>
-        <td><%= forward_stat.position_name %></td>
+ <!--        <td><%= forward_stat.position_name %></td>
         <td><%= forward_stat.shorthand %></td>
         <td><%= forward_stat.sport_id %></td>
         <td><%= forward_stat.position_id %></td>
-        <td><%= forward_stat.sport_name %></td>
+        <td><%= forward_stat.sport_name %></td> -->
         <td><%= forward_stat.event %></td>
-        <td><%= forward_stat.games_played %></td>
+<!--         <td><%= forward_stat.games_played %></td> -->
         <td><%= forward_stat.win %></td>
-        <td><%= forward_stat.loss %></td>
+ <!--        <td><%= forward_stat.loss %></td>
         <td><%= forward_stat.draw %></td>
-        <td><%= forward_stat.wins %></td>
+        <td><%= forward_stat.wins %></td> 
         <td><%= forward_stat.losses %></td>
-        <td><%= forward_stat.draws %></td>
+        <td><%= forward_stat.draws %></td>-->
         <td><%= forward_stat.goals %></td>
         <td><%= forward_stat.assists %></td>
         <td><%= forward_stat.shots_taken %></td>
         <td><%= forward_stat.user.try(:name) %></td>
-        <td><%= forward_stat.stat %></td>
+<!--         <td><%= forward_stat.stat %></td>
         <td><%= forward_stat.sport %></td>
         <td><%= forward_stat.position %></td>
         <td><%= link_to 'Show', forward_stat %></td>
         <td><%= link_to 'Edit', edit_forward_stat_path(forward_stat) %></td>
-        <td><%= link_to 'Destroy', forward_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', forward_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
+</div>
+</div>
+<!-- <br>
 
-<br>
-
-<%= link_to 'New Forward stat', new_forward_stat_path %>
+<%= link_to 'New Forward stat', new_forward_stat_path %> -->

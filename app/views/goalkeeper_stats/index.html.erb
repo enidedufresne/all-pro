@@ -1,63 +1,68 @@
+<div class="row">
+<div class="col-lg-12 well">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Goalkeeper Stats</h1>
 
-<table>
+<div class="table-responsive">
+<table class="table">
   <thead>
     <tr>
-      <th>Position name</th>
+     <!--  <th>Position name</th>
       <th>Shorthand</th>
       <th>Sport</th>
       <th>Position</th>
-      <th>Sport name</th>
+      <th>Sport name</th> -->
       <th>Event</th>
-      <th>Games played</th>
+      <!-- <th>Games played</th> -->
       <th>Win</th>
-      <th>Loss</th>
+      <!-- <th>Loss</th>
       <th>Draw</th>
       <th>Wins</th>
       <th>Losses</th>
-      <th>Draws</th>
+      <th>Draws</th> -->
       <th>Saves</th>
       <th>Shots faced</th>
       <th>User</th>
-      <th>Stat</th>
+<!--       <th>Stat</th>
       <th>Sport</th>
       <th>Position</th>
-      <th colspan="3"></th>
+      <th colspan="3"></th> -->
     </tr>
   </thead>
 
   <tbody>
     <% @goalkeeper_stats.each do |goalkeeper_stat| %>
       <tr>
-        <td><%= goalkeeper_stat.position_name %></td>
+<!--         <td><%= goalkeeper_stat.position_name %></td>
         <td><%= goalkeeper_stat.shorthand %></td>
         <td><%= goalkeeper_stat.sport_id %></td>
         <td><%= goalkeeper_stat.position_id %></td>
-        <td><%= goalkeeper_stat.sport_name %></td>
+        <td><%= goalkeeper_stat.sport_name %></td> -->
         <td><%= goalkeeper_stat.event %></td>
-        <td><%= goalkeeper_stat.games_played %></td>
+        <!-- <td><%= goalkeeper_stat.games_played %></td> -->
         <td><%= goalkeeper_stat.win %></td>
-        <td><%= goalkeeper_stat.loss %></td>
+        <!-- <td><%= goalkeeper_stat.loss %></td>
         <td><%= goalkeeper_stat.draw %></td>
         <td><%= goalkeeper_stat.wins %></td>
         <td><%= goalkeeper_stat.losses %></td>
-        <td><%= goalkeeper_stat.draws %></td>
+        <td><%= goalkeeper_stat.draws %></td> -->
         <td><%= goalkeeper_stat.saves %></td>
         <td><%= goalkeeper_stat.shots_faced %></td>
         <td><%= goalkeeper_stat.user.try(:name) %></td>
-        <td><%= goalkeeper_stat.stat %></td>
+<!--         <td><%= goalkeeper_stat.stat %></td>
         <td><%= goalkeeper_stat.sport %></td>
         <td><%= goalkeeper_stat.position %></td>
         <td><%= link_to 'Show', goalkeeper_stat %></td>
         <td><%= link_to 'Edit', edit_goalkeeper_stat_path(goalkeeper_stat) %></td>
-        <td><%= link_to 'Destroy', goalkeeper_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', goalkeeper_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
+</div>
+</div>
+<!-- <br>
 
-<br>
-
-<%= link_to 'New Goalkeeper stat', new_goalkeeper_stat_path %>
+<%= link_to 'New Goalkeeper stat', new_goalkeeper_stat_path %> -->

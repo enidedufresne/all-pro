@@ -1,8 +1,11 @@
+<div class="row">
+<div class="col-lg-12 well">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Runner Stats</h1>
 
-<table>
+<div class="table-responsive">
+<table class="table">
   <thead>
     <tr>
       <th>Position name</th>
@@ -31,33 +34,35 @@
   <tbody>
     <% @runner_stats.each do |runner_stat| %>
       <tr>
-        <td><%= runner_stat.position_name %></td>
+        <!-- <td><%= runner_stat.position_name %></td>
         <td><%= runner_stat.shorthand %></td>
         <td><%= runner_stat.sport_id %></td>
         <td><%= runner_stat.position_id %></td>
-        <td><%= runner_stat.sport_name %></td>
+        <td><%= runner_stat.sport_name %></td> -->
         <td><%= runner_stat.event %></td>
-        <td><%= runner_stat.races_run %></td>
+        <!-- <td><%= runner_stat.races_run %></td> -->
         <td><%= runner_stat.win %></td>
-        <td><%= runner_stat.loss %></td>
+        <!-- <td><%= runner_stat.loss %></td>
         <td><%= runner_stat.wins %></td>
-        <td><%= runner_stat.losses %></td>
+        <td><%= runner_stat.losses %></td> -->
         <td><%= runner_stat.team_score %></td>
         <td><%= runner_stat.distance_time %></td>
         <td><%= runner_stat.placed %></td>
         <td><%= runner_stat.speed %></td>
         <td><%= runner_stat.user.try(:name) %></td>
-        <td><%= runner_stat.stat %></td>
+<!--         <td><%= runner_stat.stat %></td>
         <td><%= runner_stat.sport %></td>
         <td><%= runner_stat.position %></td>
         <td><%= link_to 'Show', runner_stat %></td>
         <td><%= link_to 'Edit', edit_runner_stat_path(runner_stat) %></td>
-        <td><%= link_to 'Destroy', runner_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', runner_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
+</div>
+</div>
+<!-- <br>
 
-<br>
-
-<%= link_to 'New Runner stat', new_runner_stat_path %>
+<%= link_to 'New Runner stat', new_runner_stat_path %> -->

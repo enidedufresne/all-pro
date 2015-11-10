@@ -1,63 +1,68 @@
+<div class="row">
+<div class="col-lg-12 well">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Tight End Stats</h1>
 
-<table>
+<div class="table-responsive">
+<table class="table">
   <thead>
     <tr>
-      <th>Position name</th>
+      <!-- <th>Position name</th>
       <th>Shorthand</th>
       <th>Sport</th>
       <th>Position</th>
-      <th>Sport name</th>
+      <th>Sport name</th> -->
       <th>Event</th>
-      <th>Games played</th>
+      <!-- <th>Games played</th> -->
       <th>Win</th>
-      <th>Loss</th>
+      <!-- <th>Loss</th>
       <th>Wins</th>
-      <th>Losses</th>
+      <th>Losses</th> -->
       <th>Receptions</th>
       <th>Reception yards</th>
       <th>Reception touchdowns</th>
       <th>Pancakes</th>
       <th>User</th>
-      <th>Stat</th>
+<!--       <th>Stat</th>
       <th>Sport</th>
       <th>Position</th>
-      <th colspan="3"></th>
+      <th colspan="3"></th> -->
     </tr>
   </thead>
 
   <tbody>
     <% @tight_end_stats.each do |tight_end_stat| %>
       <tr>
-        <td><%= tight_end_stat.position_name %></td>
+        <!-- <td><%= tight_end_stat.position_name %></td>
         <td><%= tight_end_stat.shorthand %></td>
         <td><%= tight_end_stat.sport_id %></td>
         <td><%= tight_end_stat.position_id %></td>
-        <td><%= tight_end_stat.sport_name %></td>
+        <td><%= tight_end_stat.sport_name %></td> -->
         <td><%= tight_end_stat.event %></td>
-        <td><%= tight_end_stat.games_played %></td>
+        <!-- <td><%= tight_end_stat.games_played %></td> -->
         <td><%= tight_end_stat.win %></td>
-        <td><%= tight_end_stat.loss %></td>
+        <!-- <td><%= tight_end_stat.loss %></td>
         <td><%= tight_end_stat.wins %></td>
-        <td><%= tight_end_stat.losses %></td>
+        <td><%= tight_end_stat.losses %></td> -->
         <td><%= tight_end_stat.receptions %></td>
         <td><%= tight_end_stat.reception_yards %></td>
         <td><%= tight_end_stat.reception_touchdowns %></td>
         <td><%= tight_end_stat.pancakes %></td>
         <td><%= tight_end_stat.user.try(:name) %></td>
-        <td><%= tight_end_stat.stat %></td>
+<!--         <td><%= tight_end_stat.stat %></td>
         <td><%= tight_end_stat.sport %></td>
         <td><%= tight_end_stat.position %></td>
         <td><%= link_to 'Show', tight_end_stat %></td>
         <td><%= link_to 'Edit', edit_tight_end_stat_path(tight_end_stat) %></td>
-        <td><%= link_to 'Destroy', tight_end_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Destroy', tight_end_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
 </table>
+</div>
+</div>
+</div>
+<!-- <br>
 
-<br>
-
-<%= link_to 'New Tight end stat', new_tight_end_stat_path %>
+<%= link_to 'New Tight end stat', new_tight_end_stat_path %> -->
