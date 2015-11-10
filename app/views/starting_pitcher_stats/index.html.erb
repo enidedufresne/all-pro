@@ -1,25 +1,25 @@
 <div class="row">
-<div class="col-lg-9 well">
+<div class="col-lg-12 well">
 <p id="notice"><%= notice %></p>
 
 <h1>Listing Starting Pitcher Stats</h1>
-
-<table>
+<div class="table-responsive">
+<table class="table">
   <thead>
     <tr>
       <th>Event</th>
-      <th>Games started</th>
-      <th>Games played</th>
+<!--       <th>Games started</th>
+      <th>Games played</th> -->
       <th>Win</th>
       <th>Loss</th>
-      <th>Wins</th>
-      <th>Losses</th>
+<!--       <th>Wins</th>
+      <th>Losses</th> -->
       <th>Pitcher win</th>
       <th>Pitcher loss</th>
-      <th>Pitcher wins</th>
-      <th>Pitcher losses</th>
+<!--       <th>Pitcher wins</th>
+      <th>Pitcher losses</th> -->
       <th>Pitcher no decision</th>
-      <th>Pitcher no decisions</th>
+<!--       <th>Pitcher no decisions</th> -->
       <th>Pitcher saves</th>
       <th>Innings pitched</th>
       <th>Hits allowed</th>
@@ -34,18 +34,18 @@
     <% @starting_pitcher_stats.each do |starting_pitcher_stat| %>
       <tr>
         <td><%= starting_pitcher_stat.event %></td>
-        <td><%= starting_pitcher_stat.games_started %></td>
-        <td><%= starting_pitcher_stat.games_played %></td>
+<!--         <td><%= starting_pitcher_stat.games_started %></td>
+        <td><%= starting_pitcher_stat.games_played %></td> -->
         <td><%= starting_pitcher_stat.win ? 'Yes' : 'No' %></td>
         <td><%= starting_pitcher_stat.loss ? 'Yes' : 'No' %></td>
-        <td><%= starting_pitcher_stat.wins %></td>
-        <td><%= starting_pitcher_stat.losses %></td>
+<!--         <td><%= starting_pitcher_stat.wins %></td>
+        <td><%= starting_pitcher_stat.losses %></td> -->
         <td><%= starting_pitcher_stat.pitcher_win ? 'Yes' : 'No' %></td>
         <td><%= starting_pitcher_stat.pitcher_loss ? 'Yes' : 'No' %></td>
-        <td><%= starting_pitcher_stat.pitcher_wins %></td>
-        <td><%= starting_pitcher_stat.pitcher_losses %></td>
+<!--         <td><%= starting_pitcher_stat.pitcher_wins %></td>
+        <td><%= starting_pitcher_stat.pitcher_losses %></td> -->
         <td><%= starting_pitcher_stat.pitcher_no_decision ? 'Yes' : 'No' %></td>
-        <td><%= starting_pitcher_stat.pitcher_no_decisions ? 'Yes' : 'No' %></td>
+<!--         <td><%= starting_pitcher_stat.pitcher_no_decisions ? 'Yes' : 'No' %></td> -->
         <td><%= starting_pitcher_stat.pitcher_saves %></td>
         <td><%= starting_pitcher_stat.innings_pitched %></td>
         <td><%= starting_pitcher_stat.hits_allowed %></td>
@@ -57,9 +57,7 @@
     <% end %>
   </tbody>
 </table>
+</div>
 
-<br>
-
-<%= link_to 'New Starting pitcher stat', new_starting_pitcher_stat_path %>
 </div>
 </div>
