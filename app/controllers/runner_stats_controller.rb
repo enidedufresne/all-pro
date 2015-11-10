@@ -58,7 +58,7 @@ class RunnerStatsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def runner_stat_params
-      params.require(:runner_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :races_run, :win, :loss, :wins, :losses, :team_score, :distance_time, :placed, :speed, :user_id, :stat_id, :sport_id, :position_id)
+      params.require(:runner_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :races_run, :win, :loss, :wins, :losses, :team_score, :distance_time, :placed, :speed, :score, :opponent_score, :user_id, :stat_id, :sport_id, :position_id)
     end
     
     def set_user

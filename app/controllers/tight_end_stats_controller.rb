@@ -58,7 +58,7 @@ class TightEndStatsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def tight_end_stat_params
-      params.require(:tight_end_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :wins, :losses, :receptions, :reception_yards, :reception_touchdowns, :pancakes, :user_id, :stat_id, :sport_id, :position_id)
+      params.require(:tight_end_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :wins, :losses, :receptions, :reception_yards, :reception_touchdowns, :pancakes, :score, :opponent_score, :user_id, :stat_id, :sport_id, :position_id)
     end
     
     def set_user

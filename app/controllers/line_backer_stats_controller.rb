@@ -58,7 +58,7 @@ class LineBackerStatsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def line_backer_stat_params
-      params.require(:line_backer_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :win, :loss, :wins, :losses, :tackles, :sacks, :fumbles, :interception, :user_id, :stat_id, :sport_id, :position_id)
+      params.require(:line_backer_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :win, :loss, :wins, :losses, :tackles, :sacks, :fumbles, :interception, :score, :opponent_score, :user_id, :stat_id, :sport_id, :position_id)
     end
     
     def set_user

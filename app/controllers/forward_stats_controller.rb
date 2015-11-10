@@ -58,7 +58,7 @@ class ForwardStatsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def forward_stat_params
-      params.require(:forward_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :draw, :wins, :losses, :draws, :goals, :assists, :shots_taken, :user_id, :stat_id, :sport_id, :position_id)
+      params.require(:forward_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :draw, :wins, :losses, :draws, :goals, :assists, :shots_taken, :score, :opponent_score, :user_id, :stat_id, :sport_id, :position_id)
     end
     
     def set_user

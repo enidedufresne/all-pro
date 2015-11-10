@@ -58,7 +58,7 @@ class RunningBackStatsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def running_back_stat_params
-      params.require(:running_back_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :wins, :losses, :rushing_attempts, :rushing_yards, :rushing_touchdowns, :receptions, :reception_yards, :reception_touchdowns, :fumbles, :user_id, :stat_id, :sport_id, :position_id)
+      params.require(:running_back_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :wins, :losses, :rushing_attempts, :rushing_yards, :rushing_touchdowns, :receptions, :reception_yards, :reception_touchdowns, :fumbles, :score, :opponent_score, :user_id, :stat_id, :sport_id, :position_id)
     end
     
     def set_user

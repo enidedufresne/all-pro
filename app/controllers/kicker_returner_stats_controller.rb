@@ -58,7 +58,7 @@ class KickerReturnerStatsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def kicker_returner_stat_params
-      params.require(:kicker_returner_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :wins, :losses, :kickreturns, :kickreturn_yards, :kickreturn_touchdowns, :user_id, :stat_id, :sport_id, :position_id)
+      params.require(:kicker_returner_stat).permit(:position_name, :shorthand, :sport_id, :position_id, :sport_name, :event, :games_played, :win, :loss, :wins, :losses, :kickreturns, :kickreturn_yards, :kickreturn_touchdowns, :score, :opponent_score, :user_id, :stat_id, :sport_id, :position_id)
     end
     
     def set_user
