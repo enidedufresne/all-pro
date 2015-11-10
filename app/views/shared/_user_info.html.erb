@@ -2,7 +2,6 @@
   <div class="text-center">
     <%= render 'shared/avatar', user: @user %><br>
     <h5><% if cannot? :create, Stat %><i class="fa fa-star-half-o"></i><% end %><%= link_to @user.name, @user %></h5>
-
   </div>
   <h5>
     <%= fa_icon 'shield' %>

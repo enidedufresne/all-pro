@@ -2,7 +2,7 @@
 <div id="user-<%= user.id %>" class="row">
   <div class="col-lg-8">
     <%= render 'shared/avatar', user: user %>
-    <h5 class="name"><%= link_to user.name, user %></h5>
+    <h5 class="name"><%= link_to user.name, user %></h5> <% if cannot? :create, Stat %><i class="fa fa-star-half-o"></i><% end %>
   </div>
   <div class="col-lg-4">
     <div class="follow">
