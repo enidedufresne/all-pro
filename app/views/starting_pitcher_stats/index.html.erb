@@ -11,6 +11,7 @@
 <!--       <th>Games started</th>
       <th>Games played</th> -->
       <th>Win</th>
+      <th>Score</th>
 <!--      <th>Loss</th>
       <th>Wins</th>
       <th>Losses</th> -->
@@ -31,28 +32,29 @@
   </thead>
 
   <tbody>
-    <% @starting_pitcher_stats.each do |starting_pitcher_stat| %>
+    <% @sprinter_stats.each do |sprinter_stat| %>
       <tr>
-        <td><%= starting_pitcher_stat.event %></td>
-<!--         <td><%= starting_pitcher_stat.games_started %></td>
-        <td><%= starting_pitcher_stat.games_played %></td> -->
-        <td><%= starting_pitcher_stat.win ? 'Yes' : 'No' %></td>
-<!--        <td><%= starting_pitcher_stat.loss ? 'Yes' : 'No' %></td>
-         <td><%= starting_pitcher_stat.wins %></td>
-        <td><%= starting_pitcher_stat.losses %></td> -->
-        <td><%= starting_pitcher_stat.pitcher_win ? 'Yes' : 'No' %></td>
-<!--        <td><%= starting_pitcher_stat.pitcher_loss ? 'Yes' : 'No' %></td>
-        <td><%= starting_pitcher_stat.pitcher_wins %></td>
-        <td><%= starting_pitcher_stat.pitcher_losses %></td> -->
-        <td><%= starting_pitcher_stat.pitcher_no_decision ? 'Yes' : 'No' %></td>
-<!--         <td><%= starting_pitcher_stat.pitcher_no_decisions ? 'Yes' : 'No' %></td> -->
-        <td><%= starting_pitcher_stat.pitcher_saves %></td>
-        <td><%= starting_pitcher_stat.innings_pitched %></td>
-        <td><%= starting_pitcher_stat.hits_allowed %></td>
-        <td><%= starting_pitcher_stat.runs_allowed %></td>
-        <td><%= starting_pitcher_stat.strikeouts %></td>
-        <td><%= starting_pitcher_stat.walks_allowed %></td>
-        <td><%= starting_pitcher_stat.user.try(:name) %></td>
+        <td><%= sprinter_stat.event %></td>
+<!--         <td><%= sprinter_stat.games_started %></td>
+        <td><%= sprinter_stat.games_played %></td> -->
+        <td><%= sprinter_stat.win ? 'Yes' : 'No' %></td>
+        <td><%= sprinter_stat.score %> - <%= sprinter_stat.opponent_score %></td>
+<!--        <td><%= sprinter_stat.loss ? 'Yes' : 'No' %></td>
+         <td><%= sprinter_stat.wins %></td>
+        <td><%= sprinter_stat.losses %></td> -->
+        <td><%= sprinter_stat.pitcher_win ? 'Yes' : 'No' %></td>
+<!--        <td><%= sprinter_stat.pitcher_loss ? 'Yes' : 'No' %></td>
+        <td><%= sprinter_stat.pitcher_wins %></td>
+        <td><%= sprinter_stat.pitcher_losses %></td> -->
+        <td><%= sprinter_stat.pitcher_no_decision ? 'Yes' : 'No' %></td>
+<!--         <td><%= sprinter_stat.pitcher_no_decisions ? 'Yes' : 'No' %></td> -->
+        <td><%= sprinter_stat.pitcher_saves %></td>
+        <td><%= sprinter_stat.innings_pitched %></td>
+        <td><%= sprinter_stat.hits_allowed %></td>
+        <td><%= sprinter_stat.runs_allowed %></td>
+        <td><%= sprinter_stat.strikeouts %></td>
+        <td><%= sprinter_stat.walks_allowed %></td>
+        <td><%= sprinter_stat.user.try(:name) %></td>
       </tr>
     <% end %>
   </tbody>
