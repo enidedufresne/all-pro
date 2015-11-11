@@ -3,15 +3,23 @@
     <%= f.label :event %><br>
     <%= f.text_field :event %>
   </div>
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label :games_played %><br>
     <%= f.number_field :games_played %>
-  </div>
+  </div> -->
   <div class="field">
     <%= f.label :win %><br>
     <%= f.check_box :win %>
   </div>
-  <div class="field">
+    <div class="field">
+    <%= f.label "Your final score" %><br>
+    <%= f.text_field :score %>
+  </div>
+    <div class="field">
+    <%= f.label "Opponent's final score" %><br>
+    <%= f.text_field :opponent_score %>
+  </div>
+  <!-- <div class="field">
     <%= f.label :loss %><br>
     <%= f.check_box :loss %>
   </div>
@@ -22,7 +30,7 @@
   <div class="field">
     <%= f.label :losses %><br>
     <%= f.number_field :losses %>
-  </div>
+  </div> -->
   <div class="field">
     <%= f.label :receptions %><br>
     <%= f.number_field :receptions %>
