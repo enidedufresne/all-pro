@@ -11,6 +11,6 @@ class StartingPitcherStat < ActiveRecord::Base
   include PublicActivity::Model
   tracked only: [:create], owner: Proc.new{ |controller, model| model.user }
 
-  validates_presence_of :event
+  validates_presence_of :event, :score, :opponent_score
   # validates :win, presence: true, unless: :loss?
 end
