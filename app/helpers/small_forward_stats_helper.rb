@@ -1,2 +1,0 @@
-module SmallForwardStatsHelper
-end

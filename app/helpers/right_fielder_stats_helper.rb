@@ -1,2 +1,0 @@
-module RightFielderStatsHelper
-end
