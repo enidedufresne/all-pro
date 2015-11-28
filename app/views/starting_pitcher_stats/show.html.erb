@@ -18,34 +18,48 @@
      score:
       <%= @starting_pitcher_stat.score %> - <%= @starting_pitcher_stat.opponent_score %>
     </p>
+    <% if @starting_pitcher_stat.pitcher_no_decision.present? %>
     <p>
       pitcher no decision:
-      <%= @starting_pitcher_stat.opponent_score %>
+      <%= @starting_pitcher_stat.pitcher_no_decision %>
     </p>
+    <% end %>
+    <% if @starting_pitcher_stat.pitcher_saves.present? %>
     <p>
       pitcher saves:
       <%= @starting_pitcher_stat.pitcher_saves %>
     </p>
+    <% end %>
+    <% if @starting_pitcher_stat.innings_pitched.present? %>
     <p>
       Innings pitched:
       <%= @starting_pitcher_stat.innings_pitched %>
     </p>
+    <% end %>
+    <% if @starting_pitcher_stat.hits_allowed.present? %>
     <p>
       Hits allowed:
       <%= @starting_pitcher_stat.hits_allowed %>
     </p>
+    <% end %>
+    <% if @starting_pitcher_stat.runs_allowed.present? %>
     <p>
       Runs allowed:
       <%= @starting_pitcher_stat.runs_allowed %>
     </p>
+    <% end %>
+    <% if @starting_pitcher_stat.strikeouts.present? %>
     <p>
       Strikeouts:
       <%= @starting_pitcher_stat.strikeouts %>
     </p>
+    <% end %>
+    <% if @starting_pitcher_stat.walks_allowed.present? %>
     <p>
       Walks allowed:
       <%= @starting_pitcher_stat.walks_allowed %>
     </p>
+    <% end %>
   </span>  
     </div>
   </div>

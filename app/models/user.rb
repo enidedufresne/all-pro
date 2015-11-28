@@ -20,8 +20,6 @@ class User < ActiveRecord::Base
     self.role == requested_role.to_s
   end
 
-
-
   has_many :posts
   has_many :comments
   has_many :events
@@ -57,7 +55,7 @@ class User < ActiveRecord::Base
   has_many :starting_pitcher_stats
   has_many :third_baseman_stats
   has_many :tight_end_stats
-  has_many :wide_reciever_stats
+  has_many :wide_receiver_stats
 
   mount_uploader :avatar, AvatarUploader
   mount_uploader :cover, AvatarUploader
