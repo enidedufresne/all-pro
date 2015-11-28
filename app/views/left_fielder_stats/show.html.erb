@@ -1,28 +1,14 @@
 <div id="event-<%= @left_fielder_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @left_fielder_stat, remote: false %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 well">
-      <h4>Comments</h4>
-      <hr>
-      <%= render 'comments/form', commentable: @left_fielder_stat %>
-      <br>
-      <div class="comments">
-        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
-      </div>
-    </div>
-  </div>
+      <div class="info">
+  <%= render 'shared/avatar', user: @left_fielder_stat.user %>
+  <h4 class="name"><%= @left_fielder_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @left_fielder_stat %>stat</span>
 </div>
-
-
-
-<p>
-  <strong>Event:</strong>
-  <%= @left_fielder_stat.event %>
-</p>
+<div class="content">
+  <h3><%= @left_fielder_stat.event %></h3>
+  <span class="text">
 
 
 <p>
@@ -84,3 +70,16 @@
   <strong>Home runs:</strong>
   <%= @left_fielder_stat.home_runs %>
 </p>
+
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @left_fielder_stat %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>

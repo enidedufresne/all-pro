@@ -1,27 +1,14 @@
 <div id="event-<%= @power_forward_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @power_forward_stat, remote: false %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 well">
-      <h4>Comments</h4>
-      <hr>
-      <%= render 'comments/form', commentable: @power_forward_stat %>
-      <br>
-      <div class="comments">
-        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
-      </div>
-    </div>
-  </div>
+      <div class="info">
+  <%= render 'shared/avatar', user: @power_forward_stat.user %>
+  <h4 class="name"><%= @power_forward_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @power_forward_stat %>stat</span>
 </div>
-
-
-<p>
-  <strong>Event:</strong>
-  <%= @power_forward_stat.event %>
-</p>
+<div class="content">
+  <h3><%= @power_forward_stat.event %></h3>
+  <span class="text">
 
 <p>
   <strong>Win:</strong>
@@ -87,3 +74,16 @@
   <strong>Points:</strong>
   <%= @power_forward_stat.points %>
 </p>
+
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @power_forward_stat %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>

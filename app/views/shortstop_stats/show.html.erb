@@ -1,39 +1,19 @@
 <div id="event-<%= @shortstop_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @shortstop_stat, remote: false %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 well">
-      <h4>Comments</h4>
-      <hr>
-      <%= render 'comments/form', commentable: @shortstop_stat %>
-      <br>
-      <div class="comments">
-        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
-      </div>
-    </div>
-  </div>
+      <div class="info">
+  <%= render 'shared/avatar', user: @shortstop_stat.user %>
+  <h4 class="name"><%= @shortstop_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @shortstop_stat %>stat</span>
 </div>
-
-
-
-
-<p>
-  <strong>Event:</strong>
-  <%= @shortstop_stat.event %>
-</p>
-
+<div class="content">
+  <h3><%= @shortstop_stat.event %></h3>
+  <span class="text">
 <!-- <p>
   <strong>Games started:</strong>
   <%= @shortstop_stat.games_started %>
 </p>
-
-<p>
-  <strong>Games played:</strong>
-  <%= @shortstop_stat.games_played %>
-</p> -->
+ -->
 
 <p>
   <strong>Win:</strong>
@@ -109,3 +89,16 @@
   <strong>Home runs:</strong>
   <%= @shortstop_stat.home_runs %>
 </p>
+
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @shortstop_stat %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>

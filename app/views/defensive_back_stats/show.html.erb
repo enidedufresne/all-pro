@@ -1,27 +1,14 @@
 <div id="event-<%= @defensive_back_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @defensive_back_stat, remote: false %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 well">
-      <h4>Comments</h4>
-      <hr>
-      <%= render 'comments/form', commentable: @defensive_back_stat %>
-      <br>
-      <div class="comments">
-        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
-      </div>
-    </div>
-  </div>
+      <div class="info">
+  <%= render 'shared/avatar', user: @defensive_back_stat.user %>
+  <h4 class="name"><%= @defensive_back_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @defensive_back_stat %>stat</span>
 </div>
-
-
-<p>
-  <strong>Event:</strong>
-  <%= @defensive_back_stat.event %>
-</p>
+<div class="content">
+  <h3><%= @defensive_back_stat.event %></h3>
+  <span class="text">
 
 <p>
   <strong>Win:</strong>
@@ -47,3 +34,16 @@
   <strong>Interception:</strong>
   <%= @defensive_back_stat.interception %>
 </p>
+
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @defensive_back_stat %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>

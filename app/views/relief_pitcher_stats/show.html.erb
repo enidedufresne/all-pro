@@ -1,29 +1,14 @@
 <div id="event-<%= @relief_pitcher_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @reliefpitcher_stat, remote: false %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 well">
-      <h4>Comments</h4>
-      <hr>
-      <%= render 'comments/form', commentable: @relief_pitcher_stat %>
-      <br>
-      <div class="comments">
-        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
-      </div>
-    </div>
-  </div>
+      <div class="info">
+  <%= render 'shared/avatar', user: @relief_pitcher_stat.user %>
+  <h4 class="name"><%= @relief_pitcher_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @relief_pitcher_stat %>stat</span>
 </div>
-
-
-
-
-<p>
-  <strong>Event:</strong>
-  <%= @relief_pitcher_stat.event %>
-</p>
+<div class="content">
+  <h3><%= @relief_pitcher_stat.event %></h3>
+  <span class="text">
 
 
 <p>
@@ -72,3 +57,16 @@
   <strong>Walks allowed:</strong>
   <%= @relief_pitcher_stat.walks_allowed %>
 </p>
+
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @relief_pitcher_stat %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>

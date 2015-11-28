@@ -1,40 +1,20 @@
 <div id="event-<%= @small_forward_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @small_forward_stat, remote: false %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 well">
-      <h4>Comments</h4>
-      <hr>
-      <%= render 'comments/form', commentable: @small_forward_stat %>
-      <br>
-      <div class="comments">
-        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
-      </div>
-    </div>
-  </div>
+      <div class="info">
+  <%= render 'shared/avatar', user: @small_forward_stat.user %>
+  <h4 class="name"><%= @small_forward_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @small_forward_stat %>stat</span>
 </div>
-
-
-
-
-
-<p>
-  <strong>Event:</strong>
-  <%= @small_forward_stat.event %>
-</p>
+<div class="content">
+  <h3><%= @small_forward_stat.event %></h3>
+  <span class="text">
 
 <!-- <p>
   <strong>Games started:</strong>
   <%= @small_forward_stat.games_started %>
 </p>
-
-<p>
-  <strong>Games played:</strong>
-  <%= @small_forward_stat.games_played %>
-</p> -->
+ -->
 
 <p>
   <strong>Win:</strong>
@@ -102,3 +82,15 @@
   <%= @small_forward_stat.points %>
 </p>
 
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @small_forward_stat %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>

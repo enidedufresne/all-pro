@@ -1,28 +1,14 @@
 <div id="event-<%= @center_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @center_stat, remote: false %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 well">
-      <h4>Comments</h4>
-      <hr>
-      <%= render 'comments/form', commentable: @center_stat %>
-      <br>
-      <div class="comments">
-        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
-      </div>
-    </div>
-  </div>
+      <div class="info">
+  <%= render 'shared/avatar', user: @center_stat.user %>
+  <h4 class="name"><%= @center_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @center_stat %>stat</span>
 </div>
-
-
-
-<p>
-  <strong>Event:</strong>
-  <%= @center_stat.event %>
-</p>
+<div class="content">
+  <h3><%= @center_stat.event %></h3>
+  <span class="text">
 
 <!-- <p>
   <strong>Games started:</strong>
@@ -94,3 +80,16 @@
   <strong>Points:</strong>
   <%= @center_stat.points %>
 </p>
+
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @center_stat %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>

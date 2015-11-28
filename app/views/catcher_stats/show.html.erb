@@ -2,12 +2,12 @@
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
       <div class="info">
-  <%= render 'shared/avatar', user: @starting_pitcher_stat.user %>
-  <h4 class="name"><%= @starting_pitcher_stat.user.name %></h4>
-  <span class="action">created a <%= link_to 'Starting Pitcher ', @starting_pitcher_stat %>stat</span>
+  <%= render 'shared/avatar', user: @catcher_stat.user %>
+  <h4 class="name"><%= @catcher_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @catcher_stat %>stat</span>
 </div>
 <div class="content">
-  <h3><%= @starting_pitcher_stat.event %></h3>
+  <h3><%= @catcher_stat.event %></h3>
   <span class="text">
 
 <!-- <p>
@@ -75,3 +75,16 @@
   <strong>Home runs:</strong>
   <%= @catcher_stat.home_runs %>
 </p>
+
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @catcher_stat %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>

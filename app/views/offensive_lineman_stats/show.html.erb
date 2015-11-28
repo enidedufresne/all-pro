@@ -1,9 +1,25 @@
 <div id="event-<%= @offensive_lineman_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @offensive_lineman_stat, remote: false %>
-    </div>
-  </div>
+      <div class="info">
+  <%= render 'shared/avatar', user: @offensive_lineman_stat.user %>
+  <h4 class="name"><%= @offensive_lineman_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @offensive_lineman_stat %>stat</span>
+</div>
+<div class="content">
+  <h3><%= @offensive_lineman_stat.event %></h3>
+  <span class="text">
+
+<p>
+  <strong>Win:</strong>
+  <%= @offensive_lineman_stat.win %>
+</p>
+
+<p>
+  <strong>Pancakes:</strong>
+  <%= @offensive_lineman_stat.pancakes %>
+</p>
+
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
       <h4>Comments</h4>
@@ -16,20 +32,3 @@
     </div>
   </div>
 </div>
-
-
-
-<p>
-  <strong>Event:</strong>
-  <%= @offensive_lineman_stat.event %>
-</p>
-
-<p>
-  <strong>Win:</strong>
-  <%= @offensive_lineman_stat.win %>
-</p>
-
-<p>
-  <strong>Pancakes:</strong>
-  <%= @offensive_lineman_stat.pancakes %>
-</p>

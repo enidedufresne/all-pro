@@ -1,28 +1,14 @@
 <div id="event-<%= @tight_end_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @tight_end_stat, remote: false %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 well">
-      <h4>Comments</h4>
-      <hr>
-      <%= render 'comments/form', commentable: @tight_end_stat %>
-      <br>
-      <div class="comments">
-        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
-      </div>
-    </div>
-  </div>
+      <div class="info">
+  <%= render 'shared/avatar', user: @tight_end_stat.user %>
+  <h4 class="name"><%= @tight_end_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @tight_end_stat %>stat</span>
 </div>
-
-
-
-<p>
-  <strong>Event:</strong>
-  <%= @tight_end_stat.event %>
-</p>
+<div class="content">
+  <h3><%= @tight_end_stat.event %></h3>
+  <span class="text">
 
 <!-- <p>
   <strong>Games played:</strong>
@@ -56,3 +42,15 @@
 </p>
 
 
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @tight_end_stat %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>

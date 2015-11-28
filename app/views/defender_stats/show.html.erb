@@ -1,28 +1,14 @@
 <div id="event-<%= @defender_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @defender_stat, remote: false %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 well">
-      <h4>Comments</h4>
-      <hr>
-      <%= render 'comments/form', commentable: @defender_stat %>
-      <br>
-      <div class="comments">
-        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
-      </div>
-    </div>
-  </div>
+      <div class="info">
+  <%= render 'shared/avatar', user: @defender_stat.user %>
+  <h4 class="name"><%= @defender_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @defender_stat %>stat</span>
 </div>
-
-
-
-<p>
-  <strong>Event:</strong>
-  <%= @defender_stat.event %>
-</p>
+<div class="content">
+  <h3><%= @defender_stat.event %></h3>
+  <span class="text">
 
 
 <p>
@@ -50,3 +36,16 @@
   <strong>Shots taken:</strong>
   <%= @defender_stat.shots_taken %>
 </p>
+
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @defender_stat %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>

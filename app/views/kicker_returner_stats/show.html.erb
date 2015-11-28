@@ -1,27 +1,14 @@
 <div id="event-<%= @kicker_returner_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @kicker_returner_stat, remote: false %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 well">
-      <h4>Comments</h4>
-      <hr>
-      <%= render 'comments/form', commentable: @kicker_returner_stat %>
-      <br>
-      <div class="comments">
-        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
-      </div>
-    </div>
-  </div>
+      <div class="info">
+  <%= render 'shared/avatar', user: @kicker_returner_stat.user %>
+  <h4 class="name"><%= @kicker_returner_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @kicker_returner_stat %>stat</span>
 </div>
-
-
-<p>
-  <strong>Event:</strong>
-  <%= @kicker_returner_stat.event %>
-</p>
+<div class="content">
+  <h3><%= @kicker_returner_stat.event %></h3>
+  <span class="text">
 
 
 <p>
@@ -44,3 +31,16 @@
   <strong>Kickreturn touchdowns:</strong>
   <%= @kicker_returner_stat.kickreturn_touchdowns %>
 </p>
+
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @kicker_returner_stat %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,60 +1,26 @@
 <div id="event-<%= @shooting_guard_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @shooting_guard_stat, remote: false %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 well">
-      <h4>Comments</h4>
-      <hr>
-      <%= render 'comments/form', commentable: @shooting_guard_stat %>
-      <br>
-      <div class="comments">
-        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
-      </div>
-    </div>
-  </div>
+      <div class="info">
+  <%= render 'shared/avatar', user: @shooting_guard_stat.user %>
+  <h4 class="name"><%= @shooting_guard_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @shooting_guard_stat %>stat</span>
 </div>
-
-
-
-
-<p>
-  <strong>Event:</strong>
-  <%= @shooting_guard_stat.event %>
-</p>
+<div class="content">
+  <h3><%= @shooting_guard_stat.event %></h3>
+  <span class="text">
 
 <!-- <p>
   <strong>Games started:</strong>
   <%= @shooting_guard_stat.games_started %>
 </p>
-
-<p>
-  <strong>Games played:</strong>
-  <%= @shooting_guard_stat.games_played %>
-</p> -->
+-->
 
 <p>
   <strong>Win:</strong>
   <%= @shooting_guard_stat.win %>
 </p>
 
-<!-- <p>
-  <strong>Loss:</strong>
-  <%= @shooting_guard_stat.loss %>
-</p>
-
-<p>
-  <strong>Wins:</strong>
-  <%= @shooting_guard_stat.wins %>
-</p>
-
-<p>
-  <strong>Losses:</strong>
-  <%= @shooting_guard_stat.losses %>
-</p>
- -->
 <p>
   <strong>Minutes played:</strong>
   <%= @shooting_guard_stat.minutes_played %>
@@ -114,3 +80,16 @@
   <strong>Points:</strong>
   <%= @shooting_guard_stat.points %>
 </p>
+
+  <div class="row">
+    <div class="col-lg-6 col-lg-offset-3 well">
+      <h4>Comments</h4>
+      <hr>
+      <%= render 'comments/form', commentable: @shooting_guard_stat %>
+      <br>
+      <div class="comments">
+        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
+      </div>
+    </div>
+  </div>
+</div>
