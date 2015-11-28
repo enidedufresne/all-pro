@@ -19,39 +19,13 @@
 
 
 
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Position name:</strong>
-  <%= @shortstop_stat.position_name %>
-</p>
-
-<p>
-  <strong>Shorthand:</strong>
-  <%= @shortstop_stat.shorthand %>
-</p>
-
-<p>
-  <strong>Sport:</strong>
-  <%= @shortstop_stat.sport_id %>
-</p>
-
-<p>
-  <strong>Position:</strong>
-  <%= @shortstop_stat.position_id %>
-</p>
-
-<p>
-  <strong>Sport name:</strong>
-  <%= @shortstop_stat.sport_name %>
-</p>
 
 <p>
   <strong>Event:</strong>
   <%= @shortstop_stat.event %>
 </p>
 
-<p>
+<!-- <p>
   <strong>Games started:</strong>
   <%= @shortstop_stat.games_started %>
 </p>
@@ -59,7 +33,7 @@
 <p>
   <strong>Games played:</strong>
   <%= @shortstop_stat.games_played %>
-</p>
+</p> -->
 
 <p>
   <strong>Win:</strong>
@@ -135,26 +109,3 @@
   <strong>Home runs:</strong>
   <%= @shortstop_stat.home_runs %>
 </p>
-
-<p>
-  <strong>User:</strong>
-  <%= @shortstop_stat.user %>
-</p>
-
-<p>
-  <strong>Stat:</strong>
-  <%= @shortstop_stat.stat %>
-</p>
-
-<p>
-  <strong>Sport:</strong>
-  <%= @shortstop_stat.sport %>
-</p>
-
-<p>
-  <strong>Position:</strong>
-  <%= @shortstop_stat.position %>
-</p>
-
-<%= link_to 'Edit', edit_shortstop_stat_path(@shortstop_stat) %> |
-<%= link_to 'Back', shortstop_stats_path %>

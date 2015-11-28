@@ -1,85 +1,24 @@
 <div id="event-<%= @catcher_stat.id %>" class="event">
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
-      <%= render @catcher_stat, remote: false %>
-    </div>
-  </div>
-  <div class="row">
-    <div class="col-lg-6 col-lg-offset-3 well">
-      <h4>Comments</h4>
-      <hr>
-      <%= render 'comments/form', commentable: @catcher_stat %>
-      <br>
-      <div class="comments">
-        <%= render(@comments) || render('shared/no_resource', resources: 'Comments') %>
-      </div>
-    </div>
-  </div>
+      <div class="info">
+  <%= render 'shared/avatar', user: @starting_pitcher_stat.user %>
+  <h4 class="name"><%= @starting_pitcher_stat.user.name %></h4>
+  <span class="action">created a <%= link_to 'Starting Pitcher ', @starting_pitcher_stat %>stat</span>
+</div>
+<div class="content">
+  <h3><%= @starting_pitcher_stat.event %></h3>
+  <span class="text">
 
-
-
-
-
-<p id="notice"><%= notice %></p>
-
-<p>
-  <strong>Position name:</strong>
-  <%= @catcher_stat.position_name %>
-</p>
-
-<p>
-  <strong>Shorthand:</strong>
-  <%= @catcher_stat.shorthand %>
-</p>
-
-<p>
-  <strong>Sport:</strong>
-  <%= @catcher_stat.sport_id %>
-</p>
-
-<p>
-  <strong>Position:</strong>
-  <%= @catcher_stat.position_id %>
-</p>
-
-<p>
-  <strong>Sport name:</strong>
-  <%= @catcher_stat.sport_name %>
-</p>
-
-<p>
-  <strong>Event:</strong>
-  <%= @catcher_stat.event %>
-</p>
-
-<p>
+<!-- <p>
   <strong>Games started:</strong>
   <%= @catcher_stat.games_started %>
-</p>
+</p> -->
 
-<p>
-  <strong>Games played:</strong>
-  <%= @catcher_stat.games_played %>
-</p>
 
 <p>
   <strong>Win:</strong>
   <%= @catcher_stat.win %>
-</p>
-
-<p>
-  <strong>Loss:</strong>
-  <%= @catcher_stat.loss %>
-</p>
-
-<p>
-  <strong>Wins:</strong>
-  <%= @catcher_stat.wins %>
-</p>
-
-<p>
-  <strong>Losses:</strong>
-  <%= @catcher_stat.losses %>
 </p>
 
 <p>
@@ -136,26 +75,3 @@
   <strong>Home runs:</strong>
   <%= @catcher_stat.home_runs %>
 </p>
-
-<p>
-  <strong>User:</strong>
-  <%= @catcher_stat.user %>
-</p>
-
-<p>
-  <strong>Stat:</strong>
-  <%= @catcher_stat.stat %>
-</p>
-
-<p>
-  <strong>Sport:</strong>
-  <%= @catcher_stat.sport %>
-</p>
-
-<p>
-  <strong>Position:</strong>
-  <%= @catcher_stat.position %>
-</p>
-
-<%= link_to 'Edit', edit_catcher_stat_path(@catcher_stat) %> |
-<%= link_to 'Back', catcher_stats_path %>
