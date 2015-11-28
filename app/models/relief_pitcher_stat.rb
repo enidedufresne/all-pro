@@ -1,3 +1,5 @@
+# Copyright (c) 2015, @purplenutmeg1(Enide Bellamy)
+
 class ReliefPitcherStat < ActiveRecord::Base
   include Shared::Callbacks
   belongs_to :user

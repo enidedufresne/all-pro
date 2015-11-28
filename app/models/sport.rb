@@ -1,3 +1,5 @@
+# Copyright (c) 2015, @purplenutmeg1(Enide Bellamy)
+
 class Sport < ActiveRecord::Base
   	belongs_to :user
 	has_many :positions

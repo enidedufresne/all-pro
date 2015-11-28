@@ -1,3 +1,4 @@
+# Copyright (c) 2015, @purplenutmeg1(Enide Bellamy)
 class DefenderStat < ActiveRecord::Base
   include Shared::Callbacks
   belongs_to :user

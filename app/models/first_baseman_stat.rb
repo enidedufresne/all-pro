@@ -1,3 +1,4 @@
+# Copyright (c) 2015, @purplenutmeg1(Enide Bellamy)
 class FirstBasemanStat < ActiveRecord::Base
   include Shared::Callbacks
   belongs_to :user

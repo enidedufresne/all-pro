@@ -1,3 +1,4 @@
+# Copyright (c) 2015, @purplenutmeg1(Enide Bellamy)
 class Ability
   include CanCan::Ability
 
