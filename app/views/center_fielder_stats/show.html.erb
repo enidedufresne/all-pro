@@ -25,60 +25,73 @@
  Score:
   <%= @center_fielder_stat.score %> - <%= @center_fielder_stat.opponent_score %>
 </p>
+
+    <% if @center_fielder_stat.plate_appearances.present? %>
 <p>
   <strong>Plate appearances:</strong>
   <%= @center_fielder_stat.plate_appearances %>
 </p>
-
+    <% end %>
+    <% if @center_fielder_stat.at_bats.present? %>
 <p>
   <strong>At bats:</strong>
   <%= @center_fielder_stat.at_bats %>
 </p>
-
+    <% end %>
+    <% if @center_fielder_stat.hits.present? %>
 <p>
   <strong>Hits:</strong>
   <%= @center_fielder_stat.hits %>
 </p>
-
+    <% end %>
+    <% if @center_fielder_stat.runs_scored.present? %>
 <p>
   <strong>Runs scored:</strong>
   <%= @center_fielder_stat.runs_scored %>
 </p>
-
+    <% end %>
+    <% if @center_fielder_stat.runs_batted_in.present? %>
 <p>
   <strong>Runs batted in:</strong>
   <%= @center_fielder_stat.runs_batted_in %>
 </p>
-
+    <% end %>
+    <% if @center_fielder_stat.walks.present? %>
 <p>
   <strong>Walks:</strong>
   <%= @center_fielder_stat.walks %>
 </p>
-
+    <% end %>
+    <% if @center_fielder_stat.strike_outs.present? %>
 <p>
   <strong>Strike outs:</strong>
   <%= @center_fielder_stat.strike_outs %>
 </p>
-
+    <% end %>
+    <% if @center_fielder_stat.stolen_bases.present? %>
 <p>
   <strong>Stolen bases:</strong>
   <%= @center_fielder_stat.stolen_bases %>
 </p>
-
+    <% end %>
+    <% if @center_fielder_stat.doubles.present? %>
 <p>
   <strong>Doubles:</strong>
   <%= @center_fielder_stat.doubles %>
 </p>
-
+    <% end %>
+    <% if @center_fielder_stat.triples.present? %>
 <p>
   <strong>Triples:</strong>
   <%= @center_fielder_stat.triples %>
 </p>
-
+    <% end %>
+    <% if @center_fielder_stat.home_runs.present? %>
 <p>
   <strong>Home runs:</strong>
   <%= @center_fielder_stat.home_runs %>
 </p>
+    <% end %>
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

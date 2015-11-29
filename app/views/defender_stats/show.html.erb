@@ -11,35 +11,43 @@
   <span class="text">
 
 
+    <% if @defender_stat.win.present? %>
 <p>
   <strong>Win:</strong>
   <%= @defender_stat.win %>
 </p>
+    <% end %>
+    <% if @defender_stat.draw.present? %>
+<p>
+  <strong>Draw:</strong>
+  <%= @defender_stat.draw %>
+</p>    
+<% end %>
 <p>
  Score:
   <%= @defender_stat.score %> - <%= @defender_stat.opponent_score %>
 </p>
-<p>
-  <strong>Draw:</strong>
-  <%= @defender_stat.draw %>
-</p>
 
 
+
+    <% if @defender_stat.goals.present? %>
 <p>
   <strong>Goals:</strong>
   <%= @defender_stat.goals %>
 </p>
-
+    <% end %>
+    <% if @defender_stat.assists.present? %>
 <p>
   <strong>Assists:</strong>
   <%= @defender_stat.assists %>
 </p>
-
+    <% end %>
+    <% if @defender_stat.shots_taken.present? %>
 <p>
   <strong>Shots taken:</strong>
   <%= @defender_stat.shots_taken %>
 </p>
-
+    <% end %>
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
       <h4>Comments</h4>

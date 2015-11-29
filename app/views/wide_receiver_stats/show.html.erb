@@ -20,25 +20,31 @@
   <%= @wide_receiver_stat.score %> - <%= @wide_receiver_stat.opponent_score %>
 </p>
 
+
+    <% if @wide_receiver_stat.receptions.present? %>
 <p>
   <strong>Receptions:</strong>
   <%= @wide_receiver_stat.receptions %>
 </p>
-
+    <% end %>
+    <% if @wide_receiver_stat.reception_yards.present? %>
 <p>
   <strong>Reception yards:</strong>
   <%= @wide_receiver_stat.reception_yards %>
 </p>
-
+    <% end %>
+    <% if @wide_receiver_stat.reception_touchdowns.present? %>
 <p>
   <strong>Reception touchdowns:</strong>
   <%= @wide_receiver_stat.reception_touchdowns %>
 </p>
-
+    <% end %>
+    <% if @wide_receiver_stat.fumbles.present? %>
 <p>
   <strong>Fumbles:</strong>
   <%= @wide_receiver_stat.fumbles %>
 </p>
+    <% end %>
 
 
 

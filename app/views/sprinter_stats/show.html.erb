@@ -24,30 +24,35 @@
   <strong>Win:</strong>
   <%= @sprinter_stat.win %>
 </p>
-<p>
+<!-- <p>
  Score:
   <%= @sprinter_stat.score %> - <%= @sprinter_stat.opponent_score %>
-</p>
+</p> -->
 
+    <% if @sprinter_stat.team_score.present? %>
 <p>
   <strong>Team score:</strong>
   <%= @sprinter_stat.team_score %>
 </p>
-
+    <% end %>
+    <% if @sprinter_stat.distance_time.present? %>
 <p>
   <strong>Distance time:</strong>
   <%= @sprinter_stat.distance_time %>
 </p>
-
+    <% end %>
+    <% if @sprinter_stat.placed.present? %>
 <p>
   <strong>Placed:</strong>
   <%= @sprinter_stat.placed %>
 </p>
-
+    <% end %>
+    <% if @sprinter_stat.speed.present? %>
 <p>
   <strong>Speed:</strong>
   <%= @sprinter_stat.speed %>
 </p>
+    <% end %>
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

@@ -19,11 +19,14 @@
  Score:
   <%= @kicker_stat.score %> - <%= @kicker_stat.opponent_score %>
 </p>
+
+    <% if @kicker_stat.field_goals.present? %>
 <p>
   <strong>Field goals:</strong>
   <%= @kicker_stat.field_goals %>
 </p>
-
+    <% end %>
+    
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
       <h4>Comments</h4>

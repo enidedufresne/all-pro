@@ -19,50 +19,61 @@
  Score:
   <%= @quarterback_stat.score %> - <%= @quarterback_stat.opponent_score %>
 </p>
+
+    <% if @quarterback_stat.pass_completions.present? %>
 <p>
   <strong>Pass completions:</strong>
   <%= @quarterback_stat.pass_completions %>
 </p>
-
+    <% end %>
+    <% if @quarterback_stat.pass_attempts.present? %>
 <p>
   <strong>Pass attempts:</strong>
   <%= @quarterback_stat.pass_attempts %>
 </p>
-
+    <% end %>
+    <% if @quarterback_stat.passing_yards.present? %>
 <p>
   <strong>Passing yards:</strong>
   <%= @quarterback_stat.passing_yards %>
 </p>
-
+    <% end %>
+    <% if @quarterback_stat.passing_touchdowns.present? %>
 <p>
   <strong>Passing touchdowns:</strong>
   <%= @quarterback_stat.passing_touchdowns %>
 </p>
-
+    <% end %>
+    <% if @quarterback_stat.rushing_attempts.present? %>
 <p>
   <strong>Rushing attempts:</strong>
   <%= @quarterback_stat.rushing_attempts %>
 </p>
-
+    <% end %>
+    <% if @quarterback_stat.rushing_yards.present? %>
 <p>
   <strong>Rushing yards:</strong>
   <%= @quarterback_stat.rushing_yards %>
 </p>
-
+    <% end %>
+    <% if @quarterback_stat.rushing_touchdowns.present? %>
 <p>
   <strong>Rushing touchdowns:</strong>
   <%= @quarterback_stat.rushing_touchdowns %>
 </p>
-
+    <% end %>
+    <% if @quarterback_stat.fumbles.present? %>
 <p>
   <strong>Fumbles:</strong>
   <%= @quarterback_stat.fumbles %>
 </p>
-
+    <% end %>
+    <% if @quarterback_stat.interception.present? %>
 <p>
   <strong>Interception:</strong>
   <%= @quarterback_stat.interception %>
 </p>
+    <% end %>
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

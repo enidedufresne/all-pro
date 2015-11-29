@@ -10,33 +10,42 @@
   <h3><%= @midfielder_stat.event %></h3>
   <span class="text">
 
+    <% if @midfielder_stat.win.present? %>
 <p>
   <strong>Win:</strong>
   <%= @midfielder_stat.win %>
 </p>
-<p>
- Score:
-  <%= @midfielder_stat.score %> - <%= @midfielder_stat.opponent_score %>
-</p>
+    <% end %>
+    <% if @midfielder_stat.draw.present? %>
 <p>
   <strong>Draw:</strong>
   <%= @midfielder_stat.draw %>
 </p>
+    <% end %>
 
+<p>
+ Score:
+  <%= @midfielder_stat.score %> - <%= @midfielder_stat.opponent_score %>
+</p>
+
+    <% if @midfielder_stat.goals.present? %>
 <p>
   <strong>Goals:</strong>
   <%= @midfielder_stat.goals %>
 </p>
-
+    <% end %>
+    <% if @midfielder_stat.assists.present? %>
 <p>
   <strong>Assists:</strong>
   <%= @midfielder_stat.assists %>
 </p>
-
+    <% end %>
+    <% if @midfielder_stat.shots_taken.present? %>
 <p>
   <strong>Shots taken:</strong>
   <%= @midfielder_stat.shots_taken %>
 </p>
+    <% end %>
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

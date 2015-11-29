@@ -20,40 +20,48 @@
   <%= @running_back_stat.score %> - <%= @running_back_stat.opponent_score %>
 </p>
 
+    <% if @running_back_stat.rushing_attempts.present? %>
 <p>
   <strong>Rushing attempts:</strong>
   <%= @running_back_stat.rushing_attempts %>
 </p>
-
+    <% end %>
+    <% if @running_back_stat.rushing_yards.present? %>
 <p>
   <strong>Rushing yards:</strong>
   <%= @running_back_stat.rushing_yards %>
 </p>
-
+    <% end %>
+    <% if @running_back_stat.rushing_touchdowns.present? %>
 <p>
   <strong>Rushing touchdowns:</strong>
   <%= @running_back_stat.rushing_touchdowns %>
 </p>
-
+    <% end %>
+    <% if @running_back_stat.receptions.present? %>
 <p>
   <strong>Receptions:</strong>
   <%= @running_back_stat.receptions %>
 </p>
-
+    <% end %>
+    <% if @running_back_stat.reception_yards.present? %>
 <p>
   <strong>Reception yards:</strong>
   <%= @running_back_stat.reception_yards %>
 </p>
-
+    <% end %>
+    <% if @running_back_stat.reception_touchdowns.present? %>
 <p>
   <strong>Reception touchdowns:</strong>
   <%= @running_back_stat.reception_touchdowns %>
 </p>
-
+    <% end %>
+    <% if @running_back_stat.fumbles.present? %>
 <p>
   <strong>Fumbles:</strong>
   <%= @running_back_stat.fumbles %>
 </p>
+    <% end %>
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

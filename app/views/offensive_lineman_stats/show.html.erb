@@ -18,11 +18,14 @@
  Score:
   <%= @offensive_lineman_stat.score %> - <%= @offensive_lineman_stat.opponent_score %>
 </p>
+
+    <% if @offensive_lineman_stat.pancakes.present? %>
 <p>
   <strong>Pancakes:</strong>
   <%= @offensive_lineman_stat.pancakes %>
 </p>
-
+    <% end %>
+    
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
       <h4>Comments</h4>

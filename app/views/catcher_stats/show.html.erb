@@ -24,60 +24,73 @@
  Score:
   <%= @catcher_stat.score %> - <%= @catcher_stat.opponent_score %>
 </p>
+
+    <% if @catcher_stat.plate_appearances.present? %>
 <p>
   <strong>Plate appearances:</strong>
   <%= @catcher_stat.plate_appearances %>
 </p>
-
+    <% end %>
+    <% if @catcher_stat.at_bats.present? %>
 <p>
   <strong>At bats:</strong>
   <%= @catcher_stat.at_bats %>
 </p>
-
+    <% end %>
+    <% if @catcher_stat.hits.present? %>
 <p>
   <strong>Hits:</strong>
   <%= @catcher_stat.hits %>
 </p>
-
+    <% end %>
+    <% if @catcher_stat.runs_scored.present? %>
 <p>
   <strong>Runs scored:</strong>
   <%= @catcher_stat.runs_scored %>
 </p>
-
+    <% end %>
+    <% if @catcher_stat.runs_batted_in.present? %>
 <p>
   <strong>Runs batted in:</strong>
   <%= @catcher_stat.runs_batted_in %>
 </p>
-
+    <% end %>
+    <% if @catcher_stat.walks.present? %>
 <p>
   <strong>Walks:</strong>
   <%= @catcher_stat.walks %>
 </p>
-
+    <% end %>
+    <% if @catcher_stat.strike_outs.present? %>
 <p>
   <strong>Strike outs:</strong>
   <%= @catcher_stat.strike_outs %>
 </p>
-
+    <% end %>
+    <% if @catcher_stat.stolen_bases.present? %>
 <p>
   <strong>Stolen bases:</strong>
   <%= @catcher_stat.stolen_bases %>
 </p>
-
+    <% end %>
+    <% if @catcher_stat.doubles.present? %>
 <p>
   <strong>Doubles:</strong>
   <%= @catcher_stat.doubles %>
 </p>
-
+    <% end %>
+    <% if @catcher_stat.triples.present? %>
 <p>
   <strong>Triples:</strong>
   <%= @catcher_stat.triples %>
 </p>
-
+    <% end %>
+    <% if @catcher_stat.home_runs.present? %>
 <p>
   <strong>Home runs:</strong>
   <%= @catcher_stat.home_runs %>
 </p>
+    <% end %>
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

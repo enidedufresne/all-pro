@@ -9,30 +9,37 @@
 <div class="content">
   <h3><%= @goalkeeper_stat.event %></h3>
   <span class="text">
-
+    
+    <% if @goalkeeper_stat.win.present? %>
 <p>
   <strong>Win:</strong>
   <%= @goalkeeper_stat.win %>
 </p>
+    <% end %>
+    <% if @goalkeeper_stat.draw.present? %>
+<p>
+  <strong>Draw:</strong>
+  <%= @goalkeeper_stat.draw %>
+</p>
+    <% end %>
+
 <p>
  Score:
   <%= @goalkeeper_stat.score %> - <%= @goalkeeper_stat.opponent_score %>
 </p>
-<p>
-  <strong>Draws:</strong>
-  <%= @goalkeeper_stat.draws %>
-</p>
 
+    <% if @goalkeeper_stat.saves.present? %>
 <p>
   <strong>Saves:</strong>
   <%= @goalkeeper_stat.saves %>
 </p>
-
+    <% end %>
+    <% if @goalkeeper_stat.shots_faced.present? %>
 <p>
   <strong>Shots faced:</strong>
   <%= @goalkeeper_stat.shots_faced %>
 </p>
-
+    <% end %>
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
       <h4>Comments</h4>

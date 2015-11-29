@@ -18,25 +18,31 @@
  Score:
   <%= @defensive_back_stat.score %> - <%= @defensive_back_stat.opponent_score %>
 </p>
+
+    <% if @defensive_back_stat.tackles.present? %>
 <p>
   <strong>Tackles:</strong>
   <%= @defensive_back_stat.tackles %>
 </p>
-
+    <% end %>
+    <% if @defensive_back_stat.sacks.present? %>
 <p>
   <strong>Sacks:</strong>
   <%= @defensive_back_stat.sacks %>
 </p>
-
+    <% end %>
+    <% if @defensive_back_stat.fumbles.present? %>
 <p>
   <strong>Fumbles:</strong>
   <%= @defensive_back_stat.fumbles %>
 </p>
-
+    <% end %>
+    <% if @defensive_back_stat.interception.present? %>
 <p>
   <strong>Interception:</strong>
   <%= @defensive_back_stat.interception %>
 </p>
+    <% end %>
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

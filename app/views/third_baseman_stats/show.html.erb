@@ -24,60 +24,72 @@
   <%= @third_baseman_stat.score %> - <%= @third_baseman_stat.opponent_score %>
 </p>
 
+    <% if @third_baseman_stat.plate_appearances.present? %>
 <p>
   <strong>Plate appearances:</strong>
   <%= @third_baseman_stat.plate_appearances %>
 </p>
-
+    <% end %>
+    <% if @third_baseman_stat.at_bats.present? %>
 <p>
   <strong>At bats:</strong>
   <%= @third_baseman_stat.at_bats %>
 </p>
-
+    <% end %>
+    <% if @third_baseman_stat.hits.present? %>
 <p>
   <strong>Hits:</strong>
   <%= @third_baseman_stat.hits %>
 </p>
-
+    <% end %>
+    <% if @third_baseman_stat.runs_scored.present? %>
 <p>
   <strong>Runs scored:</strong>
   <%= @third_baseman_stat.runs_scored %>
 </p>
-
+    <% end %>
+    <% if @third_baseman_stat.runs_batted_in.present? %>
 <p>
   <strong>Runs batted in:</strong>
   <%= @third_baseman_stat.runs_batted_in %>
 </p>
-
+    <% end %>
+    <% if @third_baseman_stat.walks.present? %>
 <p>
   <strong>Walks:</strong>
   <%= @third_baseman_stat.walks %>
 </p>
-
+    <% end %>
+    <% if @third_baseman_stat.strike_outs.present? %>
 <p>
   <strong>Strike outs:</strong>
   <%= @third_baseman_stat.strike_outs %>
 </p>
-
+    <% end %>
+    <% if @third_baseman_stat.stolen_bases.present? %>
 <p>
   <strong>Stolen bases:</strong>
   <%= @third_baseman_stat.stolen_bases %>
 </p>
-
+    <% end %>
+    <% if @third_baseman_stat.doubles.present? %>
 <p>
   <strong>Doubles:</strong>
   <%= @third_baseman_stat.doubles %>
 </p>
-
+    <% end %>
+    <% if @third_baseman_stat.triples.present? %>
 <p>
   <strong>Triples:</strong>
   <%= @third_baseman_stat.triples %>
 </p>
-
+    <% end %>
+    <% if @third_baseman_stat.home_runs.present? %>
 <p>
   <strong>Home runs:</strong>
   <%= @third_baseman_stat.home_runs %>
 </p>
+    <% end %>
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

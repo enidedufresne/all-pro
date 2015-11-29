@@ -20,21 +20,25 @@
  Score:
   <%= @kicker_returner_stat.score %> - <%= @kicker_returner_stat.opponent_score %>
 </p>
+
+    <% if @kicker_returner_stat.kickreturns.present? %>
 <p>
   <strong>Kickreturns:</strong>
   <%= @kicker_returner_stat.kickreturns %>
 </p>
-
+    <% end %>
+    <% if @kicker_returner_stat.kickreturn_yards.present? %>
 <p>
   <strong>Kickreturn yards:</strong>
   <%= @kicker_returner_stat.kickreturn_yards %>
 </p>
-
+    <% end %>
+    <% if @kicker_returner_stat.kickreturn_touchdowns.present? %>
 <p>
   <strong>Kickreturn touchdowns:</strong>
   <%= @kicker_returner_stat.kickreturn_touchdowns %>
 </p>
-
+    <% end %>
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
       <h4>Comments</h4>

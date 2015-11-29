@@ -18,65 +18,80 @@
  Score:
   <%= @point_guard_stat.score %> - <%= @point_guard_stat.opponent_score %>
 </p>
+
+    <% if @point_guard_stat.minutes_played.present? %>
 <p>
   <strong>Minutes played:</strong>
   <%= @point_guard_stat.minutes_played %>
 </p>
-
+    <% end %>
+    <% if @point_guard_stat.fieldgoals_made.present? %>
 <p>
   <strong>Fieldgoals made:</strong>
   <%= @point_guard_stat.fieldgoals_made %>
 </p>
-
+    <% end %>
+    <% if @point_guard_stat.fieldgoal_attemps.present? %>
 <p>
   <strong>Fieldgoal attemps:</strong>
   <%= @point_guard_stat.fieldgoal_attemps %>
 </p>
-
+    <% end %>
+    <% if @point_guard_stat.threepoints_made.present? %>
 <p>
   <strong>Threepoints made:</strong>
   <%= @point_guard_stat.threepoints_made %>
 </p>
-
+    <% end %>
+    <% if @point_guard_stat.threepoint_attemps.present? %>
 <p>
   <strong>Threepoint attemps:</strong>
   <%= @point_guard_stat.threepoint_attemps %>
 </p>
-
+    <% end %>
+    <% if @point_guard_stat.freethrows_made.present? %>
 <p>
   <strong>Freethrows made:</strong>
   <%= @point_guard_stat.freethrows_made %>
 </p>
-
+    <% end %>
+    <% if @point_guard_stat.freethrow_attemps.present? %>
 <p>
   <strong>Freethrow attemps:</strong>
   <%= @point_guard_stat.freethrow_attemps %>
 </p>
-
+    <% end %>
+    <% if @point_guard_stat.rebounds.present? %>
 <p>
   <strong>Rebounds:</strong>
   <%= @point_guard_stat.rebounds %>
 </p>
-
+    <% end %>
+    <% if @point_guard_stat.assists.present? %>
 <p>
   <strong>Assists:</strong>
   <%= @point_guard_stat.assists %>
 </p>
-
+    <% end %>
+    <% if @point_guard_stat.steals.present? %>
 <p>
   <strong>Steals:</strong>
   <%= @point_guard_stat.steals %>
 </p>
-
+    <% end %>
+    <% if @point_guard_stat.blocks.present? %>
 <p>
   <strong>Blocks:</strong>
   <%= @point_guard_stat.blocks %>
 </p>
-
+    <% end %>
+    <% if @point_guard_stat.points.present? %>
 <p>
   <strong>Points:</strong>
   <%= @point_guard_stat.points %>
 </p>
+    <% end %>
+    
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

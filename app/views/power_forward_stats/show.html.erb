@@ -18,65 +18,80 @@
  Score:
   <%= @power_forward_stat.score %> - <%= @power_forward_stat.opponent_score %>
 </p>
+
+    <% if @power_forward_stat.minutes_played.present? %>
 <p>
   <strong>Minutes played:</strong>
   <%= @power_forward_stat.minutes_played %>
 </p>
-
+    <% end %>
+    <% if @power_forward_stat.fieldgoals_made.present? %>
 <p>
   <strong>Fieldgoals made:</strong>
   <%= @power_forward_stat.fieldgoals_made %>
 </p>
-
+    <% end %>
+    <% if @power_forward_stat.fieldgoal_attemps.present? %>
 <p>
   <strong>Fieldgoal attemps:</strong>
   <%= @power_forward_stat.fieldgoal_attemps %>
 </p>
-
+    <% end %>
+    <% if @power_forward_stat.threepoints_made.present? %>
 <p>
   <strong>Threepoints made:</strong>
   <%= @power_forward_stat.threepoints_made %>
 </p>
-
+    <% end %>
+    <% if @power_forward_stat.threepoint_attemps.present? %>
 <p>
   <strong>Threepoint attemps:</strong>
   <%= @power_forward_stat.threepoint_attemps %>
 </p>
-
+    <% end %>
+    <% if @power_forward_stat.freethrows_made.present? %>
 <p>
   <strong>Freethrows made:</strong>
   <%= @power_forward_stat.freethrows_made %>
 </p>
-
+    <% end %>
+    <% if @power_forward_stat.freethrow_attemps.present? %>
 <p>
   <strong>Freethrow attemps:</strong>
   <%= @power_forward_stat.freethrow_attemps %>
 </p>
-
+    <% end %>
+    <% if @power_forward_stat.rebounds.present? %>
 <p>
   <strong>Rebounds:</strong>
   <%= @power_forward_stat.rebounds %>
 </p>
-
+    <% end %>
+    <% if @power_forward_stat.assists.present? %>
 <p>
   <strong>Assists:</strong>
   <%= @power_forward_stat.assists %>
 </p>
-
+    <% end %>
+    <% if @power_forward_stat.steals.present? %>
 <p>
   <strong>Steals:</strong>
   <%= @power_forward_stat.steals %>
 </p>
-
+    <% end %>
+    <% if @power_forward_stat.blocks.present? %>
 <p>
   <strong>Blocks:</strong>
   <%= @power_forward_stat.blocks %>
 </p>
-
+    <% end %>
+    <% if @power_forward_stat.points.present? %>
 <p>
   <strong>Points:</strong>
   <%= @power_forward_stat.points %>
 </p>
+    <% end %>
+    
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

@@ -14,29 +14,36 @@
   <strong>Win:</strong>
   <%= @runner_stat.win %>
 </p>
-<p>
+<!-- <p>
  Score:
   <%= @runner_stat.score %> - <%= @runner_stat.opponent_score %>
-</p>
+</p> -->
+
+    <% if @runner_stat.team_score.present? %>
 <p>
   <strong>Team score:</strong>
   <%= @runner_stat.team_score %>
 </p>
-
+    <% end %>
+    <% if @runner_stat.distance_time.present? %>
 <p>
   <strong>Distance time:</strong>
   <%= @runner_stat.distance_time %>
 </p>
-
+    <% end %>
+    <% if @runner_stat.placed.present? %>
 <p>
   <strong>Placed:</strong>
   <%= @runner_stat.placed %>
 </p>
-
+    <% end %>
+    <% if @runner_stat.speed.present? %>
 <p>
   <strong>Speed:</strong>
   <%= @runner_stat.speed %>
 </p>
+    <% end %>
+    
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

@@ -24,60 +24,73 @@
  Score:
   <%= @designated_hitter_stat.score %> - <%= @designated_hitter_stat.opponent_score %>
 </p>
+
+    <% if @designated_hitter_stat.plate_appearances.present? %>
 <p>
   <strong>Plate appearances:</strong>
   <%= @designated_hitter_stat.plate_appearances %>
 </p>
-
+    <% end %>
+    <% if @designated_hitter_stat.at_bats.present? %>
 <p>
   <strong>At bats:</strong>
   <%= @designated_hitter_stat.at_bats %>
 </p>
-
+    <% end %>
+    <% if @designated_hitter_stat.hits.present? %>
 <p>
   <strong>Hits:</strong>
   <%= @designated_hitter_stat.hits %>
 </p>
-
+    <% end %>
+    <% if @designated_hitter_stat.runs_scored.present? %>
 <p>
   <strong>Runs scored:</strong>
   <%= @designated_hitter_stat.runs_scored %>
 </p>
-
+    <% end %>
+    <% if @designated_hitter_stat.runs_batted_in.present? %>
 <p>
   <strong>Runs batted in:</strong>
   <%= @designated_hitter_stat.runs_batted_in %>
 </p>
-
+    <% end %>
+    <% if @designated_hitter_stat.walks.present? %>
 <p>
   <strong>Walks:</strong>
   <%= @designated_hitter_stat.walks %>
 </p>
-
+    <% end %>
+    <% if @designated_hitter_stat.strike_outs.present? %>
 <p>
   <strong>Strike outs:</strong>
   <%= @designated_hitter_stat.strike_outs %>
 </p>
-
+    <% end %>
+    <% if @designated_hitter_stat.stolen_bases.present? %>
 <p>
   <strong>Stolen bases:</strong>
   <%= @designated_hitter_stat.stolen_bases %>
 </p>
-
+    <% end %>
+    <% if @designated_hitter_stat.doubles.present? %>
 <p>
   <strong>Doubles:</strong>
   <%= @designated_hitter_stat.doubles %>
 </p>
-
+    <% end %>
+    <% if @designated_hitter_stat.triples.present? %>
 <p>
   <strong>Triples:</strong>
   <%= @designated_hitter_stat.triples %>
 </p>
-
+    <% end %>
+    <% if @designated_hitter_stat.home_runs.present? %>
 <p>
   <strong>Home runs:</strong>
   <%= @designated_hitter_stat.home_runs %>
 </p>
+    <% end %>
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

@@ -25,25 +25,30 @@
   <%= @tight_end_stat.score %> - <%= @tight_end_stat.opponent_score %>
 </p>
 
+    <% if @tight_end_stat.receptions.present? %>
 <p>
   <strong>Receptions:</strong>
   <%= @tight_end_stat.receptions %>
 </p>
-
+    <% end %>
+    <% if @tight_end_stat.reception_yards.present? %>
 <p>
   <strong>Reception yards:</strong>
   <%= @tight_end_stat.reception_yards %>
 </p>
-
+    <% end %>
+    <% if @tight_end_stat.reception_touchdowns.present? %>
 <p>
   <strong>Reception touchdowns:</strong>
   <%= @tight_end_stat.reception_touchdowns %>
 </p>
-
+    <% end %>
+    <% if @tight_end_stat.pancakes.present? %>
 <p>
   <strong>Pancakes:</strong>
   <%= @tight_end_stat.pancakes %>
 </p>
+    <% end %>
 
 
   <div class="row">

@@ -23,75 +23,73 @@
  Score:
   <%= @shortstop_stat.score %> - <%= @shortstop_stat.opponent_score %>
 </p>
-<p>
-  <strong>Loss:</strong>
-  <%= @shortstop_stat.loss %>
-</p>
 
-<p>
-  <strong>Wins:</strong>
-  <%= @shortstop_stat.wins %>
-</p>
-
-<p>
-  <strong>Losses:</strong>
-  <%= @shortstop_stat.losses %>
-</p>
-
+    <% if @shortstop_stat.plate_appearances.present? %>
 <p>
   <strong>Plate appearances:</strong>
   <%= @shortstop_stat.plate_appearances %>
 </p>
-
+    <% end %>
+    <% if @shortstop_stat.at_bats.present? %>
 <p>
   <strong>At bats:</strong>
   <%= @shortstop_stat.at_bats %>
 </p>
-
+    <% end %>
+    <% if @shortstop_stat.hits.present? %>
 <p>
   <strong>Hits:</strong>
   <%= @shortstop_stat.hits %>
 </p>
-
+    <% end %>
+    <% if @shortstop_stat.runs_scored.present? %>
 <p>
   <strong>Runs scored:</strong>
   <%= @shortstop_stat.runs_scored %>
 </p>
-
+    <% end %>
+    <% if @shortstop_stat.runs_batted_in.present? %>
 <p>
   <strong>Runs batted in:</strong>
   <%= @shortstop_stat.runs_batted_in %>
 </p>
-
+    <% end %>
+    <% if @shortstop_stat.walks.present? %>
 <p>
   <strong>Walks:</strong>
   <%= @shortstop_stat.walks %>
 </p>
-
+    <% end %>
+    <% if @shortstop_stat.strike_outs.present? %>
 <p>
   <strong>Strike outs:</strong>
   <%= @shortstop_stat.strike_outs %>
 </p>
-
+    <% end %>
+    <% if @shortstop_stat.stolen_bases.present? %>
 <p>
   <strong>Stolen bases:</strong>
   <%= @shortstop_stat.stolen_bases %>
 </p>
-
+    <% end %>
+    <% if @shortstop_stat.doubles.present? %>
 <p>
   <strong>Doubles:</strong>
   <%= @shortstop_stat.doubles %>
 </p>
-
+    <% end %>
+    <% if @shortstop_stat.triples.present? %>
 <p>
   <strong>Triples:</strong>
   <%= @shortstop_stat.triples %>
 </p>
-
+    <% end %>
+    <% if @shortstop_stat.home_runs.present? %>
 <p>
   <strong>Home runs:</strong>
   <%= @shortstop_stat.home_runs %>
 </p>
+    <% end %>
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

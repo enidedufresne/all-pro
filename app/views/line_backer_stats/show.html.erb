@@ -18,25 +18,31 @@
  Score:
   <%= @line_backer_stat.score %> - <%= @line_backer_stat.opponent_score %>
 </p>
+
+    <% if @line_backer_stat.tackles.present? %>
 <p>
   <strong>Tackles:</strong>
   <%= @line_backer_stat.tackles %>
 </p>
-
+    <% end %>
+    <% if @line_backer_stat.sacks.present? %>
 <p>
   <strong>Sacks:</strong>
   <%= @line_backer_stat.sacks %>
 </p>
-
+    <% end %>
+    <% if @line_backer_stat.fumbles.present? %>
 <p>
   <strong>Fumbles:</strong>
   <%= @line_backer_stat.fumbles %>
 </p>
-
+    <% end %>
+    <% if @line_backer_stat.interception.present? %>
 <p>
   <strong>Interception:</strong>
   <%= @line_backer_stat.interception %>
 </p>
+    <% end %>
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">

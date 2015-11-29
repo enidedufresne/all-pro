@@ -11,33 +11,42 @@
   <span class="text">
 
 
+    <% if @forward_stat.win.present? %>
 <p>
   <strong>Win:</strong>
   <%= @forward_stat.win %>
 </p>
-<p>
- Score:
-  <%= @forward_stat.score %> - <%= @forward_stat.opponent_score %>
-</p>
+    <% end %>
+    <% if @forward_stat.draw.present? %>
 <p>
   <strong>Draw:</strong>
   <%= @forward_stat.draw %>
 </p>
+  <% end %>
+<p>
+ Score:
+  <%= @forward_stat.score %> - <%= @forward_stat.opponent_score %>
+</p>
 
+    <% if @forward_stat.goals.present? %>
 <p>
   <strong>Goals:</strong>
   <%= @forward_stat.goals %>
 </p>
-
+    <% end %>
+    <% if @forward_stat.assists.present? %>
 <p>
   <strong>Assists:</strong>
   <%= @forward_stat.assists %>
 </p>
-
+    <% end %>
+    <% if @forward_stat.shots_taken.present? %>
 <p>
   <strong>Shots taken:</strong>
   <%= @forward_stat.shots_taken %>
 </p>
+    <% end %>
+    
 
   <div class="row">
     <div class="col-lg-6 col-lg-offset-3 well">
