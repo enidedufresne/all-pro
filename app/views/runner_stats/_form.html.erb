@@ -1,33 +1,32 @@
 <%= form_for(@runner_stat) do |f| %>
   <div class="field">
     <%= f.label :event %><br>
-    <%= f.text_field :event, class: 'form-control', autofocus: true %>
+    <%= f.text_field :event, class: 'form-control', autofocus: true, placeholder: "ex. Chicago Marathon" %>
   </div>
   <!-- <div class="field">
     <%= f.label :races_run %><br>
     <%= f.number_field :races_run %>
   </div> -->
   <div class="field">
-    <%= f.label :win %><br>
-    <%= f.check_box :win %>
-  </div>
-  <div class="field">
-    <%= f.label :team_score %><br>
-    <%= f.number_field :team_score, class: 'form-control', autofocus: true %>
-  </div>
-  <div class="field">
     <%= f.label :distance_time %><br>
     <%= f.number_field :distance_time, class: 'form-control', autofocus: true %>
+  </div>
+  <div class="field">
+    <%= f.label :speed %><br>
+    <%= f.number_field :speed, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :placed %><br>
     <%= f.number_field :placed, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
-    <%= f.label :speed %><br>
-    <%= f.number_field :speed, class: 'form-control', autofocus: true %>
+    <%= f.label "Win? Check box" %> <i>(leave blank, if not)</i><br>
+    <%= f.check_box :win %>
   </div>
-
+  <div class="field">
+    <%= f.label "Team placement" %> <i>(leave blank, if no team)</i><br>
+    <%= f.number_field :team_score, class: 'form-control', autofocus: true %>
+  </div>
   <div class="actions">
     <%= f.submit :create, class: 'btn btn-primary' %>
   </div>

@@ -1,25 +1,12 @@
 <%= form_for(@wide_receiver_stat) do |f| %>
   <div class="form-group">
     <%= f.label :event %><br>
-    <%= f.text_field :event, class: 'form-control', autofocus: true, placeholder: "Non" %>
+    <%= f.text_field :event, class: 'form-control', autofocus: true, placeholder: "ex. Reds v. Blues" %>
   </div>
   <!-- <div class="field">
     <%= f.label :games_played %><br>
     <%= f.number_field :games_played %>
   </div> -->
-  <div class="form-group">
-    <%= f.label :win %><br>
-    <%= f.check_box :win %>
-  </div>
-    <div class="form-group">
-    <%= f.label "Your final score" %><br>
-    <%= f.text_field :score, class: 'form-control', autofocus: true, placeholder: "Not that" %>
-  </div>
-    <div class="form-group">
-    <%= f.label "Opponent's final score" %><br>
-    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true, placeholder: "Do this" %>
-  </div>
-
   <div class="form-group">
     <%= f.label :receptions %><br>
     <%= f.number_field :receptions, class: 'form-control', autofocus: true %>
@@ -36,9 +23,19 @@
     <%= f.label :fumbles %><br>
     <%= f.number_field :fumbles, class: 'form-control', autofocus: true %>
   </div>
-
+    <div class="form-group">
+    <%= f.label "Win? Check box" %> <i>(leave blank, if not)</i><br>
+    <%= f.check_box :win %>
+  </div>
+    <div class="form-group">
+    <%= f.label "Your final score" %><br>
+    <%= f.text_field :score, class: 'form-control', autofocus: true %>
+  </div>
+    <div class="form-group">
+    <%= f.label "Opponent's final score" %><br>
+    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true %>
+  </div>
   <div class="actions">
     <%= f.submit :create, class: 'btn btn-primary' %>
   </div>
-
 <% end %>

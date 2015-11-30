@@ -1,39 +1,11 @@
 <%= form_for(@third_baseman_stat) do |f| %>
   <div class="field">
     <%= f.label :event %><br>
-    <%= f.text_field :event, class: 'form-control', autofocus: true %>
+    <%= f.text_field :event, class: 'form-control', autofocus: true, placeholder: "ex. Reds v. Blues" %>
   </div>
   <!-- <div class="field">
     <%= f.label :games_started %><br>
     <%= f.number_field :games_started %>
-  </div>
-  <div class="field">
-    <%= f.label :games_played %><br>
-    <%= f.number_field :games_played %>
-  </div> -->
-  <div class="field">
-    <%= f.label :win %><br>
-    <%= f.check_box :win %>
-  </div>
-    <div class="field">
-    <%= f.label "Your final score" %><br>
-    <%= f.text_field :score, class: 'form-control', autofocus: true %>
-  </div>
-    <div class="field">
-    <%= f.label "Opponent's final score" %><br>
-    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true %>
-  </div>
-  <!-- <div class="field">
-    <%= f.label :loss %><br>
-    <%= f.check_box :loss %>
-  </div>
-  <div class="field">
-    <%= f.label :wins %><br>
-    <%= f.number_field :wins %>
-  </div>
-  <div class="field">
-    <%= f.label :losses %><br>
-    <%= f.number_field :losses %>
   </div> -->
   <div class="field">
     <%= f.label :plate_appearances %><br>
@@ -79,7 +51,18 @@
     <%= f.label :home_runs %><br>
     <%= f.number_field :home_runs, class: 'form-control', autofocus: true %>
   </div>
-
+  <div class="field">
+    <%= f.label "Win? Check box" %> <i>(leave blank, if not)</i><br>
+    <%= f.check_box :win %>
+  </div>
+    <div class="field">
+    <%= f.label "Your final score" %><br>
+    <%= f.text_field :score, class: 'form-control', autofocus: true %>
+  </div>
+    <div class="field">
+    <%= f.label "Opponent's final score" %><br>
+    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true %>
+  </div>
   <div class="actions">
     <%= f.submit :create, class: 'btn btn-primary' %>
   </div>

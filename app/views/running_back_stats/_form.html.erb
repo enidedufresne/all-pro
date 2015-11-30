@@ -1,24 +1,12 @@
 <%= form_for(@running_back_stat) do |f| %>
   <div class="field">
     <%= f.label :event %><br>
-    <%= f.text_field :event, class: 'form-control', autofocus: true %>
+    <%= f.text_field :event, class: 'form-control', autofocus: true, placeholder: "ex. Reds v. Blues" %>
   </div>
   <!-- <div class="field">
     <%= f.label :games_played %><br>
     <%= f.number_field :games_played %>
   </div> -->
-  <div class="field">
-    <%= f.label :win %><br>
-    <%= f.check_box :win %>
-  </div>
-    <div class="field">
-    <%= f.label "Your final score" %><br>
-    <%= f.text_field :score, class: 'form-control', autofocus: true %>
-  </div>
-    <div class="field">
-    <%= f.label "Opponent's final score" %><br>
-    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true %>
-  </div>
   <div class="field">
     <%= f.label :rushing_attempts %><br>
     <%= f.number_field :rushing_attempts, class: 'form-control', autofocus: true %>
@@ -47,7 +35,18 @@
     <%= f.label :fumbles %><br>
     <%= f.number_field :fumbles, class: 'form-control', autofocus: true %>
   </div>
-
+  <div class="field">
+    <%= f.label "Win? Check box" %> <i>(leave blank, if not)</i><br>
+    <%= f.check_box :win %>
+  </div>
+    <div class="field">
+    <%= f.label "Your final score" %><br>
+    <%= f.text_field :score, class: 'form-control', autofocus: true %>
+  </div>
+    <div class="field">
+    <%= f.label "Opponent's final score" %><br>
+    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true %>
+  </div>
   <div class="actions">
     <%= f.submit :create, class: 'btn btn-primary' %>
   </div>

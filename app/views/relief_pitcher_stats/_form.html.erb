@@ -1,41 +1,19 @@
 <%= form_for(@relief_pitcher_stat) do |f| %>
   <div class="field">
     <%= f.label :event %><br>
-    <%= f.text_field :event, class: 'form-control', autofocus: true %>
+    <%= f.text_field :event, class: 'form-control', autofocus: true, placeholder: "ex. Reds v. Blues" %>
   </div>
   <!-- <div class="field">
     <%= f.label :games_started %><br>
     <%= f.number_field :games_started %>
   </div> -->
   <div class="field">
-    <%= f.label :win %><br>
-    <%= f.check_box :win %>
-  </div>
-    <div class="field">
-    <%= f.label "Your final score" %><br>
-    <%= f.text_field :score, class: 'form-control', autofocus: true %>
-  </div>
-    <div class="field">
-    <%= f.label "Opponent's final score" %><br>
-    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true %>
-  </div>
-  <div class="field">
-    <%= f.label :pitcher_win %><br>
-    <%= f.check_box :pitcher_win %>
-  </div>
-
-  <div class="field">
-    <%= f.label :pitcher_no_decision %><br>
-    <%= f.check_box :pitcher_no_decision %>
-  </div>
-
-  <div class="field">
-    <%= f.label :pitcher_saves %><br>
-    <%= f.number_field :pitcher_saves, class: 'form-control', autofocus: true %>
-  </div>
-  <div class="field">
     <%= f.label :innings_pitched %><br>
     <%= f.number_field :innings_pitched, class: 'form-control', autofocus: true %>
+  </div>
+    <div class="field">
+    <%= f.label :pitcher_saves %><br>
+    <%= f.number_field :pitcher_saves, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :hits_allowed %><br>
@@ -53,7 +31,26 @@
     <%= f.label :walks_allowed %><br>
     <%= f.number_field :walks_allowed, class: 'form-control', autofocus: true %>
   </div>
-
+    <div class="field">
+    <%= f.label "Pitcher Win? Check box" %> <i>(leave blank, if not)</i><br>
+    <%= f.check_box :pitcher_win %>
+  </div>
+  <div class="field">
+    <%= f.label "Pitcher No Decision? Check box" %> <i>(leave blank, if not)</i><br>
+    <%= f.check_box :pitcher_no_decision %>
+  </div>
+  <div class="field">
+    <%= f.label "Team Win? Check box" %> <i>(leave blank, if not)</i><br>
+    <%= f.check_box :win %>
+  </div>
+    <div class="field">
+    <%= f.label "Your final score" %><br>
+    <%= f.text_field :score, class: 'form-control', autofocus: true %>
+  </div>
+    <div class="field">
+    <%= f.label "Opponent's final score" %><br>
+    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true %>
+  </div>
   <div class="actions">
     <%= f.submit :create, class: 'btn btn-primary' %>
   </div>
