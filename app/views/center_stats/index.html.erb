@@ -8,19 +8,10 @@
 <table class="table">
   <thead>
     <tr>
-<!--       <th>Position name</th>
-      <th>Shorthand</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th>Sport name</th> -->
       <th>Event</th>
-<!--       <th>Games started</th>
-      <th>Games played</th> -->
+<!--       <th>Games started</th>-->
       <th>Win</th>
       <th>Score</th>
-<!--       <th>Loss</th>
-      <th>Wins</th>
-      <th>Losses</th> -->
       <th>Minutes played</th>
       <th>Fieldgoals made</th>
       <th>Fieldgoal attemps</th>
@@ -33,30 +24,17 @@
       <th>Steals</th>
       <th>Blocks</th>
       <th>Points</th>
-      <th>User</th>
-<!--       <th>Stat</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th colspan="3"></th> -->
+      <th>Athlete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @center_stats.each do |center_stat| %>
       <tr>
-<!--         <td><%= center_stat.position_name %></td>
-        <td><%= center_stat.shorthand %></td>
-        <td><%= center_stat.sport_id %></td>
-        <td><%= center_stat.position_id %></td>
-        <td><%= center_stat.sport_name %></td> -->
         <td><%= center_stat.event %></td>
-<!--         <td><%= center_stat.games_started %></td>
-        <td><%= center_stat.games_played %></td> -->
-        <td><%= center_stat.win %></td>
+<!--         <td><%= center_stat.games_started %></td> -->
+        <td><%= center_stat.win ? 'Yes' : 'No' %></td>
         <td><%= center_stat.score %> - <%= center_stat.opponent_score %></td>
-<!--         <td><%= center_stat.loss %></td>
-        <td><%= center_stat.wins %></td>
-        <td><%= center_stat.losses %></td> -->
         <td><%= center_stat.minutes_played %></td>
         <td><%= center_stat.fieldgoals_made %></td>
         <td><%= center_stat.fieldgoal_attemps %></td>
@@ -70,12 +48,6 @@
         <td><%= center_stat.blocks %></td>
         <td><%= center_stat.points %></td>
         <td><%= center_stat.user.try(:name) %></td>
-<!--         <td><%= center_stat.stat %></td>
-        <td><%= center_stat.sport %></td>
-        <td><%= center_stat.position %></td>
-        <td><%= link_to 'Show', center_stat %></td>
-        <td><%= link_to 'Edit', edit_center_stat_path(center_stat) %></td>
-        <td><%= link_to 'Destroy', center_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -83,6 +55,3 @@
 </div>
 </div>
 </div>
-<!-- <br>
-
-<%= link_to 'New Center stat', new_center_stat_path %> -->

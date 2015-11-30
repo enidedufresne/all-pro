@@ -8,19 +8,10 @@
 <table class="table">
   <thead>
     <tr>
-      <!-- <th>Position name</th>
-      <th>Shorthand</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th>Sport name</th> -->
       <th>Event</th>
-      <!-- <th>Games started</th>
-      <th>Games played</th> -->
+      <!-- <th>Games started</th>-->
       <th>Win</th>
       <th>Score</th>
-      <!-- <th>Loss</th>
-      <th>Wins</th>
-      <th>Losses</th> -->
       <th>Plate appearances</th>
       <th>At bats</th>
       <th>Hits</th>
@@ -32,30 +23,17 @@
       <th>Doubles</th>
       <th>Triples</th>
       <th>Home runs</th>
-      <th>User</th>
-<!--       <th>Stat</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th colspan="3"></th> -->
+      <th>Athlete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @second_baseman_stats.each do |second_baseman_stat| %>
       <tr>
-        <<!-- td><%= second_baseman_stat.position_name %></td>
-        <td><%= second_baseman_stat.shorthand %></td>
-        <td><%= second_baseman_stat.sport_id %></td>
-        <td><%= second_baseman_stat.position_id %></td>
-        <td><%= second_baseman_stat.sport_name %></td> -->
         <td><%= second_baseman_stat.event %></td>
-        <!-- <td><%= second_baseman_stat.games_started %></td>
-        <td><%= second_baseman_stat.games_played %></td> -->
-        <td><%= second_baseman_stat.win %></td>
+        <!-- <td><%= second_baseman_stat.games_started %></td> -->
+        <td><%= second_baseman_stat.win ? 'Yes' : 'No' %></td>
         <td><%= second_baseman_stat.score %> - <%= second_baseman_stat.opponent_score %></td>
-        <!-- <td><%= second_baseman_stat.loss %></td>
-        <td><%= second_baseman_stat.wins %></td>
-        <td><%= second_baseman_stat.losses %></td> -->
         <td><%= second_baseman_stat.plate_appearances %></td>
         <td><%= second_baseman_stat.at_bats %></td>
         <td><%= second_baseman_stat.hits %></td>
@@ -68,12 +46,6 @@
         <td><%= second_baseman_stat.triples %></td>
         <td><%= second_baseman_stat.home_runs %></td>
         <td><%= second_baseman_stat.user.try(:name) %></td>
-<!--         <td><%= second_baseman_stat.stat %></td>
-        <td><%= second_baseman_stat.sport %></td>
-        <td><%= second_baseman_stat.position %></td>
-        <td><%= link_to 'Show', second_baseman_stat %></td>
-        <td><%= link_to 'Edit', edit_second_baseman_stat_path(second_baseman_stat) %></td>
-        <td><%= link_to 'Destroy', second_baseman_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -81,6 +53,3 @@
 </div>
 </div>
 </div>
-<!-- <br>
-
-<%= link_to 'New Second baseman stat', new_second_baseman_stat_path %> -->

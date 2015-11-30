@@ -9,68 +9,15 @@
     
 <p>
   Win:
-  <%= shooting_guard_stat.win %>
+  <%= shooting_guard_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Minutes played:
-  <%= shooting_guard_stat.minutes_played %>
+ score:
+  <%= shooting_guard_stat.score %> - <%= shooting_guard_stat.opponent_score %>
 </p>
 
-<p>
-  Fieldgoals made:
-  <%= shooting_guard_stat.fieldgoals_made %>
-</p>
-
-<p>
-  Fieldgoal attemps:
-  <%= shooting_guard_stat.fieldgoal_attemps %>
-</p>
-
-<p>
-  Threepoints made:
-  <%= shooting_guard_stat.threepoints_made %>
-</p>
-
-<p>
-  Threepoint attemps:
-  <%= shooting_guard_stat.threepoint_attemps %>
-</p>
-
-<p>
-  Freethrows made:
-  <%= shooting_guard_stat.freethrows_made %>
-</p>
-
-<p>
-  Freethrow attemps:
-  <%= shooting_guard_stat.freethrow_attemps %>
-</p>
-
-<p>
-  Rebounds:
-  <%= shooting_guard_stat.rebounds %>
-</p>
-
-<p>
-  Assists:
-  <%= shooting_guard_stat.assists %>
-</p>
-
-<p>
-  Steals:
-  <%= shooting_guard_stat.steals %>
-</p>
-
-<p>
-  Blocks:
-  <%= shooting_guard_stat.blocks %>
-</p>
-
-<p>
-  Points:
-  <%= shooting_guard_stat.points %>
-</p>
+<span class="points"><%= link_to 'view more stats', shooting_guard_stat %></span>
 
 
 

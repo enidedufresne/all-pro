@@ -10,53 +10,15 @@
  
 <p>
   Win:
-  <%= quarterback_stat.win %>
+  <%= quarterback_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Pass completions:
-  <%= quarterback_stat.pass_completions %>
+ score:
+  <%= quarterback_stat.score %> - <%= quarterback_stat.opponent_score %>
 </p>
 
-<p>
-  Pass attempts:
-  <%= quarterback_stat.pass_attempts %>
-</p>
-
-<p>
-  Passing yards:
-  <%= quarterback_stat.passing_yards %>
-</p>
-
-<p>
-  Passing touchdowns:
-  <%= quarterback_stat.passing_touchdowns %>
-</p>
-
-<p>
-  Rushing attempts:
-  <%= quarterback_stat.rushing_attempts %>
-</p>
-
-<p>
-  Rushing yards:
-  <%= quarterback_stat.rushing_yards %>
-</p>
-
-<p>
-  Rushing touchdowns:
-  <%= quarterback_stat.rushing_touchdowns %>
-</p>
-
-<p>
-  Fumbles:
-  <%= quarterback_stat.fumbles %>
-</p>
-
-<p>
-  Interception:
-  <%= quarterback_stat.interception %>
-</p>
+<span class="points"><%= link_to 'view more stats', quarterback_stat %></span>
 
 
 

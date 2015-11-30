@@ -9,28 +9,15 @@
    
 <p>
   Win:
-  <%= line_backer_stat.win %>
+  <%= line_backer_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Tackles:
-  <%= line_backer_stat.tackles %>
+ score:
+  <%= line_backer_stat.score %> - <%= line_backer_stat.opponent_score %>
 </p>
 
-<p>
-  Sacks:
-  <%= line_backer_stat.sacks %>
-</p>
-
-<p>
-  Fumbles:
-  <%= line_backer_stat.fumbles %>
-</p>
-
-<p>
-  Interception:
-  <%= line_backer_stat.interception %>
-</p>
+<span class="points"><%= link_to 'view more stats', line_backer_stat %></span>
 
 
    

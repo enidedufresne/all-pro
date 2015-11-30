@@ -8,18 +8,9 @@
 <table class="table">
   <thead>
     <tr>
-      <!-- <th>Position name</th>
-      <th>Shorthand</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th>Sport name</th> -->
       <th>Event</th>
-      <!-- <th>Games played</th> -->
       <th>Win</th>
       <th>Score</th>
-      <!-- <th>Loss</th>
-      <th>Wins</th>
-      <th>Losses</th> -->
       <th>Pass completions</th>
       <th>Pass attempts</th>
       <th>Passing yards</th>
@@ -29,29 +20,16 @@
       <th>Rushing touchdowns</th>
       <th>Fumbles</th>
       <th>Interception</th>
-      <th>User</th>
-<!--       <th>Stat</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th colspan="3"></th> -->
+      <th>Athlete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @quarterback_stats.each do |quarterback_stat| %>
       <tr>
-        <!-- <td><%= quarterback_stat.position_name %></td>
-        <td><%= quarterback_stat.shorthand %></td>
-        <td><%= quarterback_stat.sport_id %></td>
-        <td><%= quarterback_stat.position_id %></td>
-        <td><%= quarterback_stat.sport_name %></td> -->
         <td><%= quarterback_stat.event %></td>
-        <!-- <td><%= quarterback_stat.games_played %></td> -->
-        <td><%= quarterback_stat.win %></td>
+        <td><%= quarterback_stat.win ? 'Yes' : 'No' %></td>
         <td><%= quarterback_stat.score %> - <%= quarterback_stat.opponent_score %></td>
-        <!-- <td><%= quarterback_stat.loss %></td>
-        <td><%= quarterback_stat.wins %></td>
-        <td><%= quarterback_stat.losses %></td> -->
         <td><%= quarterback_stat.pass_completions %></td>
         <td><%= quarterback_stat.pass_attempts %></td>
         <td><%= quarterback_stat.passing_yards %></td>
@@ -62,12 +40,6 @@
         <td><%= quarterback_stat.fumbles %></td>
         <td><%= quarterback_stat.interception %></td>
         <td><%= quarterback_stat.user.try(:name) %></td>
-<!--         <td><%= quarterback_stat.stat %></td>
-        <td><%= quarterback_stat.sport %></td>
-        <td><%= quarterback_stat.position %></td>
-        <td><%= link_to 'Show', quarterback_stat %></td>
-        <td><%= link_to 'Edit', edit_quarterback_stat_path(quarterback_stat) %></td>
-        <td><%= link_to 'Destroy', quarterback_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -75,6 +47,3 @@
 </div>
 </div>
 </div>
-<!-- <br>
-
-<%= link_to 'New Quarterback stat', new_quarterback_stat_path %> -->

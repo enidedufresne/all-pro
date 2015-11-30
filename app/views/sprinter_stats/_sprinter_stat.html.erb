@@ -9,28 +9,10 @@
     
 <p>
   Win:
-  <%= sprinter_stat.win %>
+  <%= sprinter_stat.win ? 'Yes' : 'No' %>
 </p>
 
-<p>
-  Team score:
-  <%= sprinter_stat.team_score %>
-</p>
-
-<p>
-  Distance time:
-  <%= sprinter_stat.distance_time %>
-</p>
-
-<p>
-  Placed:
-  <%= sprinter_stat.placed %>
-</p>
-
-<p>
-  Speed:
-  <%= sprinter_stat.speed %>
-</p>
+<span class="points"><%= link_to 'view more stats', sprinter_stat %></span>
 
     
   </span>

@@ -9,68 +9,15 @@
     
 <p>
   Win:
-  <%= point_guard_stat.win %>
+  <%= point_guard_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Minutes played:
-  <%= point_guard_stat.minutes_played %>
+ score:
+  <%= point_guard_stat.score %> - <%= point_guard_stat.opponent_score %>
 </p>
 
-<p>
-  Fieldgoals made:
-  <%= point_guard_stat.fieldgoals_made %>
-</p>
-
-<p>
-  Fieldgoal attemps:
-  <%= point_guard_stat.fieldgoal_attemps %>
-</p>
-
-<p>
-  Threepoints made:
-  <%= point_guard_stat.threepoints_made %>
-</p>
-
-<p>
-  Threepoint attemps:
-  <%= point_guard_stat.threepoint_attemps %>
-</p>
-
-<p>
-  Freethrows made:
-  <%= point_guard_stat.freethrows_made %>
-</p>
-
-<p>
-  Freethrow attemps:
-  <%= point_guard_stat.freethrow_attemps %>
-</p>
-
-<p>
-  Rebounds:
-  <%= point_guard_stat.rebounds %>
-</p>
-
-<p>
-  Assists:
-  <%= point_guard_stat.assists %>
-</p>
-
-<p>
-  Steals:
-  <%= point_guard_stat.steals %>
-</p>
-
-<p>
-  Blocks:
-  <%= point_guard_stat.blocks %>
-</p>
-
-<p>
-  Points:
-  <%= point_guard_stat.points %>
-</p>
+<span class="points"><%= link_to 'view more stats', point_guard_stat %></span>
 
 
     

@@ -10,23 +10,15 @@
 
 <p>
   Win:
-  <%= forward_stat.win %>
+  <%= forward_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Goals:
-  <%= forward_stat.goals %>
+ score:
+  <%= forward_stat.score %> - <%= forward_stat.opponent_score %>
 </p>
 
-<p>
-  Assists:
-  <%= forward_stat.assists %>
-</p>
-
-<p>
-  Shots taken:
-  <%= forward_stat.shots_taken %>
-</p>
+<span class="points"><%= link_to 'view more stats', forward_stat %></span>
 
 
   </span>

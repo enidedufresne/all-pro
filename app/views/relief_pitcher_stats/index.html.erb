@@ -8,61 +8,31 @@
 <table class="table">
   <thead>
     <tr>
-      <!-- <th>Position name</th>
-      <th>Shorthand</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th>Sport name</th> -->
       <th>Event</th>
-      <!-- <th>Games started</th>
-      <th>Games played</th> -->
+      <!-- <th>Games started</th> -->
       <th>Win</th>
       <th>Score</th>
-      <!-- <th>Loss</th>
-      <th>Wins</th>
-      <th>Losses</th> -->
       <th>Pitcher win</th>
-      <!--<th>Pitcher loss</th>
-       <th>Pitcher wins</th>
-      <th>Pitcher losses</th> -->
       <th>Pitcher no decision</th>
-      <!-- <th>Pitcher no decisions</th> -->
       <th>Pitcher saves</th>
       <th>Innings pitched</th>
       <th>Hits allowed</th>
       <th>Runs allowed</th>
       <th>Strikeouts</th>
       <th>Walks allowed</th>
-      <th>User</th>
-<!--       <th>Stat</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th colspan="3"></th> -->
+      <th>Athlete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @relief_pitcher_stats.each do |relief_pitcher_stat| %>
       <tr>
-        <!-- <td><%= relief_pitcher_stat.position_name %></td>
-        <td><%= relief_pitcher_stat.shorthand %></td>
-        <td><%= relief_pitcher_stat.sport_id %></td>
-        <td><%= relief_pitcher_stat.position_id %></td>
-        <td><%= relief_pitcher_stat.sport_name %></td> -->
         <td><%= relief_pitcher_stat.event %></td>
-        <!-- <td><%= relief_pitcher_stat.games_started %></td>
-        <td><%= relief_pitcher_stat.games_played %></td> -->
-        <td><%= relief_pitcher_stat.win %></td>
+        <!-- <td><%= relief_pitcher_stat.games_started %></td>-->
+        <td><%= relief_pitcher_stat.win ? 'Yes' : 'No' %></td>
         <td><%= relief_pitcher_stat.score %> - <%= relief_pitcher_stat.opponent_score %></td>
-        <!-- <td><%= relief_pitcher_stat.loss %></td>
-        <td><%= relief_pitcher_stat.wins %></td>
-        <td><%= relief_pitcher_stat.losses %></td> -->
-        <td><%= relief_pitcher_stat.pitcher_win %></td>
-        <!-- <td><%= relief_pitcher_stat.pitcher_loss %></td>
-        <td><%= relief_pitcher_stat.pitcher_wins %></td>
-        <td><%= relief_pitcher_stat.pitcher_losses %></td> -->
-        <td><%= relief_pitcher_stat.pitcher_no_decision %></td>
-        <!-- <td><%= relief_pitcher_stat.pitcher_no_decisions %></td> -->
+        <td><%= relief_pitcher_stat.pitcher_win ? 'Yes' : 'No' %></td>
+        <td><%= relief_pitcher_stat.pitcher_no_decision ? 'Yes' : 'No' %></td>
         <td><%= relief_pitcher_stat.pitcher_saves %></td>
         <td><%= relief_pitcher_stat.innings_pitched %></td>
         <td><%= relief_pitcher_stat.hits_allowed %></td>
@@ -70,12 +40,6 @@
         <td><%= relief_pitcher_stat.strikeouts %></td>
         <td><%= relief_pitcher_stat.walks_allowed %></td>
         <td><%= relief_pitcher_stat.user.try(:name) %></td>
-<!--         <td><%= relief_pitcher_stat.stat %></td>
-        <td><%= relief_pitcher_stat.sport %></td>
-        <td><%= relief_pitcher_stat.position %></td>
-        <td><%= link_to 'Show', relief_pitcher_stat %></td>
-        <td><%= link_to 'Edit', edit_relief_pitcher_stat_path(relief_pitcher_stat) %></td>
-        <td><%= link_to 'Destroy', relief_pitcher_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -83,6 +47,3 @@
 </div>
 </div>
 </div>
-<!-- <br>
-
-<%= link_to 'New Relief pitcher stat', new_relief_pitcher_stat_path %> -->

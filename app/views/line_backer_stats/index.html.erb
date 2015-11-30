@@ -8,54 +8,28 @@
 <table class="table">
   <thead>
     <tr>
-<!--       <th>Position name</th>
-      <th>Shorthand</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th>Sport name</th> -->
       <th>Event</th>
       <th>Win</th>
       <th>Score</th>
-      <!-- <th>Loss</th>
-      <th>Wins</th>
-      <th>Losses</th> -->
       <th>Tackles</th>
       <th>Sacks</th>
       <th>Fumbles</th>
       <th>Interception</th>
-      <th>User</th>
-<!--       <th>Stat</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th colspan="3"></th> -->
+      <th>Athlete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @line_backer_stats.each do |line_backer_stat| %>
       <tr>
-        <!-- <td><%= line_backer_stat.position_name %></td>
-        <td><%= line_backer_stat.shorthand %></td>
-        <td><%= line_backer_stat.sport_id %></td>
-        <td><%= line_backer_stat.position_id %></td>
-        <td><%= line_backer_stat.sport_name %></td> -->
         <td><%= line_backer_stat.event %></td>
-        <td><%= line_backer_stat.win %></td>
+        <td><%= line_backer_stat.win ? 'Yes' : 'No' %></td>
         <td><%= line_backer_stat.score %> - <%= line_backer_stat.opponent_score %></td>
-       <!--  <td><%= line_backer_stat.loss %></td>
-        <td><%= line_backer_stat.wins %></td>
-        <td><%= line_backer_stat.losses %></td> -->
         <td><%= line_backer_stat.tackles %></td>
         <td><%= line_backer_stat.sacks %></td>
         <td><%= line_backer_stat.fumbles %></td>
         <td><%= line_backer_stat.interception %></td>
         <td><%= line_backer_stat.user.try(:name) %></td>
-<!--         <td><%= line_backer_stat.stat %></td>
-        <td><%= line_backer_stat.sport %></td>
-        <td><%= line_backer_stat.position %></td>
-        <td><%= link_to 'Show', line_backer_stat %></td>
-        <td><%= link_to 'Edit', edit_line_backer_stat_path(line_backer_stat) %></td>
-        <td><%= link_to 'Destroy', line_backer_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -63,6 +37,3 @@
 </div>
 </div>
 </div>
-<!-- <br>
-
-<%= link_to 'New Line backer stat', new_line_backer_stat_path %> -->

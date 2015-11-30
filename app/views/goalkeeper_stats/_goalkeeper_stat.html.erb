@@ -10,18 +10,15 @@
 
 <p>
   Win:
-  <%= goalkeeper_stat.win %>
+  <%= goalkeeper_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Saves:
-  <%= goalkeeper_stat.saves %>
+ score:
+  <%= goalkeeper_stat.score %> - <%= goalkeeper_stat.opponent_score %>
 </p>
 
-<p>
-  Shots faced:
-  <%= goalkeeper_stat.shots_faced %>
-</p>
+<span class="points"><%= link_to 'view more stats', goalkeeper_stat %></span>
 
     
   </span>

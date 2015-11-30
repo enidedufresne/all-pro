@@ -9,28 +9,15 @@
     
 <p>
   Win:
-  <%= @defensive_tackle_stat.win %>
+  <%= @defensive_tackle_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Tackles:
-  <%= @defensive_tackle_stat.tackles %>
+ score:
+  <%= defensive_tackle_stat.score %> - <%= defensive_tackle_stat.opponent_score %>
 </p>
 
-<p>
-  Sacks:
-  <%= @defensive_tackle_stat.sacks %>
-</p>
-
-<p>
-  Fumbles:
-  <%= @defensive_tackle_stat.fumbles %>
-</p>
-
-<p>
-  Interception:
-  <%= @defensive_tackle_stat.interception %>
-</p>
+<span class="points"><%= link_to 'view more stats', defensive_tackle_stat %></span>
 
     
   </span>

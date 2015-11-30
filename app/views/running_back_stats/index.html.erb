@@ -8,18 +8,9 @@
 <table class="table">
   <thead>
     <tr>
-      <!-- <th>Position name</th>
-      <th>Shorthand</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th>Sport name</th> -->
       <th>Event</th>
-      <!-- <th>Games played</th> -->
       <th>Win</th>
       <th>Score</th>
-      <!-- <th>Loss</th>
-      <th>Wins</th>
-      <th>Losses</th> -->
       <th>Rushing attempts</th>
       <th>Rushing yards</th>
       <th>Rushing touchdowns</th>
@@ -27,29 +18,16 @@
       <th>Reception yards</th>
       <th>Reception touchdowns</th>
       <th>Fumbles</th>
-      <th>User</th>
-<!--       <th>Stat</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th colspan="3"></th> -->
+      <th>Athlete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @running_back_stats.each do |running_back_stat| %>
       <tr>
-        <!-- <td><%= running_back_stat.position_name %></td>
-        <td><%= running_back_stat.shorthand %></td>
-        <td><%= running_back_stat.sport_id %></td>
-        <td><%= running_back_stat.position_id %></td>
-        <td><%= running_back_stat.sport_name %></td> -->
         <td><%= running_back_stat.event %></td>
-        <!-- <td><%= running_back_stat.games_played %></td> -->
-        <td><%= running_back_stat.win %></td>
+        <td><%= running_back_stat.win ? 'Yes' : 'No' %></td>
         <td><%= running_back_stat.score %> - <%= running_back_stat.opponent_score %></td>
-        <!-- <td><%= running_back_stat.loss %></td>
-        <td><%= running_back_stat.wins %></td>
-        <td><%= running_back_stat.losses %></td> -->
         <td><%= running_back_stat.rushing_attempts %></td>
         <td><%= running_back_stat.rushing_yards %></td>
         <td><%= running_back_stat.rushing_touchdowns %></td>
@@ -58,12 +36,6 @@
         <td><%= running_back_stat.reception_touchdowns %></td>
         <td><%= running_back_stat.fumbles %></td>
         <td><%= running_back_stat.user.try(:name) %></td>
-<!--         <td><%= running_back_stat.stat %></td>
-        <td><%= running_back_stat.sport %></td>
-        <td><%= running_back_stat.position %></td>
-        <td><%= link_to 'Show', running_back_stat %></td>
-        <td><%= link_to 'Edit', edit_running_back_stat_path(running_back_stat) %></td>
-        <td><%= link_to 'Destroy', running_back_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -71,6 +43,3 @@
 </div>
 </div>
 </div>
-<!-- <br>
-
-<%= link_to 'New Running back stat', new_running_back_stat_path %> -->

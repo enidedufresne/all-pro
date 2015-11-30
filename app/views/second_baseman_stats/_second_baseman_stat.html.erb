@@ -9,63 +9,15 @@
     
 <p>
   Win:
-  <%= second_baseman_stat.win %>
+  <%= second_baseman_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Plate appearances:
-  <%= second_baseman_stat.plate_appearances %>
+ score:
+  <%= second_baseman_stat.score %> - <%= second_baseman_stat.opponent_score %>
 </p>
 
-<p>
-  At bats:
-  <%= second_baseman_stat.at_bats %>
-</p>
-
-<p>
-  Hits:
-  <%= second_baseman_stat.hits %>
-</p>
-
-<p>
-  Runs scored:
-  <%= second_baseman_stat.runs_scored %>
-</p>
-
-<p>
-  Runs batted in:
-  <%= second_baseman_stat.runs_batted_in %>
-</p>
-
-<p>
-  Walks:
-  <%= second_baseman_stat.walks %>
-</p>
-
-<p>
-  Strike outs:
-  <%= second_baseman_stat.strike_outs %>
-</p>
-
-<p>
-  Stolen bases:
-  <%= second_baseman_stat.stolen_bases %>
-</p>
-
-<p>
-  Doubles:
-  <%= second_baseman_stat.doubles %>
-</p>
-
-<p>
-  Triples:
-  <%= second_baseman_stat.triples %>
-</p>
-
-<p>
-  Home runs:
-  <%= second_baseman_stat.home_runs %>
-</p>
+<span class="points"><%= link_to 'view more stats', second_baseman_stat %></span>
 
     
   </span>

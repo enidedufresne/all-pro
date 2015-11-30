@@ -8,19 +8,10 @@
 <table class="table">
   <thead>
     <tr>
-      <!-- <th>Position name</th>
-      <th>Shorthand</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th>Sport name</th> -->
       <th>Event</th>
-     <!--  <th>Games started</th>
-      <th>Games played</th> -->
+     <!--  <th>Games started</th> -->
       <th>Win</th>
       <th>Score</th>
-      <!-- <th>Loss</th>
-      <th>Wins</th>
-      <th>Losses</th> -->
       <th>Plate appearances</th>
       <th>At bats</th>
       <th>Hits</th>
@@ -32,30 +23,17 @@
       <th>Doubles</th>
       <th>Triples</th>
       <th>Home runs</th>
-      <th>User</th>
-<!--       <th>Stat</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th colspan="3"></th> -->
+      <th>Athlete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @shortstop_stats.each do |shortstop_stat| %>
       <tr>
-        <!-- <td><%= shortstop_stat.position_name %></td>
-        <td><%= shortstop_stat.shorthand %></td>
-        <td><%= shortstop_stat.sport_id %></td>
-        <td><%= shortstop_stat.position_id %></td>
-        <td><%= shortstop_stat.sport_name %></td> -->
         <td><%= shortstop_stat.event %></td>
-        <!-- <td><%= shortstop_stat.games_started %></td>
-        <td><%= shortstop_stat.games_played %></td> -->
-        <td><%= shortstop_stat.win %></td>
+        <!-- <td><%= shortstop_stat.games_started %></td> -->
+        <td><%= shortstop_stat.win ? 'Yes' : 'No' %></td>
         <td><%= shortstop_stat.score %> - <%= shortstop_stat.opponent_score %></td>
-       <!--  <td><%= shortstop_stat.loss %></td>
-        <td><%= shortstop_stat.wins %></td>
-        <td><%= shortstop_stat.losses %></td> -->
         <td><%= shortstop_stat.plate_appearances %></td>
         <td><%= shortstop_stat.at_bats %></td>
         <td><%= shortstop_stat.hits %></td>
@@ -68,12 +46,6 @@
         <td><%= shortstop_stat.triples %></td>
         <td><%= shortstop_stat.home_runs %></td>
         <td><%= shortstop_stat.user.try(:name) %></td>
-<!--         <td><%= shortstop_stat.stat %></td>
-        <td><%= shortstop_stat.sport %></td>
-        <td><%= shortstop_stat.position %></td>
-        <td><%= link_to 'Show', shortstop_stat %></td>
-        <td><%= link_to 'Edit', edit_shortstop_stat_path(shortstop_stat) %></td>
-        <td><%= link_to 'Destroy', shortstop_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -81,7 +53,3 @@
 </div>
 </div>
 </div>
-
-<!-- <br>
-
-<%= link_to 'New Shortstop stat', new_shortstop_stat_path %> -->

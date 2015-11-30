@@ -9,23 +9,15 @@
 
 <p>
   Win:
-  <%= defender_stat.win %>
+  <%= defender_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Goals:
-  <%= defender_stat.goals %>
+ score:
+  <%= defender_stat.score %> - <%= defender_stat.opponent_score %>
 </p>
 
-<p>
-  Assists:
-  <%= defender_stat.assists %>
-</p>
-
-<p>
-  Shots taken:
-  <%= defender_stat.shots_taken %>
-</p>
+<span class="points"><%= link_to 'view more stats', defender_stat %></span>
 
 
 

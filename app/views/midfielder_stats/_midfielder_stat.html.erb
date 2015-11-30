@@ -9,23 +9,15 @@
 
 <p>
   Win:
-  <%= midfielder_stat.win %>
+  <%= midfielder_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Goals:
-  <%= midfielder_stat.goals %>
+ score:
+  <%= midfielder_stat.score %> - <%= midfielder_stat.opponent_score %>
 </p>
 
-<p>
-  Assists:
-  <%= midfielder_stat.assists %>
-</p>
-
-<p>
-  Shots taken:
-  <%= midfielder_stat.shots_taken %>
-</p>
+<span class="points"><%= link_to 'view more stats', midfielder_stat %></span>
 
 
   </span>

@@ -8,19 +8,10 @@
 <table class="table">
   <thead>
     <tr>
-<!--       <th>Position name</th>
-      <th>Shorthand</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th>Sport name</th> -->
       <th>Event</th>
-<!--       <th>Games started</th>
-      <th>Games played</th> -->
+<!--       <th>Games started</th>-->
       <th>Win</th>
       <th>Score</th>
-<!--       <th>Loss</th>
-      <th>Wins</th>
-      <th>Losses</th> -->
       <th>Plate appearances</th>
       <th>At bats</th>
       <th>Hits</th>
@@ -32,30 +23,17 @@
       <th>Doubles</th>
       <th>Triples</th>
       <th>Home runs</th>
-      <th>User</th>
-<!--       <th>Stat</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th colspan="3"></th> -->
+      <th>Athlete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @designated_hitter_stats.each do |designated_hitter_stat| %>
       <tr>
-<!--         <td><%= designated_hitter_stat.position_name %></td>
-        <td><%= designated_hitter_stat.shorthand %></td>
-        <td><%= designated_hitter_stat.sport_id %></td>
-        <td><%= designated_hitter_stat.position_id %></td>
-        <td><%= designated_hitter_stat.sport_name %></td> -->
         <td><%= designated_hitter_stat.event %></td>
-<!--         <td><%= designated_hitter_stat.games_started %></td>
-        <td><%= designated_hitter_stat.games_played %></td> -->
-        <td><%= designated_hitter_stat.win %></td>
+<!--         <td><%= designated_hitter_stat.games_started %></td>-->
+        <td><%= designated_hitter_stat.win ? 'Yes' : 'No' %></td>
         <td><%= designated_hitter_stat.score %> - <%= designated_hitter_stat.opponent_score %></td>
- <!--        <td><%= designated_hitter_stat.loss %></td>
-        <td><%= designated_hitter_stat.wins %></td>
-        <td><%= designated_hitter_stat.losses %></td> -->
         <td><%= designated_hitter_stat.plate_appearances %></td>
         <td><%= designated_hitter_stat.at_bats %></td>
         <td><%= designated_hitter_stat.hits %></td>
@@ -68,12 +46,6 @@
         <td><%= designated_hitter_stat.triples %></td>
         <td><%= designated_hitter_stat.home_runs %></td>
         <td><%= designated_hitter_stat.user.try(:name) %></td>
-<!--         <td><%= designated_hitter_stat.stat %></td>
-        <td><%= designated_hitter_stat.sport %></td>
-        <td><%= designated_hitter_stat.position %></td>
-        <td><%= link_to 'Show', designated_hitter_stat %></td>
-        <td><%= link_to 'Edit', edit_designated_hitter_stat_path(designated_hitter_stat) %></td>
-        <td><%= link_to 'Destroy', designated_hitter_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -81,6 +53,3 @@
 </div>
 </div>
 </div>
-<!-- <br>
-
-<%= link_to 'New Designated hitter stat', new_designated_hitter_stat_path %> -->

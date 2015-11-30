@@ -8,58 +8,28 @@
 <table class="table">
   <thead>
     <tr>
-<!--       <th>Position name</th>
-      <th>Shorthand</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th>Sport name</th> -->
       <th>Event</th>
-<!--       <th>Games played</th> -->
       <th>Win</th>
-      <th>Score</th>
- <!--      <th>Loss</th>
       <th>Draw</th>
-      <th>Wins</th>
-      <th>Losses</th>
-      <th>Draws</th> -->
+      <th>Score</th>
       <th>Goals</th>
       <th>Assists</th>
       <th>Shots taken</th>
-      <th>User</th>
-<!--       <th>Stat</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th colspan="3"></th> -->
+      <th>Athlete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @defender_stats.each do |defender_stat| %>
       <tr>
-<!--         <td><%= defender_stat.position_name %></td>
-        <td><%= defender_stat.shorthand %></td>
-        <td><%= defender_stat.sport_id %></td>
-        <td><%= defender_stat.position_id %></td>
-        <td><%= defender_stat.sport_name %></td> -->
         <td><%= defender_stat.event %></td>
-<!--         <td><%= defender_stat.games_played %></td> -->
-        <td><%= defender_stat.win %></td>
+        <td><%= defender_stat.win ? 'Yes' : 'No' %></td>
+        <td><%= defender_stat.draw ? 'Yes' : 'No' %></td>
         <td><%= defender_stat.score %> - <%= defender_stat.opponent_score %></td>
-<!--         <td><%= defender_stat.loss %></td>
-        <td><%= defender_stat.draw %></td>
-        <td><%= defender_stat.wins %></td>
-        <td><%= defender_stat.losses %></td>
-        <td><%= defender_stat.draws %></td> -->
         <td><%= defender_stat.goals %></td>
         <td><%= defender_stat.assists %></td>
         <td><%= defender_stat.shots_taken %></td>
         <td><%= defender_stat.user.try(:name) %></td>
-<!--         <td><%= defender_stat.stat %></td>
-        <td><%= defender_stat.sport %></td>
-        <td><%= defender_stat.position %></td>
-        <td><%= link_to 'Show', defender_stat %></td>
-        <td><%= link_to 'Edit', edit_defender_stat_path(defender_stat) %></td>
-        <td><%= link_to 'Destroy', defender_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -67,6 +37,3 @@
 </div>
 </div>
 </div>
-<!-- <br>
-
-<%= link_to 'New Defender stat', new_defender_stat_path %> -->

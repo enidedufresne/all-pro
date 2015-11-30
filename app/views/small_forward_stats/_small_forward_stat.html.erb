@@ -9,68 +9,15 @@
     
 <p>
   Win:
-  <%= small_forward_stat.win %>
+  <%= small_forward_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Minutes played:
-  <%= small_forward_stat.minutes_played %>
+ score:
+  <%= small_forward_stat.score %> - <%= small_forward_stat.opponent_score %>
 </p>
 
-<p>
-  Fieldgoals made:
-  <%= small_forward_stat.fieldgoals_made %>
-</p>
-
-<p>
-  Fieldgoal attemps:
-  <%= small_forward_stat.fieldgoal_attemps %>
-</p>
-
-<p>
-  Threepoints made:
-  <%= small_forward_stat.threepoints_made %>
-</p>
-
-<p>
-  Threepoint attemps:
-  <%= small_forward_stat.threepoint_attemps %>
-</p>
-
-<p>
-  Freethrows made:
-  <%= small_forward_stat.freethrows_made %>
-</p>
-
-<p>
-  Freethrow attemps:
-  <%= small_forward_stat.freethrow_attemps %>
-</p>
-
-<p>
-  Rebounds:
-  <%= small_forward_stat.rebounds %>
-</p>
-
-<p>
-  Assists:
-  <%= small_forward_stat.assists %>
-</p>
-
-<p>
-  Steals:
-  <%= small_forward_stat.steals %>
-</p>
-
-<p>
-  Blocks:
-  <%= small_forward_stat.blocks %>
-</p>
-
-<p>
-  Points:
-  <%= small_forward_stat.points %>
-</p>
+<span class="points"><%= link_to 'view more stats', small_forward_stat %></span>
 
 
 

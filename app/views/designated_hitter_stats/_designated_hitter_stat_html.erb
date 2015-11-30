@@ -9,63 +9,15 @@
 
 <p>
   Win:
-  <%= designated_hitter_stat.win %>
+  <%= designated_hitter_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Plate appearances:
-  <%= designated_hitter_stat.plate_appearances %>
+ score:
+  <%= designated_hitter_stat.score %> - <%= designated_hitter_stat.opponent_score %>
 </p>
 
-<p>
-  At bats:
-  <%= designated_hitter_stat.at_bats %>
-</p>
-
-<p>
-  Hits:
-  <%= designated_hitter_stat.hits %>
-</p>
-
-<p>
-  Runs scored:
-  <%= designated_hitter_stat.runs_scored %>
-</p>
-
-<p>
-  Runs batted in:
-  <%= designated_hitter_stat.runs_batted_in %>
-</p>
-
-<p>
-  Walks:
-  <%= designated_hitter_stat.walks %>
-</p>
-
-<p>
-  Strike outs:
-  <%= designated_hitter_stat.strike_outs %>
-</p>
-
-<p>
-  Stolen bases:
-  <%= designated_hitter_stat.stolen_bases %>
-</p>
-
-<p>
-  Doubles:
-  <%= designated_hitter_stat.doubles %>
-</p>
-
-<p>
-  Triples:
-  <%= designated_hitter_stat.triples %>
-</p>
-
-<p>
-  Home runs:
-  <%= designated_hitter_stat.home_runs %>
-</p>
+<span class="points"><%= link_to 'view more stats', designated_hitter_stat %></span>
 
 
   </span>

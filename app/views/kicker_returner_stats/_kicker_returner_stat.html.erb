@@ -10,23 +10,15 @@
       
 <p>
   Win:
-  <%= kicker_returner_stat.win %>
+  <%= kicker_returner_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Kickreturns:
-  <%= kicker_returner_stat.kickreturns %>
+ score:
+  <%= kicker_returner_stat.score %> - <%= kicker_returner_stat.opponent_score %>
 </p>
 
-<p>
-  Kickreturn yards:
-  <%= kicker_returner_stat.kickreturn_yards %>
-</p>
-
-<p>
-  Kickreturn touchdowns:
-  <%= kicker_returner_stat.kickreturn_touchdowns %>
-</p>
+<span class="points"><%= link_to 'view more stats', kicker_returner_stat %></span>
 
 
   </span>

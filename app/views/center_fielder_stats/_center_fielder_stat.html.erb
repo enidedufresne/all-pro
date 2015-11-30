@@ -9,63 +9,15 @@
     
     <p>
   Win:
-  <%= center_fielder_stat.win %>
+  <%= center_fielder_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Plate appearances:
-  <%= center_fielder_stat.plate_appearances %>
+ score:
+  <%= center_fielder_stat.score %> - <%= center_fielder_stat.opponent_score %>
 </p>
 
-<p>
-  At bats:
-  <%= center_fielder_stat.at_bats %>
-</p>
-
-<p>
-  Hits:
-  <%= center_fielder_stat.hits %>
-</p>
-
-<p>
-  Runs scored:
-  <%= center_fielder_stat.runs_scored %>
-</p>
-
-<p>
-  Runs batted in:
-  <%= center_fielder_stat.runs_batted_in %>
-</p>
-
-<p>
-  Walks:
-  <%= center_fielder_stat.walks %>
-</p>
-
-<p>
-  Strike outs:
-  <%= center_fielder_stat.strike_outs %>
-</p>
-
-<p>
-  Stolen bases:
-  <%= center_fielder_stat.stolen_bases %>
-</p>
-
-<p>
-  Doubles:
-  <%= center_fielder_stat.doubles %>
-</p>
-
-<p>
-  Triples:
-  <%= center_fielder_stat.triples %>
-</p>
-
-<p>
-  Home runs:
-  <%= center_fielder_stat.home_runs %>
-</p>
+<span class="points"><%= link_to 'view more stats', center_fielder_stat %></span>
 
 
 

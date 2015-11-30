@@ -8,19 +8,10 @@
 <table class="table">
   <thead>
     <tr>
-<!--       <th>Position name</th>
-      <th>Shorthand</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th>Sport name</th> -->
       <th>Event</th>
-<!--       <th>Games started</th>
-      <th>Games played</th> -->
+<!--       <th>Games started</th>-->
       <th>Win</th>
       <th>Score</th>
-<!--       <th>Loss</th>
-      <th>Wins</th>
-      <th>Losses</th> -->
       <th>Plate appearances</th>
       <th>At bats</th>
       <th>Hits</th>
@@ -32,30 +23,17 @@
       <th>Doubles</th>
       <th>Triples</th>
       <th>Home runs</th>
-      <th>User</th>
-<!--       <th>Stat</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th colspan="3"></th> -->
+      <th>Athlete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @center_fielder_stats.each do |center_fielder_stat| %>
       <tr>
-        <!-- <td><%= center_fielder_stat.position_name %></td>
-        <td><%= center_fielder_stat.shorthand %></td>
-        <td><%= center_fielder_stat.sport_id %></td>
-        <td><%= center_fielder_stat.position_id %></td>
-        <td><%= center_fielder_stat.sport_name %></td> -->
         <td><%= center_fielder_stat.event %></td>
-<!--         <td><%= center_fielder_stat.games_started %></td>
-        <td><%= center_fielder_stat.games_played %></td> -->
-        <td><%= center_fielder_stat.win %></td>
+<!--         <td><%= center_fielder_stat.games_started %></td> -->
+        <td><%= center_fielder_stat.win ? 'Yes' : 'No' %></td>
         <td><%= center_fielder_stat.score %> - <%= center_fielder_stat.opponent_score %></td>
-        <!--<td><%= center_fielder_stat.loss %></td>
-        <td><%= center_fielder_stat.wins %></td>
-        <td><%= center_fielder_stat.losses %></td> -->
         <td><%= center_fielder_stat.plate_appearances %></td>
         <td><%= center_fielder_stat.at_bats %></td>
         <td><%= center_fielder_stat.hits %></td>
@@ -68,12 +46,6 @@
         <td><%= center_fielder_stat.triples %></td>
         <td><%= center_fielder_stat.home_runs %></td>
         <td><%= center_fielder_stat.user.try(:name) %></td>
-<!--         <td><%= center_fielder_stat.stat %></td>
-        <td><%= center_fielder_stat.sport %></td>
-        <td><%= center_fielder_stat.position %></td>
-        <td><%= link_to 'Show', center_fielder_stat %></td>
-        <td><%= link_to 'Edit', edit_center_fielder_stat_path(center_fielder_stat) %></td>
-        <td><%= link_to 'Destroy', center_fielder_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -81,6 +53,3 @@
 </div>
 </div>
 </div>
-<!-- <br>
-
-<%= link_to 'New Center fielder stat', new_center_fielder_stat_path %> -->

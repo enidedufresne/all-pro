@@ -9,68 +9,15 @@
     
 <p>
   Win:
-  <%= relief_pitcher_stat.win %>
+  <%= relief_pitcher_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Pitcher win:
-  <%= relief_pitcher_stat.pitcher_win %>
+ score:
+  <%= relief_pitcher_stat.score %> - <%= relief_pitcher_stat.opponent_score %>
 </p>
 
-<p>
-  Pitcher loss:
-  <%= relief_pitcher_stat.pitcher_loss %>
-</p>
-
-<p>
-  Pitcher wins:
-  <%= relief_pitcher_stat.pitcher_wins %>
-</p>
-
-<p>
-  Pitcher losses:
-  <%= relief_pitcher_stat.pitcher_losses %>
-</p>
-
-<p>
-  Pitcher no decision:
-  <%= relief_pitcher_stat.pitcher_no_decision %>
-</p>
-
-<p>
-  Pitcher no decisions:
-  <%= relief_pitcher_stat.pitcher_no_decisions %>
-</p>
-
-<p>
-  Pitcher saves:
-  <%= relief_pitcher_stat.pitcher_saves %>
-</p>
-
-<p>
-  Innings pitched:
-  <%= relief_pitcher_stat.innings_pitched %>
-</p>
-
-<p>
-  Hits allowed:
-  <%= relief_pitcher_stat.hits_allowed %>
-</p>
-
-<p>
-  Runs allowed:
-  <%= relief_pitcher_stat.runs_allowed %>
-</p>
-
-<p>
-  Strikeouts:
-  <%= relief_pitcher_stat.strikeouts %>
-</p>
-
-<p>
-  Walks allowed:
-  <%= relief_pitcher_stat.walks_allowed %>
-</p>
+<span class="points"><%= link_to 'view more stats', relief_pitcher_stat %></span>
     
   </span>
   <%= render 'shared/created_at', activity: relief_pitcher_stat %>

@@ -10,28 +10,10 @@
 
 <p>
   Win:
-  <%= runner_stat.win %>
+  <%= runner_stat.win ? 'Yes' : 'No' %>
 </p>
 
-<p>
-  Team score:
-  <%= runner_stat.team_score %>
-</p>
-
-<p>
-  Distance time:
-  <%= runner_stat.distance_time %>
-</p>
-
-<p>
-  Placed:
-  <%= runner_stat.placed %>
-</p>
-
-<p>
-  Speed:
-  <%= runner_stat.speed %>
-</p>
+<span class="points"><%= link_to 'view more stats', runner_stat %></span>
 
 
 

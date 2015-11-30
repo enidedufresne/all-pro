@@ -9,63 +9,15 @@
     
 <p>
   Win:
-  <%= right_fielder_stat.win %>
+  <%= right_fielder_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Plate appearances:
-  <%= right_fielder_stat.plate_appearances %>
+ score:
+  <%= right_fielder_stat.score %> - <%= right_fielder_stat.opponent_score %>
 </p>
 
-<p>
-  At bats:
-  <%= right_fielder_stat.at_bats %>
-</p>
-
-<p>
-  Hits:
-  <%= right_fielder_stat.hits %>
-</p>
-
-<p>
-  Runs scored:
-  <%= right_fielder_stat.runs_scored %>
-</p>
-
-<p>
-  Runs batted in:
-  <%= right_fielder_stat.runs_batted_in %>
-</p>
-
-<p>
-  Walks:
-  <%= right_fielder_stat.walks %>
-</p>
-
-<p>
-  Strike outs:
-  <%= right_fielder_stat.strike_outs %>
-</p>
-
-<p>
-  Stolen bases:
-  <%= right_fielder_stat.stolen_bases %>
-</p>
-
-<p>
-  Doubles:
-  <%= right_fielder_stat.doubles %>
-</p>
-
-<p>
-  Triples:
-  <%= right_fielder_stat.triples %>
-</p>
-
-<p>
-  Home runs:
-  <%= right_fielder_stat.home_runs %>
-</p>
+<span class="points"><%= link_to 'view more stats', right_fielder_stat %></span>
 
     
   </span>

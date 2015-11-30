@@ -7,68 +7,17 @@
   <h3><%= catcher_stat.event %></h3>
   <span class="text">
 
-
-
-
 <p>
   Win:
-  <%= catcher_stat.win %>
+  <%= catcher_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Plate appearances:
-  <%= catcher_stat.plate_appearances %>
+ score:
+  <%= catcher_stat.score %> - <%= catcher_stat.opponent_score %>
 </p>
 
-<p>
-  At bats:
-  <%= catcher_stat.at_bats %>
-</p>
-
-<p>
-  Hits:
-  <%= catcher_stat.hits %>
-</p>
-
-<p>
-  Runs scored:
-  <%= catcher_stat.runs_scored %>
-</p>
-
-<p>
-  Runs batted in:
-  <%= catcher_stat.runs_batted_in %>
-</p>
-
-<p>
-  Walks:
-  <%= catcher_stat.walks %>
-</p>
-
-<p>
-  Strike outs:
-  <%= catcher_stat.strike_outs %>
-</p>
-
-<p>
-  Stolen bases:
-  <%= catcher_stat.stolen_bases %>
-</p>
-
-<p>
-  Doubles:
-  <%= catcher_stat.doubles %>
-</p>
-
-<p>
-  Triples:
-  <%= catcher_stat.triples %>
-</p>
-
-<p>
-  Home runs:
-  <%= catcher_stat.home_runs %>
-</p>
+<span class="points"><%= link_to 'view more stats', catcher_stat %></span>
 
 
 

@@ -9,48 +9,27 @@
   <thead>
     <tr>
       <th>Event</th>
-     <!--  <th>Games played</th> -->
       <th>Win</th>
-      <th>Score</th>
-      <!-- <th>Loss</th>
       <th>Draw</th>
-      <th>Wins</th>
-      <th>Losses</th>
-      <th>Draws</th> -->
+      <th>Score</th>
       <th>Goals</th>
       <th>Assists</th>
       <th>Shots taken</th>
-      <th>User</th>
+      <th>Athlete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @midfielder_stats.each do |midfielder_stat| %>
       <tr>
-        <!-- <td><%= midfielder_stat.position_name %></td>
-        <td><%= midfielder_stat.shorthand %></td>
-        <td><%= midfielder_stat.sport_id %></td>
-        <td><%= midfielder_stat.position_id %></td>
-        <td><%= midfielder_stat.sport_name %></td> -->
         <td><%= midfielder_stat.event %></td>
-        <!-- <td><%= midfielder_stat.games_played %></td> -->
-        <td><%= midfielder_stat.win %></td>
+        <td><%= midfielder_stat.win ? 'Yes' : 'No' %></td>
+        <td><%= midfielder_stat.draw ? 'Yes' : 'No' %></td>
         <td><%= midfielder_stat.score %> - <%= midfielder_stat.opponent_score %></td>
-        <!-- <td><%= midfielder_stat.loss %></td>
-        <td><%= midfielder_stat.draw %></td>
-        <td><%= midfielder_stat.wins %></td>
-        <td><%= midfielder_stat.losses %></td>
-        <td><%= midfielder_stat.draws %></td> -->
         <td><%= midfielder_stat.goals %></td>
         <td><%= midfielder_stat.assists %></td>
         <td><%= midfielder_stat.shots_taken %></td>
         <td><%= midfielder_stat.user.try(:name) %></td>
-<!--         <td><%= midfielder_stat.stat %></td>
-        <td><%= midfielder_stat.sport %></td>
-        <td><%= midfielder_stat.position %></td>
-        <td><%= link_to 'Show', midfielder_stat %></td>
-        <td><%= link_to 'Edit', edit_midfielder_stat_path(midfielder_stat) %></td>
-        <td><%= link_to 'Destroy', midfielder_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -58,6 +37,3 @@
 </div>
 </div>
 </div>
-<!-- <br>
-
-<%= link_to 'New Midfielder stat', new_midfielder_stat_path %> -->

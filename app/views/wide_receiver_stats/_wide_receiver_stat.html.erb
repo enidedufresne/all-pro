@@ -9,28 +9,17 @@
    
 <p>
   Win:
-  <%= wide_receiver_stat.win %>
+  <%= wide_receiver_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Receptions:
-  <%= wide_receiver_stat.receptions %>
+ score:
+  <%= wide_receiver_stat.score %> - <%= wide_receiver_stat.opponent_score %>
 </p>
 
-<p>
-  Reception yards:
-  <%= wide_receiver_stat.reception_yards %>
-</p>
+<span class="points"><%= link_to 'view more stats', wide_receiver_stat %></span>
 
-<p>
-  Reception touchdowns:
-  <%= wide_receiver_stat.reception_touchdowns %>
-</p>
 
-<p>
-  Fumbles:
-  <%= wide_receiver_stat.fumbles %>
-</p>
 
   </span>
   <%= render 'shared/created_at', activity: wide_receiver_stat %>

@@ -9,13 +9,15 @@
 
 <p>
   Win:
-  <%= offensive_lineman_stat.win %>
+  <%= offensive_lineman_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Pancakes:
-  <%= offensive_lineman_stat.pancakes %>
+ score:
+  <%= offensive_lineman_stat.score %> - <%= offensive_lineman_stat.opponent_score %>
 </p>
+
+<span class="points"><%= link_to 'view more stats', offensive_lineman_stat %></span>
 
 
   </span>

@@ -8,19 +8,10 @@
 <table class="table">
   <thead>
     <tr>
-      <!-- <th>Position name</th>
-      <th>Shorthand</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th>Sport name</th> -->
       <th>Event</th>
-      <!-- <th>Games started</th>
-      <th>Games played</th> -->
+      <!-- <th>Games started</th>-->
       <th>Win</th>
       <th>Score</th>
-      <!-- <th>Loss</th>
-      <th>Wins</th>
-      <th>Losses</th> -->
       <th>Minutes played</th>
       <th>Fieldgoals made</th>
       <th>Fieldgoal attemps</th>
@@ -33,30 +24,17 @@
       <th>Steals</th>
       <th>Blocks</th>
       <th>Points</th>
-      <th>User</th>
-<!--       <th>Stat</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th colspan="3"></th> -->
+      <th>Athlete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @small_forward_stats.each do |small_forward_stat| %>
       <tr>
-        <!-- <td><%= small_forward_stat.position_name %></td>
-        <td><%= small_forward_stat.shorthand %></td>
-        <td><%= small_forward_stat.sport_id %></td>
-        <td><%= small_forward_stat.position_id %></td>
-        <td><%= small_forward_stat.sport_name %></td> -->
         <td><%= small_forward_stat.event %></td>
-       <!--  <td><%= small_forward_stat.games_started %></td>
-        <td><%= small_forward_stat.games_played %></td> -->
-        <td><%= small_forward_stat.win %></td>
+       <!--  <td><%= small_forward_stat.games_started %></td> -->
+        <td><%= small_forward_stat.win ? 'Yes' : 'No' %></td>
         <td><%= small_forward_stat.score %> - <%= small_forward_stat.opponent_score %></td>
-        <!-- <td><%= small_forward_stat.loss %></td>
-        <td><%= small_forward_stat.wins %></td>
-        <td><%= small_forward_stat.losses %></td> -->
         <td><%= small_forward_stat.minutes_played %></td>
         <td><%= small_forward_stat.fieldgoals_made %></td>
         <td><%= small_forward_stat.fieldgoal_attemps %></td>
@@ -70,12 +48,6 @@
         <td><%= small_forward_stat.blocks %></td>
         <td><%= small_forward_stat.points %></td>
         <td><%= small_forward_stat.user.try(:name) %></td>
-<!--         <td><%= small_forward_stat.stat %></td>
-        <td><%= small_forward_stat.sport %></td>
-        <td><%= small_forward_stat.position %></td>
-        <td><%= link_to 'Show', small_forward_stat %></td>
-        <td><%= link_to 'Edit', edit_small_forward_stat_path(small_forward_stat) %></td>
-        <td><%= link_to 'Destroy', small_forward_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -83,6 +55,3 @@
 </div>
 </div>
 </div>
-<!-- <br>
-
-<%= link_to 'New Small forward stat', new_small_forward_stat_path %> -->

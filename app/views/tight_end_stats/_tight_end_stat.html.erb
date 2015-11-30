@@ -10,28 +10,15 @@
 
 <p>
   Win:
-  <%= tight_end_stat.win %>
+  <%= tight_end_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Receptions:
-  <%= tight_end_stat.receptions %>
+ score:
+  <%= tight_end_stat.score %> - <%= tight_end_stat.opponent_score %>
 </p>
 
-<p>
-  Reception yards:
-  <%= tight_end_stat.reception_yards %>
-</p>
-
-<p>
-  Reception touchdowns:
-  <%= tight_end_stat.reception_touchdowns %>
-</p>
-
-<p>
-  Pancakes:
-  <%= tight_end_stat.pancakes %>
-</p>
+<span class="points"><%= link_to 'view more stats', tight_end_stat %></span>
 
 
   </span>

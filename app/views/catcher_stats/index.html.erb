@@ -8,19 +8,10 @@
 <table class="table">
   <thead>
     <tr>
-<!--       <th>Position name</th>
-      <th>Shorthand</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th>Sport name</th> -->
       <th>Event</th>
-<!--       <th>Games started</th>
-      <th>Games played</th> -->
+<!--       <th>Games started</th> -->
       <th>Win</th>
       <th>Score</th>
-<!--       <th>Loss</th>
-      <th>Wins</th>
-      <th>Losses</th> -->
       <th>Plate appearances</th>
       <th>At bats</th>
       <th>Hits</th>
@@ -32,30 +23,17 @@
       <th>Doubles</th>
       <th>Triples</th>
       <th>Home runs</th>
-      <th>User</th>
-<!--       <th>Stat</th>
-      <th>Sport</th>
-      <th>Position</th>
-      <th colspan="3"></th> -->
+      <th>Athlete</th>
     </tr>
   </thead>
 
   <tbody>
     <% @catcher_stats.each do |catcher_stat| %>
       <tr>
-<!--         <td><%= catcher_stat.position_name %></td>
-        <td><%= catcher_stat.shorthand %></td>
-        <td><%= catcher_stat.sport_id %></td>
-        <td><%= catcher_stat.position_id %></td>
-        <td><%= catcher_stat.sport_name %></td> -->
         <td><%= catcher_stat.event %></td>
-<!--         <td><%= catcher_stat.games_started %></td>
-        <td><%= catcher_stat.games_played %></td> -->
-        <td><%= catcher_stat.win %></td>
+<!--         <td><%= catcher_stat.games_started %></td> -->
+        <td><%= catcher_stat.win ? 'Yes' : 'No' %></td>
         <td><%= catcher_stat.score %> - <%= catcher_stat.opponent_score %></td>
-<!--          <td><%= catcher_stat.loss %></td>
-       <td><%= catcher_stat.wins %></td>
-        <td><%= catcher_stat.losses %></td> -->
         <td><%= catcher_stat.plate_appearances %></td>
         <td><%= catcher_stat.at_bats %></td>
         <td><%= catcher_stat.hits %></td>
@@ -68,12 +46,6 @@
         <td><%= catcher_stat.triples %></td>
         <td><%= catcher_stat.home_runs %></td>
         <td><%= catcher_stat.user.try(:name) %></td>
-<!--         <td><%= catcher_stat.stat %></td>
-        <td><%= catcher_stat.sport %></td>
-        <td><%= catcher_stat.position %></td>
-        <td><%= link_to 'Show', catcher_stat %></td>
-        <td><%= link_to 'Edit', edit_catcher_stat_path(catcher_stat) %></td>
-        <td><%= link_to 'Destroy', catcher_stat, method: :delete, data: { confirm: 'Are you sure?' } %></td> -->
       </tr>
     <% end %>
   </tbody>
@@ -81,6 +53,3 @@
 </div>
 </div>
 </div>
-<!-- <br>
-
-<%= link_to 'New Catcher stat', new_catcher_stat_path %> -->

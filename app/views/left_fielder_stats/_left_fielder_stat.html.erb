@@ -9,63 +9,15 @@
    
 <p>
   Win:
-  <%= left_fielder_stat.win %>
+  <%= left_fielder_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Plate appearances:
-  <%= left_fielder_stat.plate_appearances %>
+ score:
+  <%= left_fielder_stat.score %> - <%= left_fielder_stat.opponent_score %>
 </p>
 
-<p>
-  At bats:
-  <%= left_fielder_stat.at_bats %>
-</p>
-
-<p>
-  Hits:
-  <%= left_fielder_stat.hits %>
-</p>
-
-<p>
-  Runs scored:
-  <%= left_fielder_stat.runs_scored %>
-</p>
-
-<p>
-  Runs batted in:
-  <%= left_fielder_stat.runs_batted_in %>
-</p>
-
-<p>
-  Walks:
-  <%= left_fielder_stat.walks %>
-</p>
-
-<p>
-  Strike outs:
-  <%= left_fielder_stat.strike_outs %>
-</p>
-
-<p>
-  Stolen bases:
-  <%= left_fielder_stat.stolen_bases %>
-</p>
-
-<p>
-  Doubles:
-  <%= left_fielder_stat.doubles %>
-</p>
-
-<p>
-  Triples:
-  <%= left_fielder_stat.triples %>
-</p>
-
-<p>
-  Home runs:
-  <%= left_fielder_stat.home_runs %>
-</p>
+<span class="points"><%= link_to 'view more stats', left_fielder_stat %></span>
 
 
    

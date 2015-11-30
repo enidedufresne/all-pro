@@ -9,43 +9,15 @@
     
 <p>
   Win:
-  <%= running_back_stat.win %>
+  <%= running_back_stat.win ? 'Yes' : 'No' %>
 </p>
 
 <p>
-  Rushing attempts:
-  <%= running_back_stat.rushing_attempts %>
+ score:
+  <%= running_back_stat.score %> - <%= running_back_stat.opponent_score %>
 </p>
 
-<p>
-  Rushing yards:
-  <%= running_back_stat.rushing_yards %>
-</p>
-
-<p>
-  Rushing touchdowns:
-  <%= running_back_stat.rushing_touchdowns %>
-</p>
-
-<p>
-  Receptions:
-  <%= running_back_stat.receptions %>
-</p>
-
-<p>
-  Reception yards:
-  <%= running_back_stat.reception_yards %>
-</p>
-
-<p>
-  Reception touchdowns:
-  <%= running_back_stat.reception_touchdowns %>
-</p>
-
-<p>
-  Fumbles:
-  <%= running_back_stat.fumbles %>
-</p>
+<span class="points"><%= link_to 'view more stats', running_back_stat %></span>
 
     
   </span>
