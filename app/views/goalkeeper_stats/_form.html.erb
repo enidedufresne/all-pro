@@ -1,5 +1,4 @@
 <%= form_for(@goalkeeper_stat) do |f| %>
-  <% if @goalkeeper_stat.errors.any? %>
   <div class="field">
     <%= f.label :event %><br>
     <%= f.text_field :event, class: 'form-control', autofocus: true, placeholder: "ex. Reds v. Blues" %>

@@ -35,6 +35,10 @@
 <% end %>
 </div>
 
+
+
+
+
 <div>
 <h4>Basketball</h4>
 <%= link_to new_center_stat_path do %>
@@ -62,12 +66,10 @@
 <% end %>
 </div>
 
+
+
 <div>
 <h4>Football</h4>
-<%= link_to new_defender_stat_path do %>
-  <div id="xdefender" class="col-lg-6 well">Defender</div>
-<% end %>
-
 <%= link_to new_defensive_back_stat_path do %>
   <div id="xdefensive-back" class="col-lg-6 well">Defensive Back</div>
 <% end %>
@@ -109,10 +111,11 @@
 <% end %>
 
 <%= link_to new_wide_receiver_stat_path do %>
-  <div id="xwide-receiver" class="col-lg-6 well">Wide Receiver</div>
+  <div id="xwide-receiver" class="col-lg-12 well">Wide Receiver</div>
 <% end %>
 </div>
 
+<div>
 <h4>Racing</h4>
 <%= link_to new_runner_stat_path do %>
   <div id="xrunner" class="col-lg-6 well">Cross Country</div>
@@ -121,9 +124,14 @@
 <%= link_to new_sprinter_stat_path do %>
   <div id="xsprinter" class="col-lg-6 well">Track &amp; Field</div>
 <% end %>
-<div>
+</div>
 
+<div>
 <h4>Soccer</h4>
+<%= link_to new_defender_stat_path do %>
+  <div id="xdefender" class="col-lg-6 well">Defender</div>
+<% end %>
+
 <%= link_to new_goalkeeper_stat_path do %>
   <div id="xgoalkeeper" class="col-lg-6 well">Goalkeeper</div>
 <% end %>
