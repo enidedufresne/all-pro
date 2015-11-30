@@ -1,7 +1,7 @@
 <%= form_for(@running_back_stat) do |f| %>
   <div class="field">
     <%= f.label :event %><br>
-    <%= f.text_field :event %>
+    <%= f.text_field :event, class: 'form-control', autofocus: true %>
   </div>
   <!-- <div class="field">
     <%= f.label :games_played %><br>
@@ -13,51 +13,39 @@
   </div>
     <div class="field">
     <%= f.label "Your final score" %><br>
-    <%= f.text_field :score %>
+    <%= f.text_field :score, class: 'form-control', autofocus: true %>
   </div>
     <div class="field">
     <%= f.label "Opponent's final score" %><br>
-    <%= f.text_field :opponent_score %>
+    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true %>
   </div>
-  <!-- <div class="field">
-    <%= f.label :loss %><br>
-    <%= f.check_box :loss %>
-  </div>
-  <div class="field">
-    <%= f.label :wins %><br>
-    <%= f.number_field :wins %>
-  </div>
-  <div class="field">
-    <%= f.label :losses %><br>
-    <%= f.number_field :losses %>
-  </div> -->
   <div class="field">
     <%= f.label :rushing_attempts %><br>
-    <%= f.number_field :rushing_attempts %>
+    <%= f.number_field :rushing_attempts, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :rushing_yards %><br>
-    <%= f.number_field :rushing_yards %>
+    <%= f.number_field :rushing_yards, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :rushing_touchdowns %><br>
-    <%= f.number_field :rushing_touchdowns %>
+    <%= f.number_field :rushing_touchdowns, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :receptions %><br>
-    <%= f.number_field :receptions %>
+    <%= f.number_field :receptions, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :reception_yards %><br>
-    <%= f.number_field :reception_yards %>
+    <%= f.number_field :reception_yards, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :reception_touchdowns %><br>
-    <%= f.number_field :reception_touchdowns %>
+    <%= f.number_field :reception_touchdowns, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :fumbles %><br>
-    <%= f.number_field :fumbles %>
+    <%= f.number_field :fumbles, class: 'form-control', autofocus: true %>
   </div>
 
   <div class="actions">

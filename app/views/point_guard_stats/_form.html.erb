@@ -1,15 +1,11 @@
 <%= form_for(@point_guard_stat) do |f| %>
   <div class="field">
     <%= f.label :event %><br>
-    <%= f.text_field :event %>
+    <%= f.text_field :event, class: 'form-control', autofocus: true %>
   </div>
  <!--  <div class="field">
     <%= f.label :games_started %><br>
     <%= f.number_field :games_started %>
-  </div>
-  <div class="field">
-    <%= f.label :games_played %><br>
-    <%= f.number_field :games_played %>
   </div> -->
   <div class="field">
     <%= f.label :win %><br>
@@ -17,71 +13,59 @@
   </div>
     <div class="field">
     <%= f.label "Your final score" %><br>
-    <%= f.text_field :score %>
+    <%= f.text_field :score, class: 'form-control', autofocus: true %>
   </div>
     <div class="field">
     <%= f.label "Opponent's final score" %><br>
-    <%= f.text_field :opponent_score %>
+    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true %>
   </div>
-  <!-- <div class="field">
-    <%= f.label :loss %><br>
-    <%= f.check_box :loss %>
-  </div>
-  <div class="field">
-    <%= f.label :wins %><br>
-    <%= f.number_field :wins %>
-  </div>
-  <div class="field">
-    <%= f.label :losses %><br>
-    <%= f.number_field :losses %>
-  </div> -->
   <div class="field">
     <%= f.label :minutes_played %><br>
-    <%= f.number_field :minutes_played %>
+    <%= f.number_field :minutes_played, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :fieldgoals_made %><br>
-    <%= f.number_field :fieldgoals_made %>
+    <%= f.number_field :fieldgoals_made, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :fieldgoal_attemps %><br>
-    <%= f.number_field :fieldgoal_attemps %>
+    <%= f.number_field :fieldgoal_attemps, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :threepoints_made %><br>
-    <%= f.number_field :threepoints_made %>
+    <%= f.number_field :threepoints_made, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :threepoint_attemps %><br>
-    <%= f.number_field :threepoint_attemps %>
+    <%= f.number_field :threepoint_attemps, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :freethrows_made %><br>
-    <%= f.number_field :freethrows_made %>
+    <%= f.number_field :freethrows_made, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :freethrow_attemps %><br>
-    <%= f.number_field :freethrow_attemps %>
+    <%= f.number_field :freethrow_attemps, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :rebounds %><br>
-    <%= f.number_field :rebounds %>
+    <%= f.number_field :rebounds, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :assists %><br>
-    <%= f.number_field :assists %>
+    <%= f.number_field :assists, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :steals %><br>
-    <%= f.number_field :steals %>
+    <%= f.number_field :steals, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :blocks %><br>
-    <%= f.number_field :blocks %>
+    <%= f.number_field :blocks, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :points %><br>
-    <%= f.number_field :points %>
+    <%= f.number_field :points, class: 'form-control', autofocus: true %>
   </div>
 
   <div class="actions">

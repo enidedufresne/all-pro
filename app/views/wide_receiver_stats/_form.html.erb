@@ -1,54 +1,44 @@
 <%= form_for(@wide_receiver_stat) do |f| %>
-  <div class="field">
+  <div class="form-group">
     <%= f.label :event %><br>
-    <%= f.text_field :event %>
+    <%= f.text_field :event, class: 'form-control', autofocus: true, placeholder: "Non" %>
   </div>
   <!-- <div class="field">
     <%= f.label :games_played %><br>
     <%= f.number_field :games_played %>
   </div> -->
-  <div class="field">
+  <div class="form-group">
     <%= f.label :win %><br>
     <%= f.check_box :win %>
   </div>
-    <div class="field">
+    <div class="form-group">
     <%= f.label "Your final score" %><br>
-    <%= f.text_field :score %>
+    <%= f.text_field :score, class: 'form-control', autofocus: true, placeholder: "Not that" %>
   </div>
-    <div class="field">
+    <div class="form-group">
     <%= f.label "Opponent's final score" %><br>
-    <%= f.text_field :opponent_score %>
+    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true, placeholder: "Do this" %>
   </div>
-  <!-- <div class="field">
-    <%= f.label :loss %><br>
-    <%= f.check_box :loss %>
-  </div>
-  <div class="field">
-    <%= f.label :wins %><br>
-    <%= f.number_field :wins %>
-  </div>
-  <div class="field">
-    <%= f.label :losses %><br>
-    <%= f.number_field :losses %>
-  </div> -->
-  <div class="field">
+
+  <div class="form-group">
     <%= f.label :receptions %><br>
-    <%= f.number_field :receptions %>
+    <%= f.number_field :receptions, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :reception_yards %><br>
-    <%= f.number_field :reception_yards %>
+    <%= f.number_field :reception_yards, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :reception_touchdowns %><br>
-    <%= f.number_field :reception_touchdowns %>
+    <%= f.number_field :reception_touchdowns, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :fumbles %><br>
-    <%= f.number_field :fumbles %>
+    <%= f.number_field :fumbles, class: 'form-control', autofocus: true %>
   </div>
 
   <div class="actions">
     <%= f.submit :create, class: 'btn btn-primary' %>
   </div>
+
 <% end %>

@@ -2,7 +2,7 @@
   <% if @goalkeeper_stat.errors.any? %>
   <div class="field">
     <%= f.label :event %><br>
-    <%= f.text_field :event %>
+    <%= f.text_field :event, class: 'form-control', autofocus: true %>
   </div>
   <!-- <div class="field">
     <%= f.label :games_played %><br>
@@ -11,44 +11,27 @@
   <div class="field">
     <%= f.label :win %><br>
     <%= f.check_box :win %>
-  </div>
-    <div class="field">
-    <%= f.label "Your final score" %><br>
-    <%= f.text_field :score %>
-  </div>
-    <div class="field">
-    <%= f.label "Opponent's final score" %><br>
-    <%= f.text_field :opponent_score %>
-  </div>
-  <!-- <div class="field">
-    <%= f.label :loss %><br>
-    <%= f.check_box :loss %>
-  </div>
+  </div>  
   <div class="field">
     <%= f.label :draw %><br>
     <%= f.check_box :draw %>
   </div>
-  <div class="field">
-    <%= f.label :wins %><br>
-    <%= f.number_field :wins %>
+    <div class="field">
+    <%= f.label "Your final score" %><br>
+    <%= f.text_field :score, class: 'form-control', autofocus: true %>
   </div>
-  <div class="field">
-    <%= f.label :losses %><br>
-    <%= f.number_field :losses %>
+    <div class="field">
+    <%= f.label "Opponent's final score" %><br>
+    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true %>
   </div>
-  <div class="field">
-    <%= f.label :draws %><br>
-    <%= f.number_field :draws %>
-  </div> -->
   <div class="field">
     <%= f.label :saves %><br>
-    <%= f.number_field :saves %>
+    <%= f.number_field :saves, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :shots_faced %><br>
-    <%= f.number_field :shots_faced %>
+    <%= f.number_field :shots_faced, class: 'form-control', autofocus: true %>
   </div>
-
   <div class="actions">
     <%= f.submit :create, class: 'btn btn-primary' %>
   </div>

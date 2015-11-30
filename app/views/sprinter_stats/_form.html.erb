@@ -1,7 +1,7 @@
 <%= form_for(@sprinter_stat) do |f| %>
   <div class="field">
     <%= f.label :event %><br>
-    <%= f.text_field :event %>
+    <%= f.text_field :event, class: 'form-control', autofocus: true %>
   </div>
   <!-- <div class="field">
     <%= f.label :races_run %><br>
@@ -29,19 +29,19 @@
   </div> -->
   <div class="field">
     <%= f.label :team_score %><br>
-    <%= f.number_field :team_score %>
+    <%= f.number_field :team_score, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :distance_time %><br>
-    <%= f.number_field :distance_time %>
+    <%= f.number_field :distance_time, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :placed %><br>
-    <%= f.number_field :placed %>
+    <%= f.number_field :placed, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :speed %><br>
-    <%= f.number_field :speed %>
+    <%= f.number_field :speed, class: 'form-control', autofocus: true %>
   </div>
 
   <div class="actions">

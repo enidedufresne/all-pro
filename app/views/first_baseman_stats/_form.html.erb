@@ -1,15 +1,11 @@
 <%= form_for(@first_baseman_stat) do |f| %>
   <div class="field">
     <%= f.label :event %><br>
-    <%= f.text_field :event %>
+    <%= f.text_field :event, class: 'form-control', autofocus: true %>
   </div>
 <!--   <div class="field">
     <%= f.label :games_started %><br>
     <%= f.number_field :games_started %>
-  </div> -->
-<!--   <div class="field">
-    <%= f.label :games_played %><br>
-    <%= f.number_field :games_played %>
   </div> -->
   <div class="field">
     <%= f.label :win %><br>
@@ -17,69 +13,56 @@
   </div>
     <div class="field">
     <%= f.label "Your final score" %><br>
-    <%= f.text_field :score %>
+    <%= f.text_field :score, class: 'form-control', autofocus: true %>
   </div>
     <div class="field">
     <%= f.label "Opponent's final score" %><br>
-    <%= f.text_field :opponent_score %>
+    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true %>
   </div>
-  <!-- <div class="field">
-    <%= f.label :loss %><br>
-    <%= f.check_box :loss %>
-  </div>
-  <div class="field">
-    <%= f.label :wins %><br>
-    <%= f.number_field :wins %>
-  </div>
-  <div class="field">
-    <%= f.label :losses %><br>
-    <%= f.number_field :losses %>
-  </div> -->
   <div class="field">
     <%= f.label :plate_appearances %><br>
-    <%= f.number_field :plate_appearances %>
+    <%= f.number_field :plate_appearances, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :at_bats %><br>
-    <%= f.number_field :at_bats %>
+    <%= f.number_field :at_bats, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :hits %><br>
-    <%= f.number_field :hits %>
+    <%= f.number_field :hits, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :runs_scored %><br>
-    <%= f.number_field :runs_scored %>
+    <%= f.number_field :runs_scored, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :runs_batted_in %><br>
-    <%= f.number_field :runs_batted_in %>
+    <%= f.number_field :runs_batted_in, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :walks %><br>
-    <%= f.number_field :walks %>
+    <%= f.number_field :walks, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :strike_outs %><br>
-    <%= f.number_field :strike_outs %>
+    <%= f.number_field :strike_outs, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :stolen_bases %><br>
-    <%= f.number_field :stolen_bases %>
+    <%= f.number_field :stolen_bases, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :doubles %><br>
-    <%= f.number_field :doubles %>
+    <%= f.number_field :doubles, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :triples %><br>
-    <%= f.number_field :triples %>
+    <%= f.number_field :triples, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :home_runs %><br>
-    <%= f.number_field :home_runs %>
+    <%= f.number_field :home_runs, class: 'form-control', autofocus: true %>
   </div>
-
   <div class="actions">
     <%= f.submit :create, class: 'btn btn-primary' %>
   </div>

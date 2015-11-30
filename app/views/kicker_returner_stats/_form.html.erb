@@ -1,7 +1,7 @@
 <%= form_for(@kicker_returner_stat) do |f| %>
   <div class="field">
     <%= f.label :event %><br>
-    <%= f.text_field :event %>
+    <%= f.text_field :event, class: 'form-control', autofocus: true %>
   </div>
   <!-- <div class="field">
     <%= f.label :games_played %><br>
@@ -13,37 +13,24 @@
   </div>
     <div class="field">
     <%= f.label "Your final score" %><br>
-    <%= f.text_field :score %>
+    <%= f.text_field :score, class: 'form-control', autofocus: true %>
   </div>
     <div class="field">
     <%= f.label "Opponent's final score" %><br>
-    <%= f.text_field :opponent_score %>
+    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true %>
   </div>
-  <!-- <div class="field">
-    <%= f.label :loss %><br>
-    <%= f.check_box :loss %>
-  </div>
-  <div class="field">
-    <%= f.label :wins %><br>
-    <%= f.number_field :wins %>
-  </div>
-  <div class="field">
-    <%= f.label :losses %><br>
-    <%= f.number_field :losses %>
-  </div> -->
   <div class="field">
     <%= f.label :kickreturns %><br>
-    <%= f.number_field :kickreturns %>
+    <%= f.number_field :kickreturns, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :kickreturn_yards %><br>
-    <%= f.number_field :kickreturn_yards %>
+    <%= f.number_field :kickreturn_yards, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :kickreturn_touchdowns %><br>
-    <%= f.number_field :kickreturn_touchdowns %>
+    <%= f.number_field :kickreturn_touchdowns, class: 'form-control', autofocus: true %>
   </div>
-
   <div class="actions">
     <%= f.submit :create, class: 'btn btn-primary' %>
   </div>

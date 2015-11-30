@@ -1,15 +1,11 @@
 <%= form_for(@relief_pitcher_stat) do |f| %>
   <div class="field">
     <%= f.label :event %><br>
-    <%= f.text_field :event %>
+    <%= f.text_field :event, class: 'form-control', autofocus: true %>
   </div>
   <!-- <div class="field">
     <%= f.label :games_started %><br>
     <%= f.number_field :games_started %>
-  </div>
-  <div class="field">
-    <%= f.label :games_played %><br>
-    <%= f.number_field :games_played %>
   </div> -->
   <div class="field">
     <%= f.label :win %><br>
@@ -17,71 +13,45 @@
   </div>
     <div class="field">
     <%= f.label "Your final score" %><br>
-    <%= f.text_field :score %>
+    <%= f.text_field :score, class: 'form-control', autofocus: true %>
   </div>
     <div class="field">
     <%= f.label "Opponent's final score" %><br>
-    <%= f.text_field :opponent_score %>
+    <%= f.text_field :opponent_score, class: 'form-control', autofocus: true %>
   </div>
-  <!-- <div class="field">
-    <%= f.label :loss %><br>
-    <%= f.check_box :loss %>
-  </div>
-  <div class="field">
-    <%= f.label :wins %><br>
-    <%= f.number_field :wins %>
-  </div>
-  <div class="field">
-    <%= f.label :losses %><br>
-    <%= f.number_field :losses %>
-  </div> -->
   <div class="field">
     <%= f.label :pitcher_win %><br>
     <%= f.check_box :pitcher_win %>
   </div>
-  <!-- <div class="field">
-    <%= f.label :pitcher_loss %><br>
-    <%= f.check_box :pitcher_loss %>
-  </div>
-  <div class="field">
-    <%= f.label :pitcher_wins %><br>
-    <%= f.number_field :pitcher_wins %>
-  </div>
-  <div class="field">
-    <%= f.label :pitcher_losses %><br>
-    <%= f.number_field :pitcher_losses %>
-  </div> -->
+
   <div class="field">
     <%= f.label :pitcher_no_decision %><br>
     <%= f.check_box :pitcher_no_decision %>
   </div>
-  <!-- <div class="field">
-    <%= f.label :pitcher_no_decisions %><br>
-    <%= f.number_field :pitcher_no_decisions %>
-  </div> -->
+
   <div class="field">
     <%= f.label :pitcher_saves %><br>
-    <%= f.number_field :pitcher_saves %>
+    <%= f.number_field :pitcher_saves, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :innings_pitched %><br>
-    <%= f.number_field :innings_pitched %>
+    <%= f.number_field :innings_pitched, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :hits_allowed %><br>
-    <%= f.number_field :hits_allowed %>
+    <%= f.number_field :hits_allowed, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :runs_allowed %><br>
-    <%= f.number_field :runs_allowed %>
+    <%= f.number_field :runs_allowed, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :strikeouts %><br>
-    <%= f.number_field :strikeouts %>
+    <%= f.number_field :strikeouts, class: 'form-control', autofocus: true %>
   </div>
   <div class="field">
     <%= f.label :walks_allowed %><br>
-    <%= f.number_field :walks_allowed %>
+    <%= f.number_field :walks_allowed, class: 'form-control', autofocus: true %>
   </div>
 
   <div class="actions">
